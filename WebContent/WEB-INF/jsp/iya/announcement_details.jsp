@@ -2,7 +2,9 @@
 <head>
 	<title>IYA Announcement form</title>
 </head>
-<a class="btn btn-primary" href="<s:url namespace="/iya" action="announcement/edit" />?id=<s:property value="id" />">Edit Announcement</a> 
+<a class="btn btn-primary" href="<s:url namespace="/iya" action="announcement/edit" />?id=<s:property value="id" />">Edit Announcement</a>
+<a class="btn btn-primary" href="<s:url namespace="/iya" action="announcements" />">All Trainings</a> <br>
+
 <table class="table">
 		<colgroup>
 			<col width="200px" />

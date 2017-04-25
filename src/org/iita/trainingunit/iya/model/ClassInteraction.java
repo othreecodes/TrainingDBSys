@@ -20,7 +20,7 @@ public class ClassInteraction extends VersionedEntity {
 	 */
 	private static final long serialVersionUID = 1L;
 	private IYAEvaluation iyaEvaluation;
-	private InteractionType classInteraction;
+	private InteractionType classInt;
 	
 	public enum InteractionType {
 		UseCaseStudy, Energizers, GroupWorkPresentation, Practicals, AudioVisuals
@@ -42,19 +42,20 @@ public class ClassInteraction extends VersionedEntity {
 	}
 
 	/**
-	 * @param classInteraction the classInteraction to set
+	 * @param classInt the classInt to set
 	 */
-	public void setClassInteraction(InteractionType classInteraction) {
-		this.classInteraction = classInteraction;
+	public void setClassInt(InteractionType classInt) {
+		this.classInt = classInt;
 	}
 
 	/**
-	 * @return the classInteraction
+	 * @return the classInt
 	 */
-	public InteractionType getClassInteraction() {
-		return classInteraction;
+	public InteractionType getClassInt() {
+		return classInt;
 	}
-	
+
+
 	
 
 }

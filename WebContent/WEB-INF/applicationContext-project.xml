@@ -15,6 +15,8 @@
 	<bean id="iyaService" class="org.iita.trainingunit.iya.service.IyaServiceImpl">
 		<property name="userService" ref="userService" />
 	</bean>
+	
+	
 	<bean id="staffService" class="org.iita.trainingunit.staff.serviceImpl.StaffServiceImpl">
 		<property name="application" value="${application.securityId}" />
 		<property name="notificationService"  ref="notificationService" />
@@ -42,15 +44,20 @@
 	<bean id="dashboardIyaAction" class="org.iita.trainingunit.iya.action.DashboardIyaAction" scope="request">
 		<constructor-arg ref="iyaService" />
 	</bean>
-	<bean id="iyaAnnouncementAction" class="org.iita.trainingunit.iya.action.IyaAnnouncementAction" scope="request">
-		<constructor-arg ref="iyaService" />
-	</bean>
-	<bean id="iyaAnnouncementEditAction" class="org.iita.trainingunit.iya.action.IyaAnnouncementEditAction" scope="request">
+	<bean id="iyaAnnouncementAction" class="org.iita.trainingunit.iya.action.IyaTrainingAnnouncementAction" scope="request">
 		<constructor-arg ref="iyaService" />
 	</bean>
 	<bean id="iyaRegistrationAction" class="org.iita.trainingunit.iya.action.IyaRegistrationAction" scope="request">
 		<constructor-arg ref="iyaService" />
+		<constructor-arg ref="trainingUnitService" />
+	</bean>	
+	<bean id="iyaRegistrationEditAction" class="org.iita.trainingunit.iya.action.IyaRegistrationAction" scope="request">
+		<constructor-arg ref="iyaService" />
+		<constructor-arg ref="trainingUnitService" />
 	</bean>
+	<bean id="iyaEvaluationAction" class="org.iita.trainingunit.iya.action.IyaEvaluationAction" scope="request">
+		<constructor-arg ref="iyaService" />
+	</bean>	
 	
 	<bean id="chartAction" scope="request" class="org.iita.trainingunit.action.ProjectChartAction" />	
 	

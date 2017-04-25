@@ -19,23 +19,11 @@ public class IYAEvaluationObjective extends VersionedEntity {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private IYATrainingAnnouncement iyaTrainingAnnouncement;
+	//private IYATrainingAnnouncement iyaTrainingAnnouncement;
 	private IYAEvaluation iyaEvaluation;
+	private String objective;
 	
-	/**
-	 * @param iyaTrainingAnnouncement the iyaTrainingAnnouncement to set
-	 */
-	public void setIyaTrainingAnnouncement(IYATrainingAnnouncement iyaTrainingAnnouncement) {
-		this.iyaTrainingAnnouncement = iyaTrainingAnnouncement;
-	}
-	/**
-	 * @return the iyaTrainingAnnouncement
-	 */
-	@OneToOne(cascade = {}, optional = true)
-	public IYATrainingAnnouncement getIyaTrainingAnnouncement() {
-		return iyaTrainingAnnouncement;
-	}
-	
+
 	/**
 	 * @param iyaEvaluation the iyaEvaluation to set
 	 */
@@ -48,6 +36,18 @@ public class IYAEvaluationObjective extends VersionedEntity {
 	@OneToOne(cascade = {}, optional = true)
 	public IYAEvaluation getIyaEvaluation() {
 		return iyaEvaluation;
+	}
+	/**
+	 * @param objective the objective to set
+	 */
+	public void setObjective(String objective) {
+		this.objective = objective;
+	}
+	/**
+	 * @return the objective
+	 */
+	public String getObjective() {
+		return objective;
 	}
 	
 }

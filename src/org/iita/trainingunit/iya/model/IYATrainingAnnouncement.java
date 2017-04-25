@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 import org.iita.entity.VersionedEntity;
 import org.iita.trainingunit.announcements.model.TrainingLocation;
@@ -17,22 +16,14 @@ import org.iita.trainingunit.model.Trainer;
  */
 @Entity
 public class IYATrainingAnnouncement extends VersionedEntity {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private String sponsor;
-	
+	private String sponsor;	
 	private String organizer;
-	
-
-	private String trainingCourse;
-	
+	private String trainingCourse;	
 	private List<IYAAnnouncementObjective> trainingObjectives;	
 	private List<TrainingLocation> trainingLocations;
 	private List<Trainer> facilitators;
-	private IYARegistration registration;
+	private List<IYARegistration> registration;
 	
 	
 	public String getSponsor() {
@@ -84,14 +75,14 @@ public class IYATrainingAnnouncement extends VersionedEntity {
 	/**
 	 * @param registration the registration to set
 	 */
-	public void setRegistration(IYARegistration registration) {
+	public void setRegistration(List<IYARegistration> registration) {
 		this.registration = registration;
 	}
 	/**
 	 * @return the registration
 	 */
-	@OneToOne(cascade = {}, mappedBy = "iyaTrainingAnnouncement")
-	public IYARegistration getRegistration() {
+	@OneToMany(cascade = {}, mappedBy = "iyaTrainingAnnouncement")
+	public List<IYARegistration> getRegistration() {
 		return registration;
 	}
 	

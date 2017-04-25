@@ -3,6 +3,7 @@ package org.iita.trainingunit.iya.action;
 import java.util.List;
 
 import org.iita.crm.action.BaseAction;
+import org.iita.trainingunit.iya.model.IYAEvaluation;
 import org.iita.trainingunit.iya.model.IYARegistration;
 import org.iita.trainingunit.iya.model.IYATrainingAnnouncement;
 import org.iita.trainingunit.iya.service.IyaService;
@@ -20,6 +21,10 @@ public class DashboardIyaAction extends BaseAction implements Preparable {
 	private PagedResult<IYARegistration> registrations;
 	private List<IYARegistration> iyaRegistrations;
 	private IYARegistration registration;
+	
+	private PagedResult<IYAEvaluation> evaluations;
+	private List<IYAEvaluation> iyaEvaluations;
+	private IYAEvaluation evaluation;
 	protected int startAt = 0, maxResults = 50;
 	
 	/**
@@ -42,6 +47,7 @@ public class DashboardIyaAction extends BaseAction implements Preparable {
 		super.prepare();
 		this.iyaAnnouncements = this.iyaService.iyaAnnoucements();
 		this.iyaRegistrations = this.iyaService.iyaRegistrations();
+		this.iyaEvaluations = this.iyaService.iyaEvaluations();
 	}
 
 	/**
@@ -129,6 +135,48 @@ public class DashboardIyaAction extends BaseAction implements Preparable {
 	 */
 	public List<IYARegistration> getIyaRegistrations() {
 		return iyaRegistrations;
+	}
+
+	/**
+	 * @param iyaEvaluations the iyaEvaluations to set
+	 */
+	public void setIyaEvaluations(List<IYAEvaluation> iyaEvaluations) {
+		this.iyaEvaluations = iyaEvaluations;
+	}
+
+	/**
+	 * @return the iyaEvaluations
+	 */
+	public List<IYAEvaluation> getIyaEvaluations() {
+		return iyaEvaluations;
+	}
+
+	/**
+	 * @param evaluations the evaluations to set
+	 */
+	public void setEvaluations(PagedResult<IYAEvaluation> evaluations) {
+		this.evaluations = evaluations;
+	}
+
+	/**
+	 * @return the evaluations
+	 */
+	public PagedResult<IYAEvaluation> getEvaluations() {
+		return evaluations;
+	}
+
+	/**
+	 * @param evaluation the evaluation to set
+	 */
+	public void setEvaluation(IYAEvaluation evaluation) {
+		this.evaluation = evaluation;
+	}
+
+	/**
+	 * @return the evaluation
+	 */
+	public IYAEvaluation getEvaluation() {
+		return evaluation;
 	}
 	
 	

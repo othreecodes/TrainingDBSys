@@ -56,6 +56,7 @@ import org.iita.trainingunit.applications.model.BCodeStatus;
 import org.iita.trainingunit.applications.model.BudgetCode;
 import org.iita.trainingunit.applications.model.Application.APPLICATIONSTATUS;
 import org.iita.trainingunit.applications.service.impl.CDOApplicationException;
+import org.iita.trainingunit.iya.model.IYATrainingAnnouncement;
 import org.iita.trainingunit.model.Alert;
 import org.iita.trainingunit.model.Alert.AlertType;
 import org.iita.trainingunit.model.Alert.NotifyStatus;
@@ -2434,5 +2435,15 @@ public class TrainingUnitServiceImpl extends CoreCRMServiceImpl implements Train
 				.createQuery("select count(distinct bc.internalApproval.application) from BudgetCode bc where bc.budgetHolder=:user").setParameter("user", user)
 				.getSingleResult());
 		return paged;
+	}
+	
+	/**
+	 * @see org.iita.trainingunit.service.TrainingProgramService#loadAnnouncement(java.lang.Long)
+	 */
+	@Override
+	@Transactional
+	@Secured( { "ROLE_USER", "ROLE_CRM", "BF_USERACCESS" })
+	public IYATrainingAnnouncement loadIYAAnnouncement(Long id) {
+		return this.entityManager.find(IYATrainingAnnouncement.class, id);
 	}
 }

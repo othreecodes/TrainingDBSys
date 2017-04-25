@@ -3,9 +3,8 @@
 <title>IYA Announcement form</title>
 </head>
 <s:form namespace="/iya" action="save-announcement" method="post">
-	<s:hidden name="announcement.version" value="%{announcement.version}" />
 	<s:if test="id!=null">
-		<s:hidden name="id" value="%{id}" />
+		<s:hidden name="announcement.id" value="%{id}" />
 	</s:if>
 	<table class="inputform">
 		<colgroup>
@@ -17,21 +16,17 @@
 			<td>Sponsor:</td>
 			<td><s:url namespace="/ajax" action="public-ajax" id="xx" /> <iita:autocompleter
 				cssClass="organization" name="announcement.sponsor"
-				id="announcement.sponsor.id" submitTextTo="sponsor" listKey="title"
-				listValue="title" url="%{xx}" method="autocompleteOrganization"
-				value="%{announcement.sponsor.id}"
+				id="announcement.sponsor" listKey="title" listValue="title"
+				url="%{xx}" method="autocompleteOrganization"
 				displayValue="%{announcement.sponsor}" /></td>
 		</tr>
-
 		<tr>
 			<td>Organizer:</td>
 			<td><s:url namespace="/ajax" action="public-ajax" id="xxx" /> <iita:autocompleter
 				cssClass="organization" name="announcement.organizer"
-				id="announcement.id" listKey="title" listValue="title"
+				id="announcement.organizer" listKey="title" listValue="title"
 				url="%{xxx}" method="autocompleteOrganization"
-				value="%{announcement.organizer.id}"
-				submitTextTo="organizer" displayValue="%{announcement.organizer}" />
-			</td>
+				displayValue="%{announcement.organizer}" /></td>
 		</tr>
 
 		<tr>
@@ -70,11 +65,14 @@
 			</td>
 		</tr>
 
+
 		<tr>
 			<td>Training Course/Module:</td>
 			<td><s:textarea name="announcement.trainingCourse"
-				value="%{announcement.trainingCourse}"></s:textarea></td>
+				value="%{announcement.trainingCourse}" /></td>
+
 		</tr>
+
 
 		<tr>
 			<td valign="top">Location/Venue Information:</td>
@@ -202,8 +200,15 @@
 
 		<tr>
 			<td></td>
-			<td><s:submit value="Update" cssClass="btn btn-warning"
-				onclick="javascript: return confirm('Are you sure you want to update this record?');" /></td>
+			<td><s:if test="announcement.id==null || announcement.id<=0">
+				<s:submit value="Submit"
+					onclick="javascript: return confirm('Are you sure you want to save this record?');"
+					cssClass="btn btn-warning" />
+			</s:if><s:else>
+				<s:submit value="Update" action="announcement/save-edit"
+					cssClass="btn btn-warning"
+					onclick="javascript: return confirm('Are you sure you want to update this record?');" />
+			</s:else></td>
 		</tr>
 	</table>
 </s:form>

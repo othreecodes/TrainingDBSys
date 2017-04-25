@@ -21,6 +21,7 @@ import org.iita.trainingunit.announcements.model.TrainingLocation;
 import org.iita.trainingunit.announcements.model.TrainingProposal;
 import org.iita.trainingunit.applications.model.Application;
 import org.iita.trainingunit.applications.service.impl.CDOApplicationException;
+import org.iita.trainingunit.iya.model.IYATrainingAnnouncement;
 import org.iita.trainingunit.model.Trainee;
 import org.iita.trainingunit.model.TraineeTag;
 import org.iita.trainingunit.model.Trainer;
@@ -263,4 +264,6 @@ public interface TrainingUnitService extends CoreCRMService, TraineeService, Tra
 	PagedResult<Application> getMyBcApplications(User user, int startAt, int maxResults);
 
 	PagedResult<StaffDevelopment> getAwaitingStaffDevApproval(User user, int startAt, int maxResults) throws CDOApplicationException;
+	
+	IYATrainingAnnouncement loadIYAAnnouncement(Long id);
 }

@@ -121,40 +121,122 @@
 	</package>
 	
 	<package namespace="/iya" name="agripreneur-browsing" extends="default">
-		
+
 		<action name="index" class="dashboardIyaAction">
 			<result>/WEB-INF/jsp/iya/index.jsp</result>
 		</action>
-		
-		<action name="save-announcement" class="iyaAnnouncementAction" method="saveAnnouncement">
-			<result name="error">/WEB-INF/jsp/iya/announcement.jsp</result>
-			<result name="success" type="redirect-action">index</result>
-		</action>		
-		<action name="announcement" class="iyaAnnouncementAction" method="input">
+
+		<action name="save-announcement" class="iyaAnnouncementAction"	method="saveAnnouncement">
+			<result name="input">/WEB-INF/jsp/iya/announcement.jsp</result>
+			<result name="success" >/WEB-INF/jsp/iya/announcement_details.jsp</result>
+		</action>
+		<action name="announcement" class="iyaAnnouncementAction"
+			method="input">
 			<result name="input">/WEB-INF/jsp/iya/announcement.jsp</result>
 			<result name="success" type="redirect-action">index</result>
 		</action>
 		<action name="announcements" class="iyaAnnouncementAction">
-			<result name="success">/WEB-INF/jsp/iya/announcementslisting.jsp</result>
+			<result name="success">/WEB-INF/jsp/iya/announcementslisting.jsp
+			</result>
 			<result name="error" type="redirect-action">index</result>
+		</action>
+		<action name="announcement/view" class="iyaAnnouncementAction"
+			method="details">
+			<result name="success">/WEB-INF/jsp/iya/announcement_details.jsp
+			</result>
+			<result name="error" type="redirect-action">index</result>
+		</action>
+
+		<action name="announcement/edit" class="iyaAnnouncementAction">
+			<result name="success">/WEB-INF/jsp/iya/announcement_edit.jsp</result>					
+		</action>
+
+		<action name="announcement/delete" class="iyaAnnouncementAction" method="removeAnnouncement">
+			<result name="success" type="redirect-action">announcements</result>
+			<result name="error">index</result>
+		</action>
+
+
+		<action name="registration" class="iyaRegistrationAction"
+			method="input">
+			<result name="input">/WEB-INF/jsp/iya/registration.jsp</result>
+			<result name="success" type="redirect-action">index</result>
+		</action>
+		<action name="save-registration" class="iyaRegistrationAction"
+			method="saveRegistration">
+			<result name="input">/WEB-INF/jsp/iya/registration.jsp</result>
+			<result name="success">/WEB-INF/jsp/iya/registration_details.jsp</result>
+		</action>
+
+		<action name="registration/view" class="iyaRegistrationAction"
+			method="details">
+			<result name="success">/WEB-INF/jsp/iya/registration_details.jsp
+			</result>
+			<result name="error" type="redirect-action">index</result>
+		</action>
+
+		<action name="registrations" class="iyaRegistrationAction" method="list">
+			<result name="success">/WEB-INF/jsp/iya/registrationslisting.jsp
+			</result>
+			<result name="error" type="redirect-action">index</result>
+		</action>
+
+		<action name="registration/edit" class="iyaRegistrationAction">
+			<result name="success">/WEB-INF/jsp/iya/registration_edit.jsp</result>
+		</action>
+
+		<action name="registration/delete" class="iyaRegistrationAction" method="removeRegistration">
+			<result name="success" type="redirect-action">registrations</result>
+			<result name="error">index</result>
+		</action>
+
+		<action name="registration/appraise" class="iyaRegistrationAction" method="input">
+			<result name="input">/WEB-INF/jsp/iya/evaluation.jsp</result>
+			<result name="success" type="redirect-action">index</result>
+		</action>
+		
+		
+
+		<action name="evaluation" class="iyaEvaluationAction" method="input">
+			<result name="input">/WEB-INF/jsp/iya/evaluation.jsp</result>
+			<result name="success" type="redirect-action">index</result>
 		</action>		
-		<action name="announcement/view" class="iyaAnnouncementAction" method="details">
-			<result name="success">/WEB-INF/jsp/iya/announcement_details.jsp</result>
+
+		<action name="save-evaluation" class="iyaEvaluationAction" method ="saveEvaluation">
+			<result name="success">/WEB-INF/jsp/iya/evaluation_details.jsp</result>
+		</action>
+
+		<action name="evaluation/view" class="iyaEvaluationAction" method="details">
+			<result name="success">/WEB-INF/jsp/iya/evaluation_details.jsp</result>
 			<result name="error" type="redirect-action">index</result>
 		</action>
 		
-		<action name="announcement/edit" class="iyaAnnouncementAction" method="input">
-			<result name="input">/WEB-INF/jsp/iya/announcement_edit.jsp</result>
+		<action name="evaluations" class="iyaEvaluationAction" method="list">
+			<result name="success">/WEB-INF/jsp/iya/evaluationslisting.jsp
+			</result>
 			<result name="error" type="redirect-action">index</result>
-			<result name="success" type="redirect-action">announcements</result>
+		</action>
+		<action name="evaluation/edit" class="iyaEvaluationAction">	
+			<result name="success">/WEB-INF/jsp/iya/evaluation_edit.jsp</result>					
 		</action>
 		
-		<action name="announcement/save-edit" class="iyaAnnouncementEditAction" method="edit">
-			<result name="input">/WEB-INF/jsp/iya/announcement_edit.jsp</result>
-			<result name="error" type="redirect-action">index</result>
-			<result name="success" type="redirect-action">announcements</result>
+		<action name="evaluation/delete" class="iyaEvaluationAction" method="removeEvaluation">
+			<result name="success" type="redirect-action">evaluations</result>
+			<result name="error">index</result>
 		</action>
-	</package>
+		
+		<action name="radioButtonAction" class="org.iita.trainingunit.iya.action.RadioButtonAction"
+			method="display">
+			<result name="none">/WEB-INF/jsp/iya/radiobutton.jsp</result>
+		</action>
+	
+		<action name="resultAction" class="org.iita.trainingunit.iya.action.RadioButtonAction">
+			<result name="success">/WEB-INF/jsp/iya/result.jsp</result>
+		</action>     
+		<action name="evaresultAction" class="org.iita.trainingunit.iya.action.IyaEvaluationAction">
+			<result name="success">/WEB-INF/jsp/iya/evaresult.jsp</result>
+		</action>         
+	</package>	
 	
 	<package namespace="/applicant" name="applicant-browsing" extends="default">
 		<action name="index" class="dashboardActionApplicant">
