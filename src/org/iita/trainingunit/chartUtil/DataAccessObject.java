@@ -29,12 +29,12 @@ public class DataAccessObject
 	
 	private static Connection dbConnection = null;
 	private static final String dbDriver = "com.mysql.jdbc.Driver";//configProp.getProperty("database.driver");//
-	//private static final String dbUrl = "jdbc:mysql://localhost/training?useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8";
-	private static final String dbUrl = "jdbc:mysql://mysql1.iita.cgiarad.org/training?useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8";
+	private static final String dbUrl = "jdbc:mysql://localhost/training?useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8";
+	//private static final String dbUrl = "jdbc:mysql://mysql1.iita.cgiarad.org/training?useUnicode=true&amp;connectionCollation=utf8_general_ci&amp;characterSetResults=utf8&amp;characterEncoding=utf8";
 	
 	private static final String dbUser = "root";
 	//configProp.getProperty("database.username");//
-	private static final String dbPassword = "mysql";
+	private static final String dbPassword ="";
 	//configProp.getProperty("database.password");//
 	
 	public static Connection getConnection() {
