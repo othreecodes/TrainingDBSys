@@ -801,6 +801,14 @@
 			<result name="error">/WEB-INF/jsp/generic-error.jsp</result>
 		</action>
 		
+		
+	<!-- External training sat may 14th-->
+		
+		<action name="ext-training" >		
+			<result>/WEB-INF/jsp/training/ext_training.jsp</result>	
+		</action>
+			
+		
 		<!-- Index form remapping -->
 		<action name="person-register" class="dashboardAction" method="regPerson">	
 			<result name="regPerson">/WEB-INF/jsp/indexforms/reg-person.jsp</result>
