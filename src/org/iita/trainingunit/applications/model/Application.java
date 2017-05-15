@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.iita.trainingunit.applications.model;
 
 import java.util.ArrayList;

@@ -795,6 +795,10 @@
 			<result>/WEB-INF/jsp/upload-report.jsp</result>
 		</action>
 		
+		<action name="external-training" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction">
+			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+		</action>
+		
 		<action name="readonly" class="viewApplicationAction">
 			<!-- <result>/WEB-INF/jsp/request/view-application-details.jsp</result> -->
 			<result>/WEB-INF/jsp/review/include/application-review.jsp</result>
