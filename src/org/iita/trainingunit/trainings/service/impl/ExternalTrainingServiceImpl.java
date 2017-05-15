@@ -10,7 +10,10 @@ public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 	protected EntityManager entityManager;
 	@Override
 	public void saveTraining(ExternalTraining training) {
-		 
+		
+		System.out.print("I got here tho");
+		this.entityManager.persist(training);
+		System.out.print("I passed");
 		
 	}
 

@@ -103,13 +103,13 @@
 
 
 								<div class="row">
-									<!-- Organization.-->
+									<!-- Job Title.-->
 									<div class="col-xs-12 col-md-12">
-										<label for="organization" class="col-xs-6"><strong>Job
+										<label for="jobtitle" class="col-xs-6"><strong>Job
 												Title: <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="Organization" name=""
-											value="%{training.organisation}" />
+										<s:textfield cssClass="form-control" id="jobtitle" name=""
+											value="%{training.jobTitle}" />
 									</div>
 								</div>
 

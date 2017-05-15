@@ -74,6 +74,77 @@ public class ExternalTraining extends VersionedEntity {
 	public void setGaintFromCourse(String gaintFromCourse) {
 		this.gaintFromCourse = gaintFromCourse;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getOtherNames() {
+		return otherNames;
+	}
+	public void setOtherNames(String otherNames) {
+		this.otherNames = otherNames;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getOfficeAddress() {
+		return officeAddress;
+	}
+	public void setOfficeAddress(String officeAddress) {
+		this.officeAddress = officeAddress;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
 	
 
 }
