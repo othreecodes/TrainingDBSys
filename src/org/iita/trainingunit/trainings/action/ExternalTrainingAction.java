@@ -1,9 +1,10 @@
 package org.iita.trainingunit.trainings.action;
 
-import org.iita.trainingunit.staff.model.StaffDevelopment.APPROVALSTATUS;
-import org.iita.trainingunit.staff.model.StaffDevelopment.STATUS;
+
+import org.iita.trainingunit.announcements.service.AnnouncementService;
 import org.iita.trainingunit.trainings.model.ExternalTraining;
-import org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl;
+import org.iita.trainingunit.trainings.service.ExternalTrainingService;
+
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.Preparable;
@@ -18,9 +19,15 @@ public class ExternalTrainingAction implements Preparable{
 		
 		return Action.SUCCESS;
 	}
+	
+	
 
 	ExternalTraining training;
-	private ExternalTrainingServiceImpl trainingService;
+	private ExternalTrainingService trainingService;
+	public ExternalTrainingAction(ExternalTrainingService externalTrainingService) {
+		this.trainingService = externalTrainingService;
+	}
+	
 	@Override
 	public void prepare() throws Exception {
 		 

@@ -799,7 +799,7 @@
 			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
 		</action>  
 		
-		<action name="apply" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction" method="apply">
+		<action name="apply" class="externalTrainingAction" method="apply">
 			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
 		</action>  
 		
