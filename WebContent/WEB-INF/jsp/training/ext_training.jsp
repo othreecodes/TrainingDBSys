@@ -1,12 +1,20 @@
 <%@ include file="/common/taglibs.jsp"%>
 
+<html lang="en">
+<head>
+    <title>External Training Registration</title>
+    <style type="text/css">
+		.singleColumn{ padding-left: 5px; font-weight:normal;}
+		.lr{float:left; width:100%}
+	</style>
+</head>
 
-	<div class=" col col-sm-12 actionMessage">
-		<s:form id="evaluation" namespace="/staff" action="evaluation" method="post">
+	<div class="container-fluid">
+		<s:form id="" namespace="" action="" method="post">
 			<s:if test="id!=null">
 				<s:hidden name="id" value="%{id}" />
-				<s:if test="evaluationId!=null">
-					<s:hidden name="evaluationId" value="%{evaluationId}" />
+				<s:if test="">
+					<s:hidden name="" value="%{}" />
 				</s:if>
 			</s:if>
 			
@@ -19,250 +27,194 @@
 			        <tr>
 			            <td></td>
 			            <td>
-			            	<s:if test="sd!=null && sd.evaluation.evaluationStatus==@org.iita.trainingunit.staff.model.StaffDevelopmentEvaluation$EVALUATIONSTATUS@OPEN">
-		           			<s:submit cssClass="btn btn-primary pull-right" action="evaluation!finalized" value="Finalize Evaluation" onclick="if(confirm('Submit your application evaluation form anyway?')){return true;}else{return false;}" />
+			            	<s:if test="">
+		           			<s:submit cssClass="btn btn-primary pull-right" action="evaluation!finalized" value="Finalize Registeration" onclick="if(confirm('Submit your application evaluation form anyway?')){return true;}else{return false;}" />
 		           		</s:if>
 		           		<s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" />
 			            </td>
 			        </tr>
 			</table>
+			
 			<div>
 				<div>
 					<h3>Registration Form (External Training)</h3>
-				    <table id="evaluationTable" class="table">
-				    	<tr>
+				    
+				    
+		<table id="" class="table">		 
+				    	<tr>				    	
 							<td>
-								<table id="evaluationTable" class="table">
-									<colgroup>
-										<col />
-										<col width="150px" />
-										<col width="150px" />
-										<col width="150px" />
-										<col width="150px" />
-										<col width="150px" />
-									</colgroup>
-									<thead>
-										<tr>
-											<th></th>
-											<th>Strongly Agree</th>
-											<th>Agree</th>
-											<th>Neutral</th>
-											<th>Disagree</th>
-											<th>Strongly Disagree</th>
-										</tr>
-									</thead>
-										
-							    	<tr>
-							    		<td>The training objectives were met? <em><font style="color:#ff0000">*</font></em></td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="objMet1" name="objMet" value="%{objMet}" list="#{'STRONGLYAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="objMet2" name="objMet" value="%{objMet}" list="#{'AGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-								        </td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="objMet4" name="objMet" value="%{objMet}" list="#{'NEUTRAL':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="objMet3" name="objMet" value="%{objMet}" list="#{'DISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="objMet5" name="objMet" value="%{objMet}" list="#{'STRONGLYDISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-								    </tr>
-								    
-								    <tr>
-							    		<td>The training enhanced my knowledge and skills? <em><font style="color:#ff0000">*</font></em></td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="skillEnhanced1" name="skillEnhanced" value="%{skillEnhanced}" list="#{'STRONGLYAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="skillEnhanced2" name="skillEnhanced" value="%{skillEnhanced}" list="#{'AGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-								        </td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="skillEnhanced4" name="skillEnhanced" value="%{skillEnhanced}" list="#{'NEUTRAL':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="skillEnhanced3" name="skillEnhanced" value="%{skillEnhanced}" list="#{'DISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="skillEnhanced5" name="skillEnhanced" value="%{skillEnhanced}" list="#{'STRONGLYDISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-								    </tr>
-								    
-								    <tr>
-							    		<td>Information could be applied to practice? <em><font style="color:#ff0000">*</font></em></td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="appliedPractice1" name="appliedPractice" value="%{appliedPractice}" list="#{'STRONGLYAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="appliedPractice2" name="appliedPractice" value="%{appliedPractice}" list="#{'AGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-								        </td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="appliedPractice4" name="appliedPractice" value="%{appliedPractice}" list="#{'NEUTRAL':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="appliedPractice3" name="appliedPractice" value="%{appliedPractice}" list="#{'DISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="appliedPractice5" name="appliedPractice" value="%{appliedPractice}" list="#{'STRONGLYDISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-								    </tr>
-								    
-								    <tr>
-							    		<td>The course will be of value to me in my role? <em><font style="color:#ff0000">*</font></em></td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="valueRole1" name="valueRole" value="%{valueRole}" list="#{'STRONGLYAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="valueRole2" name="valueRole" value="%{valueRole}" list="#{'AGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-								        </td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="valueRole4" name="valueRole" value="%{valueRole}" list="#{'NEUTRAL':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="valueRole3" name="valueRole" value="%{valueRole}" list="#{'DISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-										<td>
-											<div class="row">
-								            	<div class="form-group">
-									                <div class="col-xs-12 col-md-12">
-									                	<s:radio id="valueRole5" name="valueRole" value="%{valueRole}" list="#{'STRONGLYDISAGREE':''}" />     
-									                </div>
-								                </div>
-								            </div>
-										</td>
-								    </tr>
-								</table>
-							</td>
-						</tr>
-				    	<tr>
-							<td>
+							
+							
+														
+			<!-- title.-->  		
+					<div class="row">
+						<div class="form-group">			
+							<div class="col-xs-12 col-md-3">
+				                <label for="lastname" class="col-xs-6"><strong>Title (Dr., Mr., Mrs., etc.):<font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="title" name="" value="%{training.title}" />
+				            </div>
+				        </div>
+			        </div>
+			        
+						
+			<!-- Surname.-->  
+					<div class="row">
+						<div class="form-group">			
+							<div class="col-xs-12 col-md-6">
+				                <label for="Surname" class="col-xs-6"><strong>Surname:<font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="Surname" name="" value="%{training.surname}" />
+				            </div>
+				            
+			<!-- First name-->  		            
+				            <div class="col-xs-12 col-md-6">
+				                <label for="firstname" class="col-xs-6"><strong>First Name: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="firstname" name="" value="%{training.firstname}" />
+				            </div>
+				        </div>
+			        </div>		
+							
+			 		<div class="row">
+						<div class="form-group">						
+			<!-- Gender.-->  			
+							<div class="col-xs-12 col-md-6">
+				                <label for="gender" class="col-xs-6"><strong>Gender:<font style="color:#ff0000">*</font></strong></label>
+				             
+				                <s:select cssClass="form-control" name="" list="#{'-':' select gender', 'MALE':' MALE',' FEMALE':'FEMALE'}" value="%{training.gender}" />
+				            </div>
+				           
+				           
+				            
+			<!--Nationality-->  		            
+				            <div class="col-xs-12 col-md-6">
+				                <label for="firstname" class="col-xs-6"><strong>Nationality: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="Nationality" name="" value="%{training.nationality}" />
+				            </div>
+				        </div>
+			        </div>
+			     
+       
+			        
+			 	<div class="row">								
+			<!-- jobtitle.-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="jobtitle" class="col-xs-6"><strong>Job Title: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="jobtitle" name="" value="%{training.jobtitle}" />
+				            </div>			
+			        </div>       
+			        
+			   <div class="row">								
+			<!-- Organization.-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="Organization" class="col-xs-6"><strong>Organization:<font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="Organization" name="" value="%{training.organization}" />
+				            </div>			
+			        </div>          
+			        
+			        
+			  <div class="row">								
+			<!-- Office Address.-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="OfficeAddress" class="col-xs-6"><strong>Office Address: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="OfficeAddress" name="" value="%{training.officeAddress}" />
+				            </div>			
+			        </div>          
+			              
+			 
+			 			<div class="row">								
+			<!-- Phone.-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="Phone" class="col-xs-6"><strong>Phone (preferable Mobile):<font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="Phone" name="" value="%{training.phone}" />
+				            </div>			
+			        </div>       				
+						
+						
+					<div class="row">								
+			<!-- E-mail Address: .-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="Email" class="col-xs-6"><strong>E-mail Address: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="Email" name="" value="%{training.email}" />
+				            </div>			
+			        </div>     		
+						
+						
+						
+					<div class="row">
+			<!-- Most recent Education: .-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="recentEduc" class="col-xs-6"><strong>Most recent Education:  <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="recentEduc" name="" value="%{training.recentEducation}" />
+				            </div>			
+			        </div>  		
+						
+			
+			<div class="row">
+			<!-- Relevant areas of interest .-->  			
+							<div class="col-xs-12 col-md-12">
+				                <label for="interest" class="col-xs-6"><strong>Relevant areas of interest:  <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="interest" name="" value="%{training.areasInterest}" />
+				            </div>			
+			        </div>  		
+		
+		<!-- Please tell us what you hope to gain from this course.-->  	
 					            <div class="row">
 					            	<div class="form-group">
 						                <div class="col-xs-12 col-md-12">
-						                	<label for="additionalComment" class="col-xs-12"><strong>Please tell us what you hope to gain from this course./strong></label>
-						                	<s:textarea cssClass="form-control" id="additionalComments" name="additionalComments" value="%{additionalComments}" />     
+						                	<label for="gainfromthiscourse" class="col-xs-12"><strong>Please tell us what you hope to gain from this course.</label>
+						                	<s:textarea cssClass="form-control" id="" name="" value="%{training.gainCourse}" />     
 						                </div>
 					                </div>
 					            </div>
+					            
+				
+					<div class="row">
+			<!-- Name in Full:  .-->  	
+					
+							<div class="col-xs-12 col-md-12">
+				                <label for="fullName" class="col-xs-6"><strong>Name in Full: :  <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="fullName" name="" value="%{training.fullname}" />
+				            </div>	
+				            <div><em>* <font style="color:#ff0000">(As you would like it to appear in your certificate)</font></em></div>
+					
+			        </div>  		
+								            
+			<!-- Signature 
+					<div class="row">
+						<div class="form-group">			
+							<div class="col-xs-12 col-md-6">
+				                <label for="signature" class="col-xs-6"><strong>Signature:<font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="signature" name="" value="%{}" />
+				            </div>
+				            
+			 		            
+				            <div class="col-xs-12 col-md-6">
+				                <label for="date" class="col-xs-6"><strong>Date: <font style="color:#ff0000">*</font></strong></label>
+				                <s:textfield cssClass="form-control" id="date" name="" value="%{}" />
+				            </div>
+				        </div>
+			        </div>		
+									            
+	       .-->  
+					            
 							</td>
-						</tr>
+						</tr>		
 				    </table>
+			
+			<div>
+					<ul>
+					 <li>Registration is subject to confirmation of received payment, please send payment confirmation to <font style="color:#ff0000">*IITA-TrainingUnit@cgiar.org</font>
+					</li>
+					 <li>Please send completed registration form to <font style="color:#ff0000">*IITA-TrainingUnit@cgiar.org</font>
+					</li>
+					 <li>IITA reserves the right to cancel a course 4 weeks to the start date of the course 
+					</li>
+					</ul>
+			</div>	
+			
+			
+			
+			
+			   
 				</div>
 				<table class="inputform">
 			    <colgroup>
@@ -272,10 +224,10 @@
 			        <tr>
 			            <td></td>
 			            <td>
-			            	<s:if test="sd!=null && sd.evaluation.evaluationStatus==@org.iita.trainingunit.staff.model.StaffDevelopmentEvaluation$EVALUATIONSTATUS@OPEN">
-		           			<s:submit cssClass="btn btn-primary pull-right" action="evaluation!finalized" value="Finalize Evaluation" onclick="if(confirm('Submit your application evaluation form anyway?')){return true;}else{return false;}" />
+			            	<s:if test="">
+		           			<s:submit cssClass="btn btn-primary pull-right" action="" value="" onclick="if(confirm('Submit your Registeration form anyway?')){return true;}else{return false;}" />
 		           		</s:if>
-		           		<s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" />
+		           		<s:submit cssClass="btn btn-primary pull-right" value="Submit Form" />
 			            </td>
 			        </tr>
 			</table>

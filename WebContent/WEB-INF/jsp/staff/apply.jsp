@@ -16,6 +16,8 @@
 	<s:submit value="Go to list!" cssClass="btn btn-success" cssStyle="align: right" />
 </s:form>
 </div>
+
+
 <div class="container-fluid">
 <h2>Reference Number: <s:property value="staffDev.referenceNumber" /> (<s:property value="staffDev.owner.fullName" />)</h2>
 	<div class="notice">
