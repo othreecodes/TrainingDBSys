@@ -8,7 +8,7 @@
 
 
 	<div class="container-fluid">
-		<s:form id="" namespace="" action="" method="post">
+		<s:form id="" namespace="/" action="apply" method="post">
 			<s:if test="id!=null">
 				<s:hidden name="id" value="%{training.id}" />
 				<s:if test="">
@@ -51,7 +51,7 @@
 											<label for="lastname" class="col-xs-6"><strong>Title
 													(Dr., Mr., Mrs., etc.):<font style="color: #ff0000">*</font>
 											</strong></label>
-											<s:textfield cssClass="form-control" id="title" name=""
+											<s:textfield cssClass="form-control" id="title" name="training.title"
 												value="%{training.title}" />
 										</div>
 									</div>
@@ -61,7 +61,7 @@
 										<div class="col-xs-12 col-md-6">
 											<label for="Surname" class="col-xs-6"><strong>Surname:<font
 													style="color: #ff0000">*</font></strong></label>
-											<s:textfield cssClass="form-control" id="Surname" name=""
+											<s:textfield cssClass="form-control" id="Surname" name="training.lastName"
 												value="%{training.lastName}" />
 										</div>
 
@@ -70,7 +70,7 @@
 											<label for="firstname" class="col-xs-6"><strong>First
 													Name: <font style="color: #ff0000">*</font>
 											</strong></label>
-											<s:textfield cssClass="form-control" id="firstname" name=""
+											<s:textfield cssClass="form-control" id="firstname" name="training.firstName"
 												value="%{training.firstName}" />
 										</div>
 									</div>
@@ -83,7 +83,7 @@
 											<label for="gender" class="col-xs-6"><strong>Gender:<font
 													style="color: #ff0000">*</font></strong></label>
 			
-				           	  				   <s:radio id="gender" name="gender" value="%{training.gender}" list="#{'Female':'FEMALE','Male':'MALE'}" />
+				           	  				   <s:radio id="gender" name="training.gender" value="%{training.gender}" list="#{'Female':'FEMALE','Male':'MALE'}" />
 				                
 										</div>
 
@@ -94,7 +94,7 @@
 											<label for="firstname" class="col-xs-6"><strong>Nationality:
 													<font style="color: #ff0000">*</font>
 											</strong></label>
-											<s:textfield cssClass="form-control" id="Nationality" name=""
+											<s:textfield cssClass="form-control" id="Nationality" name="training.country"
 												value="%{training.country}" />
 										</div>
 									</div>
@@ -108,7 +108,7 @@
 										<label for="jobtitle" class="col-xs-6"><strong>Job
 												Title: <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="jobtitle" name=""
+										<s:textfield cssClass="form-control" id="jobtitle" name="training.jobTitle"
 											value="%{training.jobTitle}" />
 									</div>
 								</div>
@@ -119,7 +119,7 @@
 										<label for="Organization" class="col-xs-6"><strong>Organization:<font
 												style="color: #ff0000">*</font></strong></label>
 										<s:textfield cssClass="form-control" id="Organisation"
-											name="" value="%{training.organization}" />
+											name="training.organization" value="%{training.organization}" />
 									</div>
 								</div>
 
@@ -131,7 +131,7 @@
 												Address: <font style="color: #ff0000">*</font>
 										</strong></label>
 										<s:textfield cssClass="form-control" id="OfficeAddress"
-											name="" value="%{training.officeAddress}" />
+											name="training.officeAddress" value="%{training.officeAddress}" />
 									</div>
 								</div>
 
@@ -142,7 +142,7 @@
 										<label for="Phone" class="col-xs-6"><strong>Phone
 												(preferable Mobile):<font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="Phone" name=""
+										<s:textfield cssClass="form-control" id="Phone" name="training.phone"
 											value="%{training.phone}" />
 									</div>
 								</div>
@@ -154,7 +154,7 @@
 										<label for="Email" class="col-xs-6"><strong>E-mail
 												Address: <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="Email" name=""
+										<s:textfield cssClass="form-control" id="Email" name="training.email"
 											value="%{training.email}" />
 									</div>
 								</div>
@@ -167,7 +167,7 @@
 										<label for="recentEduc" class="col-xs-6"><strong>Most
 												recent Education: <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="recentEduc" name=""
+										<s:textfield cssClass="form-control" id="recentEduc" name="training.educationalInfo"
 											value="%{training.educationalInfo}" />
 									</div>
 								</div>
@@ -179,7 +179,7 @@
 										<label for="interest" class="col-xs-6"><strong>Relevant
 												areas of interest: <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="interest" name=""
+										<s:textfield cssClass="form-control" id="interest" name="training.RelevantAreasInterest"
 											value="%{training.RelevantAreasInterest}" />
 									</div>
 								</div> <!-- Please tell us what you hope to gain from this course.-->
@@ -188,7 +188,7 @@
 										<div class="col-xs-12 col-md-12">
 											<label for="gainfromthiscourse" class="col-xs-12"><strong>Please
 													tell us what you hope to gain from this course.</label>
-											<s:textarea cssClass="form-control" id="" name="" value="%{training.gaintFromCourse}" />
+											<s:textarea cssClass="form-control" id="" name="training.gaintFromCourse" value="%{training.gaintFromCourse}" />
 										</div>
 									</div>
 								</div>
@@ -201,7 +201,7 @@
 										<label for="fullName" class="col-xs-6"><strong>Name
 												in Full: : <font style="color: #ff0000">*</font>
 										</strong></label>
-										<s:textfield cssClass="form-control" id="fullName" name=""
+										<s:textfield cssClass="form-control" id="fullName" name="training.fullName"
 											value="%{training.fullName}" />
 									</div>
 									<div>

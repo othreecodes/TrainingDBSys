@@ -5,32 +5,41 @@ import javax.persistence.PersistenceContext;
 
 import org.iita.trainingunit.trainings.model.ExternalTraining;
 import org.iita.trainingunit.trainings.service.ExternalTrainingService;
+import org.springframework.transaction.annotation.Transactional;
 
 public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 
 	protected EntityManager entityManager;
+	
 	@Override
-	public void saveTraining(ExternalTraining training) {
+	@Transactional
+	public ExternalTraining saveTraining(ExternalTraining training) {
 		
-		System.out.print("I got here tho");
-		System.out.print(training.getEmail());
-		this.entityManager.persist(training);
-		System.out.print("I passed");
+		 
+		if(training==null)
+			this.entityManager.persist(training);
+		else
+			this.entityManager.merge(training);
 		
+		 
+		return training;
 	}
 
 	@PersistenceContext
 	public void setEntityManager(EntityManager entityManager) {
 		this.entityManager = entityManager;
 	}
+	
 	@Override
+	@Transactional
 	public void deleteTraining(ExternalTraining training) {
-		ExternalTraining training1 = this.entityManager.find(ExternalTraining.class, training.getId());
-		
+		if(training.getId()!=null)
+			this.entityManager.remove(training);
 		
 	}
 
 	@Override
+	@Transactional(readOnly=true)
 	public ExternalTraining load(Long id) {
 		 
 		return this.entityManager.find(ExternalTraining.class, id);

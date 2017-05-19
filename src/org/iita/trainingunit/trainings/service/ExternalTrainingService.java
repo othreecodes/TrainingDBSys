@@ -8,7 +8,7 @@ import org.iita.trainingunit.trainings.model.ExternalTraining;
 
 public interface ExternalTrainingService {
 	
-	void saveTraining(ExternalTraining training);
+	ExternalTraining saveTraining(ExternalTraining training);
 	void deleteTraining(ExternalTraining training);
 	ExternalTraining load(Long id);
 }

@@ -795,12 +795,17 @@
 			<result>/WEB-INF/jsp/upload-report.jsp</result>
 		</action>
 		
-		<action name="external-training" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction">
+		<action name="external-training" class="externalTrainingAction">
 			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
 		</action>  
+		<action name="external-training-new" class="externalTrainingAction" method="createNew">
+			<result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
+		</action>
 		
 		<action name="apply" class="externalTrainingAction" method="apply">
 			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+			<result name="applied" type="redirect-action">external-training</result>
+			<result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
 		</action>  
 		
 		<action name="readonly" class="viewApplicationAction">
