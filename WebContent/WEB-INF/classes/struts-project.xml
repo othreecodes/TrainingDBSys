@@ -815,12 +815,10 @@
 	<!-- External training sat may 14th-->
 		
 		<action name="ext-training" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction" >		
-			<result name="success">/WEB-INF/jsp/training/ext_training.jsp</result>	
+			<result>/WEB-INF/jsp/training/ext_training.jsp</result>	
 		</action>
 			
-		
-		
-		
+		  
 		
 		
 		
