@@ -795,40 +795,24 @@
 			<result>/WEB-INF/jsp/upload-report.jsp</result>
 		</action>
 		
+		<action name="external-training" class="externalTrainingAction">
+			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+		</action>  
+		<action name="external-training-new" class="externalTrainingAction" method="createNew">
+			<result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
+		</action>
+		
+		<action name="apply" class="externalTrainingAction" method="apply">
+			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+			<result name="applied" type="redirect-action">external-training</result>
+			<result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
+		</action>  
+		
 		<action name="readonly" class="viewApplicationAction">
 			<!-- <result>/WEB-INF/jsp/request/view-application-details.jsp</result> -->
 			<result>/WEB-INF/jsp/review/include/application-review.jsp</result>
 			<result name="error">/WEB-INF/jsp/generic-error.jsp</result>
 		</action>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	<!-- External training sat may 14th-->
-		
-		<action name="ext-training" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction" >		
-			<result>/WEB-INF/jsp/training/ext_training.jsp</result>	
-		</action>
-			
-		  
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		<!-- Index form remapping -->
 		<action name="person-register" class="dashboardAction" method="regPerson">	

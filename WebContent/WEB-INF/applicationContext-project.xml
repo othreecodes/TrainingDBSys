@@ -6,7 +6,9 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
-
+    
+    
+   <bean id="externalTrainingService" class="org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl"></bean>
 	<bean id="searchService" class="org.iita.service.impl.SearchServiceImpl" />
 	<bean id="advancedTrainingSearchService" class="org.iita.trainingunit.service.impl.AdvancedTrainingSearchServiceImpl" scope="prototype" />
 	<bean id="iframeSearchService" class="org.iita.trainingunit.announcements.service.impl.IframeSearchServiceImpl" scope="prototype" />
@@ -496,6 +498,9 @@
 		<constructor-arg ref="trainingUnitService" />
 	</bean>
 
+<bean id="externalTrainingAction" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction" scope="request">
+			<constructor-arg ref="externalTrainingService" />
+	</bean>
 	<!--Liferay WebServices  -->
 	<!--
 		<bean id="journalArticleServiceSoap" class="org.springframework.remoting.jaxrpc.JaxRpcPortProxyFactoryBean"> <property name="serviceInterface"
