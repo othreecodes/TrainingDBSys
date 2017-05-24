@@ -21,8 +21,8 @@ public class PostTrainingEvaluationAction extends BaseAction {
 		return Action.INPUT;
 	}
 	
-	public String apply(){
-		 
+	public String save(){
+		 this.postTrainingEvaluationService.saveEvaluation(postTraining);
 		addActionMessage("Your form has been successfully submitted!");
 		 return Action.SUCCESS;
 	}

@@ -7,21 +7,22 @@ import org.iita.trainingunit.trainings.model.PostTrainingEvaluation;
 import org.iita.trainingunit.trainings.service.PostTrainingEvaluationsService;
 import org.springframework.transaction.annotation.Transactional;
 
-public class PostTrainingEvaluationsServiceImpl implements PostTrainingEvaluationsService{
+public class PostTrainingEvaluationsServiceImpl implements PostTrainingEvaluationsService {
 
-	protected EntityManager entityManager;
-	
-	@Override
-	@Transactional
-	public PostTrainingEvaluation saveEvaluation(PostTrainingEvaluation evaluation) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-	@PersistenceContext
-	public void setEntityManager(EntityManager entityManager) {
-		this.entityManager = entityManager;
-	}
-	
+    protected EntityManager entityManager;
+
+    @Override
+    @Transactional
+    public PostTrainingEvaluation saveEvaluation(PostTrainingEvaluation evaluation) {
+
+        this.entityManager.persist(evaluation);
+        return evaluation;
+    }
+
+    @PersistenceContext
+    public void setEntityManager(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
+
 
 }
