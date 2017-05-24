@@ -1,4 +1,4 @@
-package org.iita.trainingunit.trainings.model;
+ package org.iita.trainingunit.trainings.model;
 
 
 import java.util.List;

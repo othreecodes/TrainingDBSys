@@ -802,6 +802,11 @@
 			<result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
 		</action>
 		
+		<action name="post-training" class="postTrainingEvaluationAction" method="execute">
+			<result name="input">/WEB-INF/jsp/training/post-training.jsp</result>
+		</action>  
+		
+		
 		<action name="apply" class="externalTrainingAction" method="apply">
 			<result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
 			<result name="applied" type="redirect-action">external-training</result>
@@ -816,7 +821,7 @@
 		
 		<!-- Index form remapping -->
 		<action name="person-register" class="dashboardAction" method="regPerson">	
-			<result name="regPerson">/WEB-INF/jsp/indexforms/reg-person.jsp</result>
+			<result name="regPerson">/WEB-INF/jsp/training/post-training.jsp</result>
 		</action>
 		<action name="person-updated" class="dashboardAction" method="regPerson">	
 			<result name="regPerson">/WEB-INF/jsp/indexforms/reg-person.jsp</result>
