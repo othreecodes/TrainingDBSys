@@ -821,7 +821,7 @@
 		
 		<!-- Index form remapping -->
 		<action name="person-register" class="dashboardAction" method="regPerson">	
-			<result name="regPerson">/WEB-INF/jsp/training/post-training.jsp</result>
+			<result name="regPerson">/WEB-INF/jsp/indexforms/reg-person.jsp</result>
 		</action>
 		<action name="person-updated" class="dashboardAction" method="regPerson">	
 			<result name="regPerson">/WEB-INF/jsp/indexforms/reg-person.jsp</result>

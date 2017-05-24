@@ -82,7 +82,7 @@
 
 
 			
-			 <table id="" class="table table-bodered">
+			 <table id="" class="table table-bodered table-responsive">
 				    	<tr>
 							<td>
 								<table id="" class="table table-responsive">
@@ -850,7 +850,7 @@
 				<tr>
 					<td></td>
 					<td><s:submit cssClass="btn btn-primary pull-right"
-							action="apply" value="Submit Form"
+							action="save-form" value="Submit Form"
 							onclick="if(confirm('Submit your Registeration form ?')){return true;}else{return false;}" />
 				</tr>
 			</table>
