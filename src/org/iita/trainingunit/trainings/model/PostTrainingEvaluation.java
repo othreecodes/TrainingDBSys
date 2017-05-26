@@ -1,11 +1,14 @@
 package org.iita.trainingunit.trainings.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.OneToOne;
 
 import org.iita.entity.VersionedEntity;
+import org.iita.trainingunit.applications.model.Application;
 
 @Entity
 public class PostTrainingEvaluation extends VersionedEntity {
@@ -36,10 +39,13 @@ public class PostTrainingEvaluation extends VersionedEntity {
     private STATUS lenghtSufficient;
     private STATUS facilitiesComfortable;
     private RATE rateTraining;
+    
+    private Application application;
 
     private String canbeImproved;
     private String otherComments;
 
+    @Enumerated(EnumType.STRING)
     public STATUS getMetExpectations() {
         return metExpectations;
     }
@@ -201,5 +207,13 @@ public class PostTrainingEvaluation extends VersionedEntity {
         this.room = room;
     }
 
+    public void setApplication(Application application) {
+		this.application = application;
+	}
+	
+	@OneToOne(optional = true, cascade = CascadeType.ALL)
+	public Application getApplication() {
+		return application;
+	}
 
 }

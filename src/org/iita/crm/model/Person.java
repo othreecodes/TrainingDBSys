@@ -146,7 +146,7 @@ public class Person extends VersionedEntity {
 	public User getUser() {
 		return user;
 	}
-
+	 
 	/**
 	 * Sets the user.
 	 * 

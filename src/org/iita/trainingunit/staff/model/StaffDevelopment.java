@@ -88,6 +88,7 @@ public class StaffDevelopment extends VersionedEntity implements UserAccess {
 	public enum STATUS {NEW, SUBMITTED}
 	public enum APPROVALSTATUS {SUPERVISOR, REJECTED, APPROVED, REPORTFILED, WAITINGFORHOD, WAITINGFORCOMMITTEE, WAITINGFORCDO, WAITINGFORDDGPCD}
 	private List<ActionLog> actionLog = new ArrayList<ActionLog>();
+	
 	private List<StaffDevelopmentDocument> documents;
 	private StaffDevelopmentEvaluation evaluation;
 	
