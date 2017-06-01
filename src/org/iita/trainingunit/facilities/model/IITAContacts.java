@@ -1,8 +1,12 @@
 package org.iita.trainingunit.facilities.model;
 
+import javax.persistence.Entity;
+
+import org.iita.entity.VersionedEntity;
 import org.iita.trainingunit.applications.model.BaseEntity;
 
-public class IITAContacts extends BaseEntity {
+@Entity
+public class IITAContacts extends VersionedEntity {
 	
 	private String name;
 	private String email;

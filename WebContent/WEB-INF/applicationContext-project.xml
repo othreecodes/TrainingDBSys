@@ -221,6 +221,8 @@
 		<constructor-arg ref="approvalService" />
 	</bean>
 	
+	
+	
 	<bean id="cdoBiodataProcessAction" scope="request" class="org.iita.trainingunit.applications.action.CDOBiodataProcessAction">
 		<constructor-arg ref="cdoApplicationService" />
 		<constructor-arg ref="announcementService" />
@@ -506,7 +508,8 @@
 	<bean id="postTrainingEvaluationAction" class="org.iita.trainingunit.trainings.action.PostTrainingEvaluationAction" scope="request">
 			<constructor-arg ref="postTrainingEvaluationsService" />
 	</bean>
-		
+		<bean id="useOfFacilitiesAction" scope="request" class="org.iita.trainingunit.facilities.action.UseOfFacilitiesAction">
+	</bean>
 
 
 	<!--Liferay WebServices  -->

@@ -42,7 +42,11 @@ public class Funding extends VersionedEntity {
 		/** Other */
 		OTHER,
 		/** Donor sponsored */
-		DONOR
+		DONOR,
+		/** IITA sponsored */
+		IITA,
+		/** Employer Sponsored **/
+		EMPLOYER
 	}
 
 	/**

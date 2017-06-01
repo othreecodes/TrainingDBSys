@@ -257,7 +257,7 @@
             <result name="inhousegroup">/WEB-INF/jsp/applicant/cdoinhousereg-form.jsp</result>
             <result name="staffdevelopment">/WEB-INF/jsp/applicant/cdostaffdevreg-form.jsp</result>
             <result name="sabbatical">/WEB-INF/jsp/applicant/cdosabbaticalreg-form.jsp</result>
-
+			
             <result name="other">/WEB-INF/jsp/applicant/cdootherreg-form.jsp</result>
             <result name="input" type="redirect-action">index</result>
             <result name="error" type="redirect-action">index</result>
@@ -495,6 +495,11 @@
             <result name="error">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="input">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
         </action>
+		
+		<action name="use-of-facilities" class="useOfFacilitiesAction">
+		<result name="success">/WEB-INF/jsp/facilities/use_of_facilities.jsp</result>
+		
+		</action>
 
         <action name="incomplete" class="cdoBiodataProcessAction" method="execute">
             <result>/WEB-INF/jsp/public/application/bioreg-navigator.jsp</result>
