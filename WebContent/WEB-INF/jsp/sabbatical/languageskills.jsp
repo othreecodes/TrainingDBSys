@@ -1,85 +1,42 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<h3>LANGUAGES SKILLS</h3>
+<h3>LANGUAGE(S) PROFICIENCY</h3>
 <div>
-		<table class="table" id="motherTongueTable">
+		    <table class="inputform" id="languageskills">
 		    <colgroup>
+				<col width="200px" />
+				<col />
+				<col />
+				<col />
 				<col />
 			</colgroup>
 			<tr>
-				<td>
-					<div class="row">
-						<div class="col-xs-12 col-md-12">
-							<label class="col-xs-12">Mother Tongue</label>
-							<s:textfield cssClass="form-control" name="cdoBioData.motherTongue" value="%{cdoBioData.motherTongue}" />
-						</div>
-					</div>
-				</td>
+				<td><em>Spoken Languages</em></td>
+				<td><em>Mother tongue</em></td>
+				<td><em>English:</em></td>
+				<td><em>French:</em></td>
+				<td><em>Portuguese:</em></td>
+				<td><em>Local/Others (Indicate):</em></td>
 			</tr>
-		</table>
-	    <table class="table" id="languageTable">
-	    <colgroup>
-			<col />
-			<col />
-			<col />
-			<col />
-		</colgroup>
-		<tr>
-				<td>Language</td>
-				<td>Read</td>
-				<td>Speak</td>
-				<td>Write</td>
-		</tr>
-		<s:iterator value="cdoBioData.languageSpoken" status="status">
-			<s:set name="langIndex" value="#status.index" />
 			<tr>
+				<td></td>
+				<td><s:textfield name="cdoGraduateApplication.MotherTongue" value="%{cdoGraduateApplication.MotherTongue}" /></td>
 				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{langIndex}].language" 
-					list="#{'English':'English','French':'French','Portuguese':'Portuguese','Others':'Others'}" 
-					value="%{language}" headerKey="" headerValue="--Select language--" />
+					<s:select name="cdoGraduateApplication.englishLanguage" 
+					list="#{'Nil':'Nil','Average':'Average','Good':'Good','Excellent':'Excellent'}" 
+					value="%{cdoGraduateApplication.englishLanguage}" headerKey="" headerValue="--Select--" />
 				</td>
 				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{langIndex}].languageRead" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="%{languageRead}" headerKey="" headerValue="--Select read skill--" />
+					<s:select name="cdoGraduateApplication.frenchLanguage" 
+					list="#{'Nil':'Nil','Average':'Average','Good':'Good','Excellent':'Excellent'}" 
+					value="%{cdoGraduateApplication.frenchLanguage}" headerKey="" headerValue="--Select--" />
 				</td>
 				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{langIndex}].languageSpeak" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="%{languageSpeak}" headerKey="" headerValue="--Select speak skill--" />
+					<s:select name="cdoGraduateApplication.portugueseLanguage" 
+					list="#{'Nil':'Nil','Average':'Average','Good':'Good','Excellent':'Excellent'}" 
+					value="%{cdoGraduateApplication.portugueseLanguage}" headerKey="" headerValue="--Select--" />
 				</td>
-				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{langIndex}].languageWrite" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="%{languageWrite}" headerKey="" headerValue="--Select write skill--" />
-				</td>
+				<td><s:textfield name="cdoGraduateApplication.otherLanguage" value="%{cdoGraduateApplication.otherLanguage}" /></td>
 			</tr>
-		</s:iterator>
-	       	<tr>
-				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{cdoBioData.languageSpoken.size}].language" 
-					list="#{'English':'English','French':'French','Portuguese':'Portuguese','Others':'Others'}" 
-					value="" headerKey="" headerValue="--Select language--" />
-				</td>
-				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{cdoBioData.languageSpoken.size}].languageRead" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="" headerKey="" headerValue="--Select read skill--" />
-				</td>
-				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{cdoBioData.languageSpoken.size}].languageSpeak" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="" headerKey="" headerValue="--Select speak skill--" />
-				</td>
-				<td>
-					<s:select cssClass="form-control" name="cdoBioData.languageSpoken[%{cdoBioData.languageSpoken.size}].languageWrite" 
-					list="#{'Easily':'Easily','Not Easily':'Not Easily'}" 
-					value="" headerKey="" headerValue="--Select write skill--" />
-				</td>
-			</tr>
-			
-			<tr>
-				<td colspan="4"><a onclick="javascript: copyLanguage($($(this).parentNode.parentNode).previous(), 3, 0); return false;">More languages +</a></td>
-			</tr>
-	    </table>
-</div>
+		    </table>
+		</div>

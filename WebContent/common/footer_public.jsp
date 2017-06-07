@@ -22,7 +22,7 @@
          <s:action name="user/notification-quick" namespace="/" executeResult="true" ignoreContextParams="true" />
 	</div>
 		
-	<%-- Render footer notificaiton messages, usually success messages --%>
+	<%-- Render footer notification messages, usually success messages --%>
 	<s:if test="notificationMessages!=null && notificationMessages.size>0">
 		<div id="notificationMessages">
 			<s:iterator value="notificationMessages">

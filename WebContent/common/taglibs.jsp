@@ -9,6 +9,5 @@
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <%@ taglib uri="/struts-iita-tags" prefix="iita" %>
 <%@ taglib prefix='security' uri='http://www.springframework.org/security/tags'%>
-
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
 <c:set var="datePattern"><fmt:message key="date.format"/></c:set>
