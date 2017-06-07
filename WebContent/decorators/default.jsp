@@ -34,7 +34,7 @@
 					</div>
 				</security:authorize>
 				</security:authorize>
-				<h6 class="topbannerH1"><fmt:message key="webapp.name" /></h6>
+				<h6 class="centered"><strong><fmt:message key="webapp.name" /></strong></h6>
 			</div>
 			
     <!-- Fixed navbar -->
