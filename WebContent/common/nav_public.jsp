@@ -17,8 +17,7 @@
 							<li><a href="<s:url namespace="/" action="index" />"><span>System dashboard</span></a></li>
 						</security:authorize>
 					</security:authorize>
-					
-					
+
                     <security:authorize ifNotGranted="ROLE_STAFF,ROLE_APPLICANT">
 	                    <security:authorize ifAnyGranted="ROLE_USER">
 							<li><a href="<s:url namespace="/" action="index" />"><span>Dashboard</span></a></li>

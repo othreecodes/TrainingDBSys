@@ -777,13 +777,12 @@
 	</package>
 	
 	<!-- Project specific actions -->
-	<package name="project-default" extends="default">
-		
+	<package name="project-default" extends="default">	
 		<action name="index" class="dashboardAction">
 			<result name="user" type="redirect-action">
 				<param name="actionName">index</param>
 				<param name="namespace">/u</param>
-			</result>
+			</result>                                                                   
 			<result name="applicant" type="redirect-action">
 				<param name="actionName">index</param>
 				<param name="namespace">/applicant</param>
