@@ -63,7 +63,7 @@
 	 	<div class="row">
 	 		 
 	 		
-	 		<div class="row centered">
+	 		<div class="row ">
 		 	<div id="main">
 	<%@ include file="/common/messages.jsp"%>
 	<decorator:body />
