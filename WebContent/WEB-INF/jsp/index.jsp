@@ -65,7 +65,7 @@
 
 <div class="col-lg-8">
 	 			<! -- Blog Post 1 -->
-		 		<a href="single-post.html"><h3 class="ctitle panel-heading">	What do you want to do?</h3></a>
+		 		<a href="single-post.html"><h2 class="ctitle panel-heading">What do you want to do?</h2></a>
 		 		<div class="hline"></div>
 		 		 <div class="panel-body">
 				                <div class="list-group">
@@ -86,7 +86,7 @@
 	 		
 	 		<! -- SIDEBAR -->
 	 		<div class="col-lg-4 padding">
-	 		<h4>Applications</h4>
+	 		
 		 		<div class="hline"></div>
 		 		<br>
 		 			<s:form method="post" name="staffForm" namespace="/staff" action="index">
@@ -99,50 +99,45 @@
 			    	</s:form>	
 		 		<div class="spacing"></div>
 		 		
-		 		<h4>Categories</h4>
+		 		<h4>Trainee Chart</h4>
 		 		<div class="hline"></div>
 			 		<img src="<c:url value="traineechart.png" />" />
 		 		<div class="spacing"></div>
 		 		
 		 		
 		 		
-		 		<h4>Categories</h4>
+		 		<h4>Groupchart</h4>
 		 		<div class="hline"></div>
 			 		<img src="<c:url value="groupchart.png" />" />
 				<div class="spacing"></div>	
 				
 				
-			 	<h4>Categories</h4>
+			 	<h4>Activities</h4>
 		 		<div class="hline"></div>
 			 		<%@ include file="/common/yearmodules.jsp"%>
 			 		
 			 		
 			 		
 		 		
-		 		<h4>Recent Posts</h4>
+		 		<h4>Recent Applications</h4>
 		 		<div class="hline"></div>
 					<s:iterator value="applications">
 							<li><s:include value="/WEB-INF/jsp/include/applications-short.jsp" /></li>
 						</s:iterator>        
 		 		<div class="spacing"></div>
 		 		
-		 		<h4>Popular Tags</h4>
+		 	<h4><a href="<s:url action="alerts"/>">Notification monitor</a></h4>
 		 		<div class="hline"></div>
 		 			<p><a href="<s:url action="alerts"/>" class="image-border"><img src="/training/img/alert_notifications.png" class="img-rounded"></a></p>
-					<h4><a href="<s:url action="alerts"/>">Notification monitor</a></h4>
+					
 	 		
 	 		
-	 		<h4>Popular Tags</h4>
+	 		<h4><a href="<s:url action="tagcloud"/>">Tag cloud</a></h4>
 		 		<div class="hline"></div>
 		 				<p><a href="<s:url action="tagcloud"/>" class="image-border"><img src="/training/img/tag_cloud.png" class="img-rounded"></a></p>
-			    	<h4><a href="<s:url action="tagcloud"/>">Tag cloud</a></h4>
-	 		
-
-	
+			    	
 	 		
 	 		</div>
-
-
 	
 	
 <script>
