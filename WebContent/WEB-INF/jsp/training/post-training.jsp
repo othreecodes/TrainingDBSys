@@ -8,7 +8,7 @@
 
 
 <div class="container-fluid">
-    <s:form id="" namespace="/" action="save-evaluation" method="get">
+    <s:form id="" namespace="/" action="save-evaluation" method="post">
     <s:if test="id!=null">
         <s:hidden name="postTraining.id" value="%{postTraining.id}"/>
         <s:if test="">
@@ -29,7 +29,7 @@
         <tr>
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <label for="title" class="col-xs-6"><strong>Title of the training course: <font
+                    <label for="title" class=""><strong>Title of the training course: <font
                             style="color: #ff0000">*</font>
                     </strong></label>
                     <s:textfield cssClass="form-control" id="title" name="postTraining.title" value="%{postTraining.title}"/>
@@ -40,9 +40,10 @@
             <!-------------- date -------------->
             <div class="row">
                 <div class="col-xs-12 col-md-12">
-                    <label for="date" class="col-xs-6"><strong>Date:<font
+                    <label for="date" class=""><strong>Date:<font
                             style="color: #ff0000">*</font></strong></label>
-                    <s:textfield cssClass="form-control" id="date" name="postTraining.date"
+                            
+                    <iita:datepicker cssClass="form-control datepicker" id="date" name="postTraining.date"
                                  value="%{postTraining.date}"/>
                 </div>
             </div>
@@ -92,7 +93,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ExpMet" name="postTraining.metExpectations" value="%{ExpMet}"
+                                        <s:radio id="ExpMet" name="metExpectations" value="%{metExpectations}"
                                                  list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
@@ -102,7 +103,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ExpMet1" name="objMet" value="%{objMet}" list="#{'AGREE':''}"/>
+                                        <s:radio id="ExpMet1" name="metExpectations" value="%{metExpectations}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +112,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ExpMet2" name="objMet" value="%{objMet}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="ExpMet2" name="metExpectations" value="%{metExpectations}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +121,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ExpMet3" name="objMet" value="%{objMet}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="ExpMet3" name="metExpectations" value="%{metExpectations}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -129,7 +130,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ExpMet4" name="objMet" value="%{objMet}"
+                                        <s:radio id="ExpMet4" name="metExpectations" value="%{metExpectations}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -148,8 +149,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="knwLnd" name="postTraining.applyKnowledge"
-                                                 value="%{postTraining.applyKnowledge}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="knwLnd" name="applyKnowledge"
+                                                 value="%{applyKnowledge}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -158,8 +159,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="knwLnd2" name="postTraining.applyKnowledge"
-                                                 value="%{postTraining.applyKnowledge}" list="#{'AGREE':''}"/>
+                                        <s:radio id="knwLnd2" name="applyKnowledge"
+                                                 value="%{applyKnowledge}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -168,8 +169,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="knwLnd3" name="postTraining.applyKnowledge"
-                                                 value="%{postTraining.applyKnowledge}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="knwLnd3" name="applyKnowledge"
+                                                 value="%{applyKnowledge}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +179,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="knwLnd4" name="postTraining.applyKnowledge"
+                                        <s:radio id="knwLnd4" name="applyKnowledge"
                                                  value="%{postTraining.applyKnowledge}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -188,8 +189,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="knwLnd5" name="postTraining.applyKnowledge"
-                                                 value="%{postTraining.applyKnowledge}"
+                                        <s:radio id="knwLnd5" name="applyKnowledge"
+                                                 value="%{applyKnowledge}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -206,8 +207,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainObj" name="postTraining.trainingObjectives"
-                                                 value="%{postTraining.trainingObjectives}"
+                                        <s:radio id="trainObj" name="trainingObjectives"
+                                                 value="%{trainingObjectives}"
                                                  list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
@@ -217,8 +218,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainObj2" name="postTraining.trainingObjectives"
-                                                 value="%{postTraining.trainingObjectives}" list="#{'AGREE':''}"/>
+                                        <s:radio id="trainObj2" name="trainingObjectives"
+                                                 value="%{trainingObjectives}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +228,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainObj3" name="postTraining.trainingObjectives"
+                                        <s:radio id="trainObj3" name="trainingObjectives"
                                                  value="%{postTraining.trainingObjectives}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
@@ -237,8 +238,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainObj4" name="postTraining.trainingObjectives"
-                                                 value="%{postTraining.trainingObjectives}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="trainObj4" name="trainingObjectives"
+                                                 value="%{trainingObjectives}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -247,8 +248,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainObj5" name="postTraining.trainingObjectives"
-                                                 value="%{postTraining.trainingObjectives}"
+                                        <s:radio id="trainObj5" name="trainingObjectives"
+                                                 value="%{trainingObjectives}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -266,8 +267,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ContentOrg" name="postTraining.organisedEasy"
-                                                 value="%{postTraining.organisedEasy}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="ContentOrg" name="organisedEasy"
+                                                 value="%{organisedEasy}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -276,8 +277,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ContentOrg1" name="postTraining.organisedEasy"
-                                                 value="%{postTraining.organisedEasy}" list="#{'AGREE':''}"/>
+                                        <s:radio id="ContentOrg1" name="organisedEasy"
+                                                 value="%{organisedEasy}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -286,8 +287,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ContentOrg2" name="postTraining.organisedEasy"
-                                                 value="%{postTraining.organisedEasy}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="ContentOrg2" name="organisedEasy"
+                                                 value="%{organisedEasy}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -296,8 +297,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ContentOrg3" name="postTraining.organisedEasy"
-                                                 value="%{postTraining.organisedEasy}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="ContentOrg3" name="organisedEasy"
+                                                 value="%{organisedEasy}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -306,8 +307,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="ContentOrg4" name="postTraining.organisedEasy"
-                                                 value="%{postTraining.organisedEasy}" list="#{'STRONGLYDISAGREE':''}"/>
+                                        <s:radio id="ContentOrg4" name="organisedEasy"
+                                                 value="%{organisedEasy}" list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -323,8 +324,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="matDist" name="postTraining.materialsUseful"
-                                                 value="%{postTraining.materialsUseful}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="matDist" name="materialsUseful"
+                                                 value="%{materialsUseful}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -333,8 +334,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="matDist1" name="postTraining.materialsUseful"
-                                                 value="%{postTraining.materialsUseful}" list="#{'AGREE':''}"/>
+                                        <s:radio id="matDist1" name="materialsUseful"
+                                                 value="%{materialsUseful}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -343,8 +344,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="matDist2" name="postTraining.materialsUseful"
-                                                 value="%{postTraining.materialsUseful}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="matDist2" name="materialsUseful"
+                                                 value="%{materialsUseful}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -353,8 +354,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="matDist3" name="postTraining.materialsUseful"
-                                                 value="%{postTraining.materialsUseful}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="matDist3" name="materialsUseful"
+                                                 value="%{materialsUseful}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -363,8 +364,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="matDist4" name="postTraining.materialsUseful"
-                                                 value="%{postTraining.materialsUseful}"
+                                        <s:radio id="matDist4" name="materialsUseful"
+                                                 value="%{materialsUseful}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -381,8 +382,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainerKnw" name="postTraining.trainerKnowledge"
-                                                 value="%{postTraining.trainerKnowledge}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="trainerKnw" name="trainerKnowledge"
+                                                 value="%{trainerKnowledge}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -391,8 +392,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainerKnw1" name="postTraining.trainerKnowledge"
-                                                 value="%{postTraining.trainerKnowledge}" list="#{'AGREE':''}"/>
+                                        <s:radio id="trainerKnw1" name="trainerKnowledge"
+                                                 value="%{trainerKnowledge}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -401,8 +402,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainerKnw2" name="postTraining.trainerKnowledge"
-                                                 value="%{postTraining.trainerKnowledge}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="trainerKnw2" name="trainerKnowledge"
+                                                 value="%{trainerKnowledge}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -411,8 +412,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainerKnw3" name="postTraining.trainerKnowledge"
-                                                 value="%{postTraining.trainerKnowledge}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="trainerKnw3" name="trainerKnowledge"
+                                                 value="%{trainerKnowledge}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -421,8 +422,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trainerKnw4" name="postTraining.trainerKnowledge"
-                                                 value="%{postTraining.trainerKnowledge}"
+                                        <s:radio id="trainerKnw4" name="trainerKnowledge"
+                                                 value="%{trainerKnowledge}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -439,8 +440,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="instQual" name="postTraining.qualityGood"
-                                                 value="%{postTraining.qualityGood}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="instQual" name="qualityGood"
+                                                 value="%{qualityGood}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -449,8 +450,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="instQual1" name="postTraining.qualityGood"
-                                                 value="%{postTraining.qualityGood}" list="#{'AGREE':''}"/>
+                                        <s:radio id="instQual1" name="qualityGood"
+                                                 value="%{qualityGood}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -459,8 +460,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="instQual2" name="postTraining.qualityGood"
-                                                 value="%{postTraining.qualityGood}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="instQual2" name="qualityGood"
+                                                 value="%{qualityGood}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -469,8 +470,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="instQual3" name="postTraining.qualityGood"
-                                                 value="%{postTraining.qualityGood}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="instQual3" name="qualityGood"
+                                                 value="%{qualityGood}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -479,8 +480,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="instQual4" name="postTraining.qualityGood"
-                                                 value="%{postTraining.qualityGood}" list="#{'STRONGLYDISAGREE':''}"/>
+                                        <s:radio id="instQual4" name="qualityGood"
+                                                 value="%{qualityGood}" list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -497,8 +498,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TrainObj" name="postTraining.metObjectives"
-                                                 value="%{postTraining.metObjectives}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="TrainObj" name="metObjectives"
+                                                 value="%{metObjectives}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -507,8 +508,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TrainObj1" name="postTraining.metObjectives"
-                                                 value="%{postTraining.metObjectives}" list="#{'AGREE':''}"/>
+                                        <s:radio id="TrainObj1" name="metObjectives"
+                                                 value="%{metObjectives}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -517,8 +518,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TrainObj2" name="postTraining.metObjectives"
-                                                 value="%{postTraining.metObjectives}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="TrainObj2" name="metObjectives"
+                                                 value="%{metObjectives}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -527,8 +528,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TrainObj3" name="postTraining.metObjectives"
-                                                 value="%{postTraining.metObjectives}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="TrainObj3" name="metObjectives"
+                                                 value="%{metObjectives}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -537,8 +538,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TrainObj4" name="postTraining.metObjectives"
-                                                 value="%{postTraining.metObjectives}" list="#{'STRONGLYDISAGREE':''}"/>
+                                        <s:radio id="TrainObj4" name="metObjectives"
+                                                 value="%{metObjectives}" list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -555,8 +556,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="Classpart" name="postTraining.participationEncouraged"
-                                                 value="%{postTraining.participationEncouraged}"
+                                        <s:radio id="Classpart" name="participationEncouraged"
+                                                 value="%{participationEncouraged}"
                                                  list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
@@ -566,7 +567,7 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="Classpart2" name="postTraining.participationEncouraged"
+                                        <s:radio id="Classpart2" name="participationEncouraged"
                                                  value="%{postTraining.participationEncouraged}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
@@ -576,8 +577,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="Classpart3" name="postTraining.participationEncouraged"
-                                                 value="%{postTraining.participationEncouraged}"
+                                        <s:radio id="Classpart3" name="participationEncouraged"
+                                                 value="%{participationEncouraged}"
                                                  list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
@@ -587,8 +588,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="Classpart4" name="postTraining.participationEncouraged"
-                                                 value="%{postTraining.participationEncouraged}"
+                                        <s:radio id="Classpart4" name="participationEncouraged"
+                                                 value="%{participationEncouraged}"
                                                  list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -598,8 +599,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="Classpart5" name="postTraining.participationEncouraged"
-                                                 value="%{postTraining.participationEncouraged}"
+                                        <s:radio id="Classpart5" name="participationEncouraged"
+                                                 value="%{participationEncouraged}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -617,8 +618,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TimeProv" name="postTraining.timeforquestions"
-                                                 value="%{postTraining.timeforquestions}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="TimeProv" name="timeforquestions"
+                                                 value="%{timeforquestions}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -627,8 +628,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TimeProv1" name="postTraining.timeforquestions"
-                                                 value="%{postTraining.timeforquestions}" list="#{'AGREE':''}"/>
+                                        <s:radio id="TimeProv1" name="timeforquestions"
+                                                 value="%{timeforquestions}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -637,8 +638,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TimeProv2" name="postTraining.timeforquestions"
-                                                 value="%{postTraining.timeforquestions}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="TimeProv2" name="timeforquestions"
+                                                 value="%{timeforquestions}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -647,8 +648,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TimeProv3" name="postTraining.timeforquestions"
-                                                 value="%{postTraining.timeforquestions}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="TimeProv3" name="timeforquestions"
+                                                 value="%{timeforquestions}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -657,8 +658,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="TimeProv4" name="postTraining.timeforquestions"
-                                                 value="%{postTraining.timeforquestions}"
+                                        <s:radio id="TimeProv4" name="timeforquestions"
+                                                 value="%{timeforquestions}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -676,8 +677,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trnLength" name="postTraining.lenghtSufficient"
-                                                 value="%{postTraining.lenghtSufficient}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="trnLength" name="lenghtSufficient"
+                                                 value="%{lenghtSufficient}" list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -686,8 +687,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trnLength1" name="postTraining.lenghtSufficient"
-                                                 value="%{postTraining.lenghtSufficient}" list="#{'AGREE':''}"/>
+                                        <s:radio id="trnLength1" name="lenghtSufficient"
+                                                 value="%{lenghtSufficient}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -696,8 +697,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trnLength2" name="postTraining.lenghtSufficient"
-                                                 value="%{postTraining.lenghtSufficient}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="trnLength2" name="lenghtSufficient"
+                                                 value="%{lenghtSufficient}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -706,8 +707,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trnLength3" name="postTraining.lenghtSufficient"
-                                                 value="%{postTraining.lenghtSufficient}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="trnLength3" name="lenghtSufficient"
+                                                 value="%{lenghtSufficient}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -716,8 +717,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="trnLength4" name="postTraining.lenghtSufficient"
-                                                 value="%{postTraining.lenghtSufficient}"
+                                        <s:radio id="trnLength4" name="lenghtSufficient"
+                                                 value="%{lenghtSufficient}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -735,8 +736,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="roomFacil" name="postTraining.facilitiesComfortable"
-                                                 value="%{postTraining.facilitiesComfortable}"
+                                        <s:radio id="roomFacil" name="facilitiesComfortable"
+                                                 value="%{facilitiesComfortable}"
                                                  list="#{'STRONGLYAGREE':''}"/>
                                     </div>
                                 </div>
@@ -746,8 +747,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="roomFacil2" name="postTraining.facilitiesComfortable"
-                                                 value="%{postTraining.facilitiesComfortable}" list="#{'AGREE':''}"/>
+                                        <s:radio id="roomFacil2" name="facilitiesComfortable"
+                                                 value="%{facilitiesComfortable}" list="#{'AGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -756,8 +757,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="roomFacil3" name="postTraining.facilitiesComfortable"
-                                                 value="%{postTraining.facilitiesComfortable}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="roomFacil3" name="facilitiesComfortable"
+                                                 value="%{facilitiesComfortable}" list="#{'NEUTRAL':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -766,8 +767,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="roomFacil4" name="postTraining.facilitiesComfortable"
-                                                 value="%{postTraining.facilitiesComfortable}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="roomFacil4" name="facilitiesComfortable"
+                                                 value="%{facilitiesComfortable}" list="#{'DISAGREE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -776,8 +777,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="roomFacil5" name="postTraining.facilitiesComfortable"
-                                                 value="%{postTraining.facilitiesComfortable}"
+                                        <s:radio id="roomFacil5" name="facilitiesComfortable"
+                                                 value="%{facilitiesComfortable}"
                                                  list="#{'STRONGLYDISAGREE':''}"/>
                                     </div>
                                 </div>
@@ -819,8 +820,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="rating" name="postTraining.rateTraining"
-                                                 value="%{postTraining.rateTraining}" list="#{'STRONGLYAGREE':''}"/>
+                                        <s:radio id="rating" name="rateTraining"
+                                                 value="%{rateTraining}" list="#{'EXCELLENT':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -829,8 +830,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="rating1" name="postTraining.rateTraining"
-                                                 value="%{postTraining.rateTraining}" list="#{'AGREE':''}"/>
+                                        <s:radio id="rating1" name="rateTraining"
+                                                 value="%{rateTraining}" list="#{'GOOD':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -839,8 +840,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="rating2" name="postTraining.rateTraining"
-                                                 value="%{postTraining.rateTraining}" list="#{'NEUTRAL':''}"/>
+                                        <s:radio id="rating2" name="rateTraining"
+                                                 value="%{rateTraining}" list="#{'AVERAGE':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -849,8 +850,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="rating3" name="postTraining.rateTraining"
-                                                 value="%{postTraining.rateTraining}" list="#{'DISAGREE':''}"/>
+                                        <s:radio id="rating3" name="rateTraining"
+                                                 value="%{rateTraining}" list="#{'POOR':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -859,8 +860,8 @@
                             <div class="row">
                                 <div class="form-group">
                                     <div class="col-xs-12 col-md-12">
-                                        <s:radio id="rating4" name="postTraining.rateTraining"
-                                                 value="%{postTraining.rateTraining}" list="#{'STRONGLYDISAGREE':''}"/>
+                                        <s:radio id="rating4" name="rateTraining"
+                                                 value="%{rateTraining}" list="#{'VERYPOOR':''}"/>
                                     </div>
                                 </div>
                             </div>
@@ -877,6 +878,7 @@
                                     <label for="improve" class="col-xs-6"><strong>14. What aspects of the training could
                                         be improved?<font style="color: #ff0000">*</font>
                                     </strong></label>
+                                    
                                     <s:textfield cssClass="form-control" id="improve" name="postTraining.canbeImproved"
                                                  value="%{postTraining.canbeImproved}"/>
                                 </div>

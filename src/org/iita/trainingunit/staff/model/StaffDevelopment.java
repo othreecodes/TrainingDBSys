@@ -86,6 +86,8 @@ public class StaffDevelopment extends VersionedEntity implements UserAccess {
 	private STATUS status = STATUS.NEW;
 	private APPROVALSTATUS approvalStatus = null;
 	public enum STATUS {NEW, SUBMITTED}
+	public enum APPTYPE {STAFFDEVELOPMENT, TALENTGRANT}
+	private APPTYPE appType = APPTYPE.TALENTGRANT;
 	public enum APPROVALSTATUS {SUPERVISOR, REJECTED, APPROVED, REPORTFILED, WAITINGFORHOD, WAITINGFORCOMMITTEE, WAITINGFORCDO, WAITINGFORDDGPCD}
 	private List<ActionLog> actionLog = new ArrayList<ActionLog>();
 	
@@ -801,5 +803,15 @@ public class StaffDevelopment extends VersionedEntity implements UserAccess {
 	 */
 	public String getMandateCrop() {
 		return mandateCrop;
+	}
+	
+	/**	 * @param appType the appType to set	 */	
+	public void setAppType(APPTYPE appType) {
+		this.appType = appType;	
+		}	
+	/**	 * @return the appType	 */	
+	@Enumerated(EnumType.STRING)	
+	public APPTYPE getAppType() {
+		return appType;	
 	}
 }

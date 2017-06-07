@@ -257,6 +257,7 @@
             <result name="inhousegroup">/WEB-INF/jsp/applicant/cdoinhousereg-form.jsp</result>
             <result name="staffdevelopment">/WEB-INF/jsp/applicant/cdostaffdevreg-form.jsp</result>
             <result name="sabbatical">/WEB-INF/jsp/applicant/cdosabbaticalreg-form.jsp</result>
+           
 			
             <result name="other">/WEB-INF/jsp/applicant/cdootherreg-form.jsp</result>
             <result name="input" type="redirect-action">index</result>

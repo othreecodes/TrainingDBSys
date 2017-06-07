@@ -6,13 +6,18 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.Transient;
 
+import org.hibernate.search.annotations.Indexed;
 import org.iita.crm.model.AddressContact;
+import org.iita.crm.model.ApplicationTag;
 import org.iita.crm.model.EmailContact;
+import org.iita.crm.model.EntityTag;
 import org.iita.crm.model.Person;
 import org.iita.crm.model.Person.Gender;
 import org.iita.entity.VersionedEntity;
 import org.iita.trainingunit.applications.model.ApplicantsBioData;
+import org.iita.trainingunit.applications.model.Application;
 import org.iita.trainingunit.applications.model.Approval;
 import org.iita.trainingunit.applications.model.EducationAndTraining;
 import org.iita.trainingunit.model.Funding;
@@ -28,6 +33,7 @@ public class UseOfFacilities extends VersionedEntity  {
 	/**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = -4716770161488107676L;
 	private ApplicantsBioData cdoBioData;
 	private String synopsis;
@@ -127,6 +133,8 @@ public class UseOfFacilities extends VersionedEntity  {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+
+
 	
 	
 	
