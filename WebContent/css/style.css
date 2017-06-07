@@ -488,3 +488,7 @@ background: #4879b5;}
 .list-group-item:hover{
 	color: #dd7025;
 }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffd047;
+}
