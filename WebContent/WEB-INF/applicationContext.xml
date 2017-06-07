@@ -91,7 +91,7 @@
 				<prop key="application.production">${application.production}</prop>
 			</props>
 		</property>
-	</bean>
+	</bean> 
 	<!-- Email service -->
 	<!-- See /WEB-INF/mail.properties -->
 	<bean id="emailService" class="org.iita.service.impl.JavaMail">

@@ -36,8 +36,7 @@
 			            <div class="panel-body">
 			                <div class="list-group">
 								<a class="list-group-item" href="<s:url namespace="/application" action="register?trainingOption=Sabbatical" />">Sabbatical/Visiting Scientist</a>
-								<a class="list-group-item" href="javascript:alert('Coming soon!')">Use of Facilities</a>
-								<a class="list-group-item" href="javascript:alert('Coming soon!')">Short-term Training</a>
+								<a class="list-group-item" href="<s:url namespace="/application" action="register?trainingOption=Use of Facilities For" />">Use of Facilities</a>
 							</div>
 			            </div>
 			        </div>
