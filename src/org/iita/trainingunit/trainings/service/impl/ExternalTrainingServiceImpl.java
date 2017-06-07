@@ -46,3 +46,4 @@ public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 	}
 
 }
+

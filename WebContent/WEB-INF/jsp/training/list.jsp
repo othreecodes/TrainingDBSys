@@ -1,3 +1,4 @@
+
 <%@ include file="/common/taglibs.jsp"%>
 
 <html>
@@ -67,9 +68,5 @@
 <s:else>
 	<p>No records available.</p>
 </s:else>
-
-
-
-
 </body>
 </html>

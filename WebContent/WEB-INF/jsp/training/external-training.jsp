@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
 <title>User of Facilities</title>
 </head>
 <body>
@@ -10,6 +11,7 @@
 		<s:form id="" namespace="/" action="apply" method="post">
 			<s:if test="id!=null">
 				<s:hidden name="postTraining.id" value="%{postTraining.id}" />
+
 				<s:if test="">
 					<s:hidden name="" value="%{}" />
 				</s:if>
@@ -19,6 +21,8 @@
 				<em>* <font style="color: #ff0000">means mandatory
 						fields</font></em>
 			</div>
+
+
 
 			<table class="inputform">
 				<colgroup>
@@ -30,11 +34,14 @@
 					<td><s:if test="">
 							<s:submit cssClass="btn btn-primary pull-right"
 								action="evaluation!finalized" value="Finalize Registeration"
+
 								onclick="if(confirm('Submit your application form anyway?')){return true;}else{return false;}" />
+
 						</s:if> <s:submit cssClass="btn btn-primary pull-right"
 							value="Continue Editing" /></td>
 				</tr>
 			</table>
+
 
 
 
@@ -1450,6 +1457,7 @@ IITA Contacts:
 							onclick="if(confirm('Submit your Registeration form ?')){return true;}else{return false;}" />
 				</tr>
 			</table>
+
 
 		</s:form>
 		<div class="clearfix">&nbsp;</div>

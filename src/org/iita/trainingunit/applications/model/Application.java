@@ -1,6 +1,3 @@
-/**
- * 
- */
 package org.iita.trainingunit.applications.model;
 
 import java.util.ArrayList;
@@ -38,6 +35,7 @@ import org.iita.security.UserAccess;
 import org.iita.security.model.User;
 import org.iita.trainingunit.announcements.model.Announcement;
 import org.iita.trainingunit.lucene.ApplicationBridge;
+import org.iita.trainingunit.trainings.model.PostTrainingEvaluation;
 
 /**
  * @author ken
@@ -84,6 +82,8 @@ public abstract class Application extends VersionedEntity implements UserAccess,
 	
 	/** The parent application. */
 	private Application parentApplication;
+	
+	private PostTrainingEvaluation ptEvaluation;
 	
 	public Application(){}
 	
@@ -366,6 +366,20 @@ public abstract class Application extends VersionedEntity implements UserAccess,
 		this.actionLog = actionLog;
 	}
 
+	/**
+	 * @param ptEvaluation the ptEvaluation to set
+	 */
+	public void setPtEvaluation(PostTrainingEvaluation ptEvaluation) {
+		this.ptEvaluation = ptEvaluation;
+	}
+	/**
+	 * @return the ptEvaluation
+	 */
+	@OneToOne(cascade = CascadeType.ALL, mappedBy = "application")
+	public PostTrainingEvaluation getPtEvaluation() {
+		return ptEvaluation;
+	}
+	
 	/**
 	 * @param user
 	 * @return

@@ -1,3 +1,4 @@
+
 package org.iita.trainingunit.trainings.model;
 
 
@@ -39,6 +40,7 @@ public class ExternalTraining extends VersionedEntity{
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
 	public String getSurname() {
 		return surname;
 	}
@@ -51,12 +53,14 @@ public class ExternalTraining extends VersionedEntity{
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+
 	public String getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -75,12 +79,14 @@ public class ExternalTraining extends VersionedEntity{
 	public void setJobtitle(String jobtitle) {
 		this.jobtitle = jobtitle;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
 	public String getAreasInterest() {
 		return areasInterest;
 	}
@@ -121,4 +127,5 @@ public class ExternalTraining extends VersionedEntity{
 		this.officeAddress = officeAddress;
 	}
 	
+
 }

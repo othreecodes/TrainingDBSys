@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../iita-common/iita-common.iml" filepath="$PROJECT_DIR$/../iita-common/iita-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../iita-common-web.struts/iita-common-web.struts.iml" filepath="$PROJECT_DIR$/../iita-common-web.struts/iita-common-web.struts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/training.Struts.iml" filepath="$PROJECT_DIR$/training.Struts.iml" />
+    </modules>
+  </component>
+</project>
