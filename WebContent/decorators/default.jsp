@@ -19,10 +19,13 @@
 <decorator:getProperty property="body.id" writeEntireProperty="true"/> 
 <decorator:getProperty property="body.class" writeEntireProperty="true"/> 
 <decorator:getProperty property="body.iita:help" writeEntireProperty="true"/>
-
 >
 
+
+
 <s:action name="applock-status" namespace="/" executeResult="true" ignoreContextParams="true" />
+			
+			
 			<div class="well rmmgb" style="text-transform: uppercase;">
 				<security:authorize ifNotGranted="ROLE_APPLICANT">
 				<security:authorize ifAnyGranted="ROLE_USER">
@@ -36,6 +39,8 @@
 				</security:authorize>
 				<h6 class="centered"><strong><fmt:message key="webapp.name" /></strong></h6>
 			</div>
+			
+			
 			
     <!-- Fixed navbar -->
    		<jsp:include page="/common/nav.jsp" />
@@ -90,8 +95,8 @@
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.prettyPhoto.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.isotope.min.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/custom.js" />"></script>
- 	<script  type="text/javascript" src="<s:url value="/script/assets/js/custom.js" />"></script>
-	
+ 	<script  type="text/javascript" src="<s:url value="/script/protoype.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/scriptaculous.js" />"></script>
 	<script type="text/javascript" src="<s:url value="/script/gears/gears_init.js" />"></script>
 	<s:action name="google/analytics" namespace="/" executeResult="true" ignoreContextParams="true" />
 

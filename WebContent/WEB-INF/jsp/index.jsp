@@ -91,10 +91,10 @@
 		 		<br>
 		 			<s:form method="post" name="staffForm" namespace="/staff" action="index">
 						<s:if test="getUser().hasRole('ROLE_ADMIN') || getUser().hasRole('ROLE_CDO') || getUser().hasRole('ROLE_TRAININGUNITHEAD')">
-							<s:submit value="Staff Training Applications" cssClass="btn btn-warning" />
+							<s:submit value="Staff Training Applications" cssClass="btn btn-info" />
 						</s:if>
 						<s:else>
-							<s:submit value="My Training Applications" cssClass="btn btn-warning" />
+							<s:submit value="My Training Applications" cssClass="btn btn-info" />
 						</s:else>
 			    	</s:form>	
 		 		<div class="spacing"></div>
