@@ -691,6 +691,7 @@
     </package>
     <!--
         <package name="jfcdefault" namespace="/" extends="jfreechart-default">
+
             <action name="displayStrutsBarChart" class="chartAction">
                 <result name="success" type="chart">
                     <param name="value">chartBar</param>
@@ -699,6 +700,7 @@
                     <param name="height">400</param>
                 </result>
             </action>
+
             <action name="displayStrutsChart" class="chartAction">
                 <result name="success" type="chart">
                     <param name="value">chart</param>

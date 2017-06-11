@@ -1,11 +1,4 @@
 /*	################################################################
-
-	Author: Carlos Alvarez
-	URL: http://alvarez.is
-
-	Project Name: SOLID - Bootstrap 3 Theme
-	Version: 1.0
-	URL: http://alvarez.is
 	
 ################################################################# */ 
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700,900);
@@ -107,11 +100,11 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #00b3fe;
+	color: #dd7025;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	color: #00b3fe;
+	color: #dd7025;
 	background-color: transparent;
 }
 
@@ -142,8 +135,8 @@ a:focus {
 .btn-theme.active,
 .open .dropdown-toggle.btn-theme {
   color: #fff;
-  background-color: #00b3fe;
-  border-color: #00b3fe;
+  background-color: #dd7025;
+  border-color: #dd7025;
 }
 
 .dmbutton:hover,
@@ -205,7 +198,7 @@ a:focus {
 ################################################################# */
 
 #headerwrap {
-	background-color: #00b3fe;
+	background-color: #dd7025;
 	min-height: 550px;
 	padding-top: 100px;
 	padding-bottom: 0px;
@@ -233,7 +226,7 @@ a:focus {
 }
 
 #service i {
-	color: #00b3fe;
+	color: #dd7025;
 	font-size: 60px;
 	padding: 15px;
 }
@@ -281,7 +274,7 @@ a:focus {
 {
 	height:100%;
 	width:100%;
-	background-color:#00b3fe;
+	background-color:#dd7025;
 	background-color:rgba(0,179,254,.9);
 	text-align:center;
 }
@@ -354,7 +347,7 @@ a:focus {
 }
 
 #footerwrap i:hover {
-	color: #00b3fe
+	color: #dd7025;
 }
 
 /*	################################################################
@@ -373,7 +366,7 @@ a:focus {
 }
 
 .ctitle {
-	color: #00b3fe;
+	color: #dd7025;
 	font-weight: 700;
 	margin-bottom: 15px;
 }
@@ -393,7 +386,7 @@ csmall2 {
 }
 
 .badge-theme {
-	background: #00b3fe;
+	background: #dd7025;
 }
 
 /* Contact Page */
@@ -484,3 +477,12 @@ background: #4879b5;}
 .navbar-default .navbar-nav > li > a >span:hover{
 	color: #dd7025;
 }
+
+.list-group-item:hover{
+	color: #dd7025;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffd047;
+}
+

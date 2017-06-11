@@ -18,65 +18,124 @@
 <!-- Materializecss section end here -->
 <decorator:head />
 </head>
-<body <decorator:getProperty property="body.id" writeEntireProperty="true"/> <decorator:getProperty property="body.class" writeEntireProperty="true"/> <decorator:getProperty property="body.iita:help" writeEntireProperty="true"/>>
-<main>
-	<div style="" class="noprint">
-	<table style="width: 100%">
-		<col width="150px" />
-		<col />
-		<tr>
-			<td rowspan="2" style="vertical-align: middle; padding-right: 10px; margin-left:10px;"><a href="<s:url action="index" namespace="/" />" title="Go to dashboard of <fmt:message key="webapp.name" />"><img src="<c:url value='/img/train_50.png'/>" alt="IITA"
-						style="float: left;" /></a></td>
-			<security:authorize ifNotGranted="ROLE_APPLICANT">
-				<security:authorize ifAnyGranted="ROLE_USER">
-					<td style="vertical-align: top; padding: 0;">
-								
-						<s:action name="applock-status" namespace="/" executeResult="true" ignoreContextParams="true" />
-						<div style="padding: 3px 6px;">
-										
-						<div style="float: right;"><form method="get" action="<s:url action='search' />"><input name="q" style="width: 200px;" value="" /> <input type="submit" value="Search" /></form></div>
-										
-						<h1 style="margin: 0px 0px 3px 0px; padding: 0px; font-size: 1.2em;"><fmt:message key="webapp.name" /></h1>
-						</div>
-					</td>
-				</security:authorize>
-			</security:authorize>
-		</tr>
-		<tr>
-			<td style="vertical-align: middle; padding: 5px 0 0 0;">
-				<div style="margin: 1pt 0px 6px 0px;"><jsp:include page="/common/nav_public.jsp" /></div>
-			</td>
-		</tr>
-	</table>
-	</div>
-	
-	<section id="hero" style="margin-top:50px;">
-					<div class="hero-text container">
-						<div class="center-align">
-							<h2 class="white-text center-align heroshadow">Welcome to IITA Training System boy!!!!!!!!!</h2>
-							<div style="margin-top:50px;">
-								<a class="waves-effect waves-purple btn-large grey lighten-4" href="<s:url namespace="/" action="login" />"><span class="hero-button indigo-text darken-3">IITA Staff</span></a> <a class="waves-effect waves-purple btn-large grey lighten-4" href="<s:url namespace="/" action="application/index" />"><span class="hero-button indigo-text darken-3">Non-IITA Staff</span></a>
-							</div>
-						</div>
-					</div>
-				</section>
 
-			<section class="container section">
-				<h2 class="center-align grey-text text-darken-2"><a href="<s:url namespace="/application" action="solicited-apps" />">Training/Scholarship Announcements</a></h2>
-				<p class="center-align">We have training options available &amp; suitable for you.</p>
-			</section>
-	
-	<div style="margin: 10px 15px 0px 15px;">
-		<div id="main">
-		<%@ include file="/common/messages.jsp"%>
-		<decorator:body />
+
+
+<body
+	<decorator:getProperty property="body.id" writeEntireProperty="true"/>
+	<decorator:getProperty property="body.class" writeEntireProperty="true"/>
+	<decorator:getProperty property="body.iita:help" writeEntireProperty="true"/>>
+ <s:action name="applock-status" namespace="/"
+		executeResult="true" ignoreContextParams="true" />
+
+	<div class="well rmmgb" style="text-transform: uppercase;">
+		<security:authorize ifNotGranted="ROLE_APPLICANT">
+			<security:authorize ifAnyGranted="ROLE_USER">
+				<div style="float: right;">
+					<form method="get" class="form-inline"
+						action="<s:url action='search' />">
+						<input class="form-control" name="q" placeholder="search"
+							style="width: 200px;" value="" /> <input class="btn"
+							type="submit" value="Search" />
+					</form>
+				</div>
+			</security:authorize>
+		</security:authorize>
+		<h6 class="centered">
+			<strong><fmt:message key="webapp.name" /></strong>
+		</h6>
+	</div>
+
+
+	<!-- *****************************************************************************************************************
+	 NAVBAR
+	 ***************************************************************************************************************** -->
+	<jsp:include page="/common/nav_public.jsp" /></div>
+
+
+
+
+	<!-- *****************************************************************************************************************
+	section
+	 ***************************************************************************************************************** -->
+	<section id="hero" style="   
+	background: linear-gradient(135deg, rgba(221, 112, 37,0.8) 0%,rgba(166,0,166,0.8) 50%,rgba(239, 158, 59,0.8) 100%), /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	 url(../img/1400_banner.jpg);
+    background-size: cover;
+    background-position: center;
+  	margin-bottom: 30px;
+    position: relative;
+    height: 500px;
+	padding-top:80px;
+	" >
+	<div class="hero-text container">
+		<div class="center-align" style="color:white;">
+			<h1>
+				Welcome <br /></>to <br />IITA TRAINING SYSTEM
+			</h1>
+			<div style="padding-top: 20px;">
+				<a class="waves-effect waves-purple btn-large grey lighten-4"href="<s:url namespace="/" action="login" />">
+				<span class="hero-button  brown-text darken-1">IITA Staff</span></a>
+				 
+				 <a class="waves-effect waves-purple btn-large grey lighten-4"
+					href="<s:url namespace="/" action="application/index" />">
+					<span class="hero-button bold indigo-text darken-3">Non-IITA Staff</span></a>
+			</div>
 		</div>
 	</div>
+	</section> 
+	
+	
+	<section class="container section">
+	<h1 class="center-align" >
+		<a style=" font-family: 'Lato', sans-serif; font-size:larger; color:brown;" href="<s:url namespace="/application" action="solicited-apps" />">Training/Scholarship
+			Announcements</a>
+	</h1>
+	<p class="center-align">We have training options available &amp;
+		suitable for you.</p>
+	</section>
 
-<jsp:include page="/common/footer_public.jsp" />
-</main>
+
+
+
+
+<div class="container mtb" style="margin-bottom: 0px;" >
+	 	<div class="row">
+	 		 
+		 	<div id="main">
+	<%@ include file="/common/messages.jsp"%>
+	<decorator:body />
+	</div>
+		 	
+	 	</div><!-- --/row ---->
+	 </div>
+	 
+<jsp:include page="/common/footer.jsp" />
 <jsp:include page="/common/sessionkeeper.jsp" />
-<script type="text/javascript" src="<s:url value="/script/gears/gears_init.js" />"></script>
-<s:action name="google/analytics" namespace="/" executeResult="true" ignoreContextParams="true" />
+	
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/bootstrap.min.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/retina-1.1.0.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/jquery.hoverdir.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/jquery.hoverex.min.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/jquery.prettyPhoto.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/jquery.isotope.min.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/assets/js/custom.js" />"></script>
+	<script type="text/javascript"
+		src="<s:url value="/script/gears/gears_init.js" />"></script>
+	<s:action name="google/analytics" namespace="/" executeResult="true"
+		ignoreContextParams="true" />
 </body>
 </html>
