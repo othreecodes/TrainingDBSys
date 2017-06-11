@@ -8,7 +8,6 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
     
     
-   <bean id="externalTrainingService" class="org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl"></bean>
 	<bean id="searchService" class="org.iita.service.impl.SearchServiceImpl" />
 	<bean id="externalTrainingService" class="org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl"></bean>
 	<bean id="postTrainingEvaluationsService" class="org.iita.trainingunit.trainings.service.impl.PostTrainingEvaluationsServiceImpl"></bean>
@@ -514,9 +513,6 @@
 	</bean>
 
 
-<bean id="externalTrainingAction" class="org.iita.trainingunit.trainings.action.ExternalTrainingAction" scope="request">
-			<constructor-arg ref="externalTrainingService" />
-	</bean>
 	<!--Liferay WebServices  -->
 	<!--
 		<bean id="journalArticleServiceSoap" class="org.springframework.remoting.jaxrpc.JaxRpcPortProxyFactoryBean"> <property name="serviceInterface"

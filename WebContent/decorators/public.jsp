@@ -53,7 +53,7 @@
 	<section id="hero" style="margin-top:50px;">
 					<div class="hero-text container">
 						<div class="center-align">
-							<h2 class="white-text center-align heroshadow">Welcome to IITA Training System</h2>
+							<h2 class="white-text center-align heroshadow">Welcome to IITA Training System boy!!!!!!!!!</h2>
 							<div style="margin-top:50px;">
 								<a class="waves-effect waves-purple btn-large grey lighten-4" href="<s:url namespace="/" action="login" />"><span class="hero-button indigo-text darken-3">IITA Staff</span></a> <a class="waves-effect waves-purple btn-large grey lighten-4" href="<s:url namespace="/" action="application/index" />"><span class="hero-button indigo-text darken-3">Non-IITA Staff</span></a>
 							</div>
