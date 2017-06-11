@@ -4,33 +4,26 @@
 	<s:if test="top instanceof org.iita.crm.model.Person && id!=null">
 		<s:hidden name="personId" value="%{id}" />
 	</s:if>
-	<table class="inputform">
-		<colgroup>
-			<col width="200px" />
-			<col />
-		</colgroup>
+	 
 		<s:if test="!(top instanceof org.iita.crm.model.Person && id!=null)">
-			<tr>
-				<td>Person:</td>
-				<td><s:url namespace="/ajax" action="public-ajax" id="xx" /> <iita:autocompleter cssClass="person" name="personId" id="trainee.personId" listKey="id"
-					listValue="fullName" url="%{xx}" method="autocompletePerson" submitTextTo="personName" /></td>
-			</tr>
+			 
+				<label>Person:</label>
+				<s:url namespace="/ajax" action="public-ajax" id="xx" /> 
+				<iita:autocompleter cssClass="person form-control" name="personId" id="trainee.personId" listKey="id"
+					listValue="fullName" url="%{xx}" method="autocompletePerson" submitTextTo="personName" />
+		 
 		</s:if>
-		<tr>
-			<td>Research Topic:</td>
-			<td><s:textfield name="researchTopic" /></td>
-		</tr>
-		<tr>
-			<td>Start date:</td>
-			<td><iita:datepicker name="startDate" format="dd/MM/yyyy" /></td>
-		</tr>
-		<tr>
-			<td>End date:</td>
-			<td><iita:datepicker name="endDate" format="dd/MM/yyyy" /></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><s:submit value="Register trainee" /></td>
-		</tr>
-	</table>
+		 
+			<label>Research Topic:</label>
+			 <s:textfield name="researchTopic" cssClass="form-control" /> 
+		 
+			<label>Start date:</label>
+			<iita:datepicker name="startDate" cssClass="form-control" format="dd/MM/yyyy" />
+	 
+			<label>End date:</label>
+			<iita:datepicker name="endDate" cssClass="form-control"  format="dd/MM/yyyy" /> 
+		 
+			 <br>
+			 <s:submit value="Register trainee"  cssClass="btn btn-success"/> 
+	 	 <br>
 </s:form>

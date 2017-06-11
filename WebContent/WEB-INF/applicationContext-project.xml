@@ -7,7 +7,6 @@
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
     
-    
    
 	<bean id="searchService" class="org.iita.service.impl.SearchServiceImpl" />
 	<bean id="externalTrainingService" class="org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl"></bean>

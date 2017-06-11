@@ -11,51 +11,51 @@
 	</style>
 </head>
 <body>
-<div class="pull-right">
-<s:form method="post" name="staffForm" namespace="/staff" action="index">
-	<s:submit value="Go to list!" cssClass="btn btn-success" cssStyle="align: right" />
-</s:form>
-</div>
 
 
-<div class="container-fluid">
-<h2>Reference Number: <s:property value="staffDev.referenceNumber" /> (<s:property value="staffDev.owner.fullName" />)</h2>
-	<div class="notice">
-		<p>
-			<strong>Agreement: </strong>Please read carefully the announcement criteria and instructions before you submit your form. Failure to adhere strictly may lead to disqualification. Make sure you attach the course description of the proposed course before submission.
-		</p>
-	</div>
+
+
+<div class="">
+<span class="pull-right">
+		<s:form method="post" name="staffForm" namespace="/staff" action="index">
+			<s:submit value="Go to list!" cssClass="btn btn-success" cssStyle="align: right" />
+		</s:form>
+	</span>
+<!--  Page heading-->
+<h3 class="page-header">Reference Number: <s:property value="staffDev.referenceNumber" /> (<s:property value="staffDev.owner.fullName" />)
+	
+</h3>
+<!-- End page heading -->
+ 
+ <div class="alert alert-warning" role="alert">
+ 		<strong>Agreement: </strong>Please read carefully the announcement criteria and instructions before you submit your form. 
+ 		Failure to adhere strictly may lead to disqualification. Make sure you attach the course description of the proposed course before submission.
+ </div>
+	 
 
 	<div class=" col col-sm-9">
 	
-	
-	<div><em>* <font style="color:#ff0000">means mandatory fields</font></em></div>
-	
+	<div class="alert alert-info" role="alert"><i class="glyphicon glyphicon-asterisk text-danger"></i> means mandatory fields</div>
 	<div class="col col-sm-12">
+	
 	<s:form id="processdata" namespace="/staff" action="save" method="post">
-	<s:if test="staffDev!=null">
-		<s:hidden name="id" value="%{staffDev.id}" />
-	</s:if>
-	<table class="inputform">
-	    <colgroup>
-				<col width="200px" />
-				<col />
-			</colgroup>
-	        <tr>
-	            <td></td>
-	            <td>
-	            	<s:if test="staffDev!=null && staffDev.status==@org.iita.trainingunit.staff.model.StaffDevelopment$STATUS@NEW">
-	           			<s:submit cssClass="btn btn-primary pull-right" action="save!apply" value="Submit Form" onclick="if(confirm('Submit your application form anyway?')){return true;}else{return false;}" />
-	           		</s:if>
-	           		<s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" />
-	            </td>
-	        </tr>
-	</table>
+		<s:if test="staffDev!=null">
+			<s:hidden name="id" value="%{staffDev.id}" />
+		</s:if>
+	
+		<div class="btn-toolbar " role="toolbar" >
+ 			<div class="btn-group" role="group" aria-label="Submit Form">
+   				<s:if test="staffDev!=null && staffDev.status==@org.iita.trainingunit.staff.model.StaffDevelopment$STATUS@NEW">
+	        		<s:submit cssClass="btn btn-success pull-right" action="save!apply" value="Submit Form" onclick="if(confirm('Submit your application form anyway?')){return true;}else{return false;}" />
+	    		</s:if>
+  			</div>
+  			<div class="btn-group" role="group" aria-label="Continue Editing"> <s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" /></div>
+   
+		</div>
+	          
 
-		<h3>SECTION A:- TO BE COMPLETED BY APPLICANT</h3>
-	    <table id="locTable" class="table">
-	    	<tr>
-				<td>
+		<h3 class="page-header">SECTION A:- TO BE COMPLETED BY APPLICANT</h3>
+	     
 					<div class="row">
 						<div class="form-group">
 							<div class="col-xs-12 col-md-6">
@@ -128,7 +128,7 @@
 						<div class="form-group">
 							<div class="col-xs-12 col-md-4">
 				                <label for="gender" class="col-xs-12"><strong>Gender: <font style="color:#ff0000">*</font></strong></label>
-				                <s:radio id="gender" name="staffDev.gender" value="%{staffDev.gender}" list="#{'Female':'Female','Male':'Male'}" />
+				                <s:radio id="gender" name="staffDev.gender" cssClass="radio-inline" value="%{staffDev.gender}" list="#{'Female':'Female','Male':'Male'}" />
 				            </div>
 				            <div class="col-xs-12 col-md-4">
 				                <label for="supervisor" class="col-xs-12"><strong>Supervisor: <font style="color:#ff0000">*</font></strong></label>
@@ -170,12 +170,12 @@
 				                 'Short term course (External)':'Short term course (External)',
 				                 'Long term course (External)':'Long term course (External)',
 				                 'Attendance - Conference, Workshop (External)':'Attendance - Conference, Workshop (External)',
-				                 'Visit (External)':'Visit (External)'}" cssClass="form-radio" />
+				                 'Visit (External)':'Visit (External)'}" cssClass="form-radio radio-inline" />
 				            </div>
 				        </div>
 			        </div>
 			        			        
-			        <h3>Course details</h3>
+			        <h3 class="page-header">Course details</h3>
 			        
 			        <div class="row">
 		            	<div class="form-group">
@@ -231,7 +231,7 @@
 			        </div>
 		            <div class="clearfix">&nbsp;</div>
 		            
-		            <h3>Course relevance- please complete the following section in detail</h3>
+		            <h3 class="page-header">Course relevance- please complete the following section in detail</h3>
 					<div class="row">
 		            	<div class="form-group">
 			                <div class="col-xs-12 col-md-12">
@@ -308,7 +308,7 @@
 				        </div>
 			        </div>
 		            
-		            <h3>SECTION B- COST IMPLICATION FOR THE COURSE</h3>
+		            <h3 class="page-header">SECTION B- COST IMPLICATION FOR THE COURSE</h3>
 		            <div class="row"><font style="color:#ff0000"><em>Noteworthy:</em> Enter 0 in below fields if they are not applicable</font></div>
 		            <div class="row">		            	
 						<div class="form-group">
@@ -355,7 +355,7 @@
 		            		<div class="col-xs-12 col-md-6">
 				                <label for="totalAmtRequest" class="col-xs-12"><strong>Total amount request: <font style="color:#ff0000">*</font></strong></label>
 				                <s:textfield cssClass="form-control numeric-input" id="totalAmtRequest" name="staffDev.totalAmtRequest" value="%{staffDev.totalAmtRequest}" />
-				            </div>
+				            </div>`	
 			                <div class="col-xs-12 col-md-6">
 			                	<label for="otherFundingSource" class="col-xs-12"><strong>State other sources of funding available to you CC or PA: <font style="color:#ff0000">*</font></strong></label>
 			                	<s:textfield cssClass="form-control" id="otherFundingSource" name="staffDev.otherFundingSource" value="%{staffDev.otherFundingSource}" />     
@@ -367,54 +367,70 @@
 		            <s:if test="staffDev.status==@org.iita.trainingunit.staff.model.StaffDevelopment$STATUS@SUBMITTED && staffDev.supervisor==user">
 		            	<s:include value="/WEB-INF/jsp/staff/supervisor-form.jsp"></s:include>
 		            </s:if>
-				</td>
-			</tr>
-	    </table>
-	    
-	    <table class="inputform">
-		    <colgroup>
-					<col width="200px" />
-					<col />
-				</colgroup>
-		        <tr>
-		            <td></td>
-		            <td>
-		            	
-		            	<s:if test="staffDev!=null && staffDev.status==@org.iita.trainingunit.staff.model.StaffDevelopment$STATUS@NEW">
-		           			<s:submit cssClass="btn btn-primary pull-right" action="save!apply" value="Submit Form" onclick="if(confirm('Submit your application form anyway?')){return true;}else{return false;}" />
-		           		</s:if>
-		           		<s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" />
-		            </td>
-		        </tr>
-		</table>
-		</s:form>
+		 
+	    			
+	    <div class="btn-toolbar pull-right" role="toolbar" >
+ 			<div class="btn-group" role="group" aria-label="Submit Form">
+   				<s:if test="staffDev!=null && staffDev.status==@org.iita.trainingunit.staff.model.StaffDevelopment$STATUS@NEW">
+	        		<s:submit cssClass="btn btn-success pull-right" action="save!apply" value="Submit Form" onclick="if(confirm('Submit your application form anyway?')){return true;}else{return false;}" />
+	    		</s:if>
+  			</div>
+  			<div class="btn-group" role="group" aria-label="Continue Editing"> <s:submit cssClass="btn btn-primary pull-right" value="Continue Editing" /></div>
+   
+		</div>
+	    	 
+	</s:form>
+		
 	    </div>
 		
 	</div>
 	
 	<div class="col col-sm-3">
+	
+		
+	
 			<s:if test="staffDev.documents.size>0">
-				<h2>Application Supporting Documents</h2>
-				
-				<ul class="file-list">
+				<div class="panel panel-default">
+  				<div class="panel-heading">Application Supporting Documents</div>
+  				<div class="panel-body">
+  				
+    				<ul class="file-list">
 					<s:iterator value="staffDev.documents">
 						<li class="file"><s:include value="/WEB-INF/jsp/document/entitydocument-staffdev-quick.jsp" /></li>
 					</s:iterator>
-				</ul>
+					</ul>
+				
+  				</div>
+	    		</div>	
+				
 			</s:if>
 			
+			
 			<s:if test="user==staffDev.owner">
-				<p>Attach document to application:</p>
-				<iita:fileupload action="staffdevelopment-document!upload" value="Upload files" queryParams="entityId=${staffDev.id}" />
+			
+				<div class="panel panel-default">
+  					<div class="panel-heading">Attach document to application:</div>
+  					<div class="panel-body">
+  					<label>Upload files</label>
+    			<iita:fileupload action="staffdevelopment-document!upload" cssClass="form-control" value="Upload files" queryParams="entityId=${staffDev.id}" />
+  					</div>
+	    		</div>
+				
+				
 			</s:if>
+			
+		<s:if test="staffDev.actionLog!=null">
+		 
+			<s:include value="/WEB-INF/jsp/staff/actionlog.jsp"></s:include>
+		 
+		</s:if>
+			
 		</div>
 		
-		<s:if test="staffDev.actionLog!=null">
-		<div class="col col-sm-3">
-			<s:include value="/WEB-INF/jsp/staff/actionlog.jsp"></s:include>
-		</div>
-		</s:if>
-</div>
+	
+		
+</div>	
+	 
 	
 	
 	<div class="clearfix">&nbsp;</div>
@@ -447,5 +463,6 @@ function formatMoney(number, places, symbol, thousand, decimal) {
 }
 
 </script>
+
 </body>
 </html>
