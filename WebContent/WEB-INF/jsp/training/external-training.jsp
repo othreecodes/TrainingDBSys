@@ -24,7 +24,7 @@
 
 
 
-			<table class="inputform">
+			<table class="table table-responsive">
 				<colgroup>
 					<col width="200px" />
 					<col />
@@ -49,41 +49,36 @@
 				<strong> Application Form for Use of IITA Research
 					Facilities</strong>
 			</h2>
-
+<div class="hline"></div>
 			<br>
 			<br>
 			<br>
 
 
 			<div class="row">
-				<div class="col-md-8">
-					<p>
+			
+					<p class="alert alert-warning">
 						<strong>Instructions:</strong> Completed application forms should
 						be accompanied by a letter of interest, a letter of recommendation
 						and permission from current head of institution, curriculum vitae,
 						and a research proposal of not more than 2 pages.
-					</p>
-					<p>
+					<br><br>
+					
 						Fill in the shaded fields. Use the <em>TAB</em> key on the
 						keyboard or your mouse to move between fields.
-					</p>
-
-					<p>
+					
+<br><br>
+					
 						<strong>Le formulaire peut être rempli soit en français,
 							soit en anglais.</strong>
-					</p>
-				</div>
-				<div class="col-md-4">
-					<img alt="Bootstrap Image Preview"
-						src="http://lorempixel.com/140/140/"
-						class="img-circle pull-right img-responsive" " />
-				</div>
+					
+					<p>
+				
 			</div>
 
 
 			<!--------------------------------------- PART I - ADMINISTRATIVE INFORMATION  .------------------------------>
-			<br>
-			<br>
+			
 			<br>
 			<h4 class="text-center">
 				<strong>PART I - ADMINISTRATIVE INFORMATION </strong>
@@ -94,7 +89,7 @@
 				<strong>1. Personal </strong>
 			</h3>
 
-			<table id="" class="table table-stripped">
+			<table id="" class="table table-responsive">
 				<tr>
 					<div class="row">
 						<div class="col-md-8">
@@ -292,7 +287,7 @@
 			<br>
 			<hr />
 
-
+<div class="hline"></div>
 			<!--------------------------------------- PART II - EDUCATION AND TRAINING  .------------------------------>
 			<br>
 
@@ -1290,7 +1285,7 @@
 			<hr />
 
 
-
+<div class="hline"></div>
 	<!--------------------------------------- 2. lANGUAGE SKILLS  .------------------------------>
 			<br>
 
@@ -1300,14 +1295,12 @@
 
 <table id="" class="table table-stripped">
 				<tr>
-				<fieldset>
-						<legend>
-							<font style="color: #d3d3d3">lANGUAGE SKILLS: </font>
-						</legend>
+			
+						
 		<s:include value="languageskills.jsp" />
 
 					</tr>
-				</fieldset>
+				
 			</table>
 
 
@@ -1315,7 +1308,7 @@
 			<br>
 			<hr />
 
-
+<div class="hline"></div>
 <!--------------------------------------- PART II. FACILITIES TO BE USED   .------------------------------>
 
 

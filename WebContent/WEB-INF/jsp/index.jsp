@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Training DB Application</title>
-<style type="text/css">
+<!--  <style type="text/css">
 	.home-title {
 		text-align: left;
   		font-size: 35px;
@@ -31,10 +31,10 @@
 	.top-buffer { margin-top:20px; }
 	
 	.hideDiv {display: none;}
-</style>
+</style>-->
 </head>
 <body>
-<div class="notice">
+<div class="alert alert-warning">
 	<p>
 		<strong>Notice: </strong>This system holds tracks of all training information in the institute. You are advised to go through the procedures for information on proper use of the system. Use the system accordingly and contact <a href="mailto:iita-trainingunit@cgiar.org">IITA-TrainingUnit@cgiar.org</a> on any ambiguities.
 	</p>
@@ -62,21 +62,12 @@
 	</div>
 </s:if>
 
-<table style="width:100%">
-	<colgroup><col width="80%"/><col width="20%"/>
-	</colgroup>
-	<tr>
-		<td style="vertical-align: top; padding-right: 30px">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				        <div class="panel panel-default">
-				        	<div class="panel-heading">
-				        		<h4 class="pabel-title">
-				        			What do you want to do?        		
-				        		</h4>        	
-				        	</div>
-				            <div class="panel-body">
+
+<div class="col-lg-8">
+	 			<! -- Blog Post 1 -->
+		 		<a href="single-post.html"><h2 class="ctitle panel-heading">What do you want to do?</h2></a>
+		 		<div class="hline"></div>
+		 		 <div class="panel-body">
 				                <div class="list-group">
 									<a class="list-group-item" href="<s:url namespace="/" action="staff/apply" />">Apply for training</a>
 									<a class="list-group-item" href="<s:url namespace="/" action="trainee-register" />">Register new trainee</a>									
@@ -88,66 +79,67 @@
 									<a class="list-group-item" href="<s:url namespace="/" action="upload-report" />">Upload Report</a>
 									<a class="list-group-item" href="<s:url namespace="/" action="external-training-new" />">External Training Application</a>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</td>
-		<td valign="top">
-			<div class="row alert alert-info">
-				<div class="col-sm-12">
-					<s:form method="post" name="staffForm" namespace="/staff" action="index">
+							</div><div class="spacing"></div>
+		 	
+			</div><! --/col-lg-8 -->
+	 		
+	 		
+	 		<! -- SIDEBAR -->
+	 		<div class="col-lg-4 padding">
+	 		
+		 		<div class="hline"></div>
+		 		<br>
+		 			<s:form method="post" name="staffForm" namespace="/staff" action="index">
 						<s:if test="getUser().hasRole('ROLE_ADMIN') || getUser().hasRole('ROLE_CDO') || getUser().hasRole('ROLE_TRAININGUNITHEAD')">
-							<s:submit value="Staff Training Applications" cssClass="btn btn-warning" />
+							<s:submit value="Staff Training Applications" cssClass="btn btn-info" />
 						</s:if>
 						<s:else>
-							<s:submit value="My Training Applications" cssClass="btn btn-warning" />
+							<s:submit value="My Training Applications" cssClass="btn btn-info" />
 						</s:else>
-			    	</s:form>
-				</div>
-			</div>
-			<div class="row alert alert-info">
-				<div class="col-sm-12">
-			    	<img src="<c:url value="traineechart.png" />" />
-			    </div>
-			    <div class="clearfix" style="height:10px; clear: both;"></div>
-			    <div class="col-sm-12">
-			    	<img src="<c:url value="groupchart.png" />" />
-			    </div>
-			</div>
-			<div class="row alert alert-warning">
-				<div class="col-sm-12">
-					<%@ include file="/common/yearmodules.jsp"%>
-				</div>
-			</div>
-			<s:if test="applications!=null && applications.size>0">
-				<div class="row">
-					<div class="col-sm-12">
-						<h3>Latest applications</h3>
-						<ul>
-						<s:iterator value="applications">
+			    	</s:form>	
+		 		<div class="spacing"></div>
+		 		
+		 		<h4>Trainee Chart</h4>
+		 		<div class="hline"></div>
+			 		<img src="<c:url value="traineechart.png" />" />
+		 		<div class="spacing"></div>
+		 		
+		 		
+		 		
+		 		<h4>Groupchart</h4>
+		 		<div class="hline"></div>
+			 		<img src="<c:url value="groupchart.png" />" />
+				<div class="spacing"></div>	
+				
+				
+			 	<h4>Activities</h4>
+		 		<div class="hline"></div>
+			 		<%@ include file="/common/yearmodules.jsp"%>
+			 		
+			 		
+			 		
+		 		
+		 		<h4>Recent Applications</h4>
+		 		<div class="hline"></div>
+					<s:iterator value="applications">
 							<li><s:include value="/WEB-INF/jsp/include/applications-short.jsp" /></li>
-						</s:iterator>
-						</ul>
-					</div>
-				</div>
-			</s:if>
-			<div class="row alert alert-danger">
-				<div class="col-sm-12" style="text-align: center">
-					<p><a href="<s:url action="alerts"/>" class="image-border"><img src="/training/img/alert_notifications.png" class="img-rounded"></a></p>
-					<h4><a href="<s:url action="alerts"/>">Notification monitor</a></h4>
-				</div>
-			</div>
-			<div class="row alert alert-warning">
-			    <div class="col-sm-12" style="text-align: center">
-			      	<p><a href="<s:url action="tagcloud"/>" class="image-border"><img src="/training/img/tag_cloud.png" class="img-rounded"></a></p>
-			    	<h4><a href="<s:url action="tagcloud"/>">Tag cloud</a></h4>
-			    </div>
-			</div>
-		</td>
-	</tr>
-</table> 
+						</s:iterator>        
+		 		<div class="spacing"></div>
+		 		
+		 	<h4><a href="<s:url action="alerts"/>">Notification monitor</a></h4>
+		 		<div class="hline"></div>
+		 			<p><a href="<s:url action="alerts"/>" class="image-border"><img src="/training/img/alert_notifications.png" class="img-rounded"></a></p>
+					
+	 		
+	 		
+	 		<h4><a href="<s:url action="tagcloud"/>">Tag cloud</a></h4>
+		 		<div class="hline"></div>
+		 				<p><a href="<s:url action="tagcloud"/>" class="image-border"><img src="/training/img/tag_cloud.png" class="img-rounded"></a></p>
+			    	
+	 		
+	 		</div>
+	
+	
 <script>
 $(document).ready(function(){
 	$("#btnSearch").click(function() {

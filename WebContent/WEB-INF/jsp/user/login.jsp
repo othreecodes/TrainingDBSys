@@ -3,18 +3,18 @@
 
 
 		
-		<h1 class="headerwrap">
+		<h1 class="centered">
 		<fmt:message key="webapp.name" />
-		</h1>		
-		<div class="container-fluid">
-		<p class="alert alert-warning"><b>Note:</b> Use your Domain Network account to log in.</p>
-		
+		</h1>		<div class="hline"></div>
+		<div class="container-fluid centered">
+		<br><br>
 		
 		
 		<s:include value="login-form.jsp" />
 		
 		
 		
+		<p class="alert alert-warning"><b>Note:</b> Use your Domain Network account to log in.</p>
 		
 		<p class="smallpadding">Don't want to use your domain password or domain password does not
 			work? You can <a href="<s:url action="remind/password" />">generate
