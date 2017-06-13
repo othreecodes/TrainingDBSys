@@ -804,6 +804,10 @@
             <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
         </action>
         
+        <action name="external-training/view" class="externalTrainingAction" method="view" >
+            <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+        </action>
+        
          <action name="external-training-list" class="externalTrainingAction" method="list">
             <result name="success">/WEB-INF/jsp/training/list.jsp</result>
         </action>

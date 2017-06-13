@@ -35,8 +35,7 @@
 		<s:if test="paged.pageSize > 0">
 			
 			<table id="example"
-			class="table table-striped table-bordered table-responsive"
-			cellspacing="0" width="100%">
+			class="table table-striped table-bordered table-responsive">
 			<thead>
 				<tr>
 					<th>#</th>
@@ -62,8 +61,9 @@
 			<tbody>
 			<s:iterator value="paged.results" status="status">
 				<tr>
+				
 					<td><s:property value="#status.count + paged.startAt" /></td>
-					<td><s:property value="title" /></td>
+					<td><a href="<s:url action="external-training/view" />?id=<s:property value="id" />"><s:property value="title" /></a></td>
 					<td><s:property value="fullName" /></td>
 					<td><s:property value="phone" /></td>
 					<td><s:property value="email" /></td>

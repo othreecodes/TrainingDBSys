@@ -19,6 +19,21 @@ public class ExternalTrainingAction extends BaseAction{
 	/**
 	 * 
 	 */
+	private long id;
+	/**
+	 * @return the id
+	 */
+	public long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(long id) {
+		this.id = id;
+	}
+
 	protected int startAt = 0, maxResults = 50;
 	private static final long serialVersionUID = 1L;
 	private ExternalTrainingService trainingService;
@@ -103,6 +118,11 @@ public class ExternalTrainingAction extends BaseAction{
 		this.paged = paged;
 	}
 
+	public String view(){
+		this.training = this.trainingService.load(id);
+		
+		return Action.SUCCESS;
+	}
 	 
 	 
 
