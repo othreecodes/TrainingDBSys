@@ -16,8 +16,6 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <!-- Materializecss section end here -->
-<script type="text/javascript"
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <decorator:head />
 </head>
 
