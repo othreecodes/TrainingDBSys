@@ -5,7 +5,7 @@
 %>
 <%-- ActionError Messages - usually set in Actions --%>
 <s:if test="hasActionErrors()">
-	<div class="error" id="errorMessages"><s:iterator value="actionErrors">
+	<div class="error alert alert-danger" id="errorMessages"><s:iterator value="actionErrors">
 		<s:property />
 		<br />
 	</s:iterator></div>
@@ -13,7 +13,7 @@
 
 <%-- FieldError Messages - usually set by validation rules --%>
 <s:if test="hasFieldErrors()">
-	<div class="error" id="errorMessages"><s:iterator value="fieldErrors">
+	<div class="error alert alert-danger" id="errorMessages"><s:iterator value="fieldErrors">
 		<s:iterator value="value">
 			<s:property />
 			<br />
@@ -23,7 +23,7 @@
 
 <%-- Action Messages - usually set in Actions --%>
 <s:if test="hasActionMessages()">
-	<div class="error" id="actionMessages"><s:iterator value="actionMessages">
+	<div class="error alert alert-danger" id="actionMessages"><s:iterator value="actionMessages">
 		<s:property />
 		<br />
 	</s:iterator></div>
@@ -35,7 +35,7 @@
 
 <%-- Success Messages --%>
 <c:if test="${not empty messages}">
-	<div class="message" id="successMessages"><c:forEach var="msg" items="${messages}">
+	<div class="message alert alert-success" id="successMessages"><c:forEach var="msg" items="${messages}">
 		<c:out value="${msg}" />
 		<br />
 	</c:forEach></div>
