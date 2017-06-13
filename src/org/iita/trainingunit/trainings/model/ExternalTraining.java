@@ -1,131 +1,168 @@
-
 package org.iita.trainingunit.trainings.model;
 
 
-import org.hibernate.annotations.Entity;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.iita.crm.model.Organization;
+import org.iita.crm.model.Person;
+import org.iita.crm.model.Person.Gender;
 import org.iita.entity.VersionedEntity;
+import org.iita.trainingunit.model.TraineeEducationalInfo;
 
-
-
+/**
+ * created by David 14/05/2017
+ */
 @Entity
-public class ExternalTraining extends VersionedEntity{
+@Table(name="externaltraining")
+public class ExternalTraining extends VersionedEntity {
+	
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
-	/* private Person user;
-	 * 
-	 *  */
-	
-	
+	/** The title. */
 	private String title;
-	private String surname;
-	private String firstname;
+
+	/** The last name. */
+	private String lastName;
+
+	/** The first name. */
+	private String firstName;
+
+	/** The other names. */
+	private String otherNames;
+
+	/** The gender. */
 	private String gender;
-	private String email;
-	private String nationality;
-	private String jobtitle;
-	private String phone;
-	private String areasInterest;
-	private String gainCourse;
-	private String organization;
-	private String fullname;
-	private String recentEducation;
-	private String officeAddress;
+
+	/** The job title. */
+	private String jobTitle;
 	
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getSurname() {
-		return surname;
-	}
-	public void setSurname(String surname) {
-		this.surname = surname;
-	}
-	public String getFirstname() {
-		return firstname;
-	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getNationality() {
-		return nationality;
-	}
-	public void setNationality(String nationality) {
-		this.nationality = nationality;
-	}
-	public String getJobtitle() {
-		return jobtitle;
-	}
-	public void setJobtitle(String jobtitle) {
-		this.jobtitle = jobtitle;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getAreasInterest() {
-		return areasInterest;
-	}
-	public void setAreasInterest(String areasInterest) {
-		this.areasInterest = areasInterest;
-	}
-	public String getGainCourse() {
-		return gainCourse;
-	}
-	public void setGainCourse(String gainCourse) {
-		this.gainCourse = gainCourse;
-	}
+	/** The country. */
+	private String country;
+	private String fullName;
+	
+	private String officeAddress;
+	private String phone;
+	private String email;
+	private String organization;
+	private String educationalInfo;
+	private String RelevantAreasInterest;
+	private String gaintFromCourse;
+	
+	@Column(length = 500)
 	public String getOrganization() {
 		return organization;
 	}
 	public void setOrganization(String organization) {
 		this.organization = organization;
 	}
-
-	public String getFullname() {
-		return fullname;
+	@Column(length = 500)
+	public String getEducationalInfo() {
+		return educationalInfo;
 	}
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public void setEducationalInfo(String educationalInfo) {
+		this.educationalInfo = educationalInfo;
 	}
-
-
-	public String getRecentEducation() {
-		return recentEducation;
+	@Column(length = 500)
+	public String getRelevantAreasInterest() {
+		return RelevantAreasInterest;
 	}
-	public void setRecentEducation(String recentEducation) {
-		this.recentEducation = recentEducation;
+	public void setRelevantAreasInterest(String relevantAreasInterest) {
+		RelevantAreasInterest = relevantAreasInterest;
 	}
+	@Column(length = 500)
+	public String getGaintFromCourse() {
+		return gaintFromCourse;
+	}
+	public void setGaintFromCourse(String gaintFromCourse) {
+		this.gaintFromCourse = gaintFromCourse;
+	}
+	@Column(length = 500)
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	@Column(length = 500)
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	@Column(length = 500)
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	@Column(length = 500,nullable=true)
+	public String getOtherNames() {
+		return otherNames;
+	}
+	public void setOtherNames(String otherNames) {
+		this.otherNames = otherNames;
+	}
+	@Column(length = 10)
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	@Column(length = 100)
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	@Column(length = 500)
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	@Column(length = 500)
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	@Column(length = 500)
 	public String getOfficeAddress() {
 		return officeAddress;
 	}
 	public void setOfficeAddress(String officeAddress) {
 		this.officeAddress = officeAddress;
 	}
+	@Column(length = 50)
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	@Column(length = 50)
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	
 	
 
 }

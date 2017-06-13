@@ -7,7 +7,7 @@
 <body >
 
 
-<div class="">
+<div class="con">
 
 <div class="col-md-8">
 		<div class="alert alert-info">Before registering new training

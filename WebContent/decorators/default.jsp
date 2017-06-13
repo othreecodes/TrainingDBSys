@@ -12,6 +12,7 @@
 </title>
 <%@ include file="/common/meta.jsp"%>
 <decorator:head />
+ <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
@@ -87,7 +88,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
     <script  type="text/javascript" src="<s:url value="/script/assets/js/bootstrap.min.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/retina-1.1.0.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.hoverdir.js" />"></script>
@@ -95,7 +96,7 @@
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.prettyPhoto.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.isotope.min.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/assets/js/custom.js" />"></script>
- 	<script  type="text/javascript" src="<s:url value="/script/protoype.js" />"></script>
+ 	<script  type="text/javascript" src="<s:url value="/script/prototype.js" />"></script>
 	<script  type="text/javascript" src="<s:url value="/script/scriptaculous.js" />"></script>
 	<script type="text/javascript" src="<s:url value="/script/gears/gears_init.js" />"></script>
 	<s:action name="google/analytics" namespace="/" executeResult="true" ignoreContextParams="true" />

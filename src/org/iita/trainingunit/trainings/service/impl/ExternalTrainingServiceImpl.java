@@ -1,5 +1,7 @@
 package org.iita.trainingunit.trainings.service.impl;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -45,5 +47,13 @@ public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 		return this.entityManager.find(ExternalTraining.class, id);
 	}
 
+	@Override
+	@Transactional(readOnly=true)
+	public List<ExternalTraining> loadAll() {
+		 
+		return this.entityManager.createQuery("FROM ExternalTraining e order by e.id desc").getResultList();
+	}
+
+	
 }
 

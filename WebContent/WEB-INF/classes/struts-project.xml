@@ -803,6 +803,11 @@
         <action name="external-training" class="externalTrainingAction">
             <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
         </action>
+        
+         <action name="external-training-list" class="externalTrainingAction" method="list">
+            <result name="success">/WEB-INF/jsp/training/list.jsp</result>
+        </action>
+        
         <action name="external-training-new" class="externalTrainingAction" method="createNew">
             <result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
         </action>

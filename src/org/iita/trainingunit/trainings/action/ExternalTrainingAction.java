@@ -1,6 +1,8 @@
 package org.iita.trainingunit.trainings.action;
 
 
+import java.util.List;
+
 import org.iita.crm.action.BaseAction;
 import org.iita.trainingunit.announcements.service.AnnouncementService;
 import org.iita.trainingunit.trainings.model.ExternalTraining;
@@ -10,7 +12,9 @@ import org.iita.trainingunit.trainings.service.ExternalTrainingService;
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.Preparable;
 
-
+/**
+ * created by David 14/05/2017
+ */
 public class ExternalTrainingAction extends BaseAction{
 	/**
 	 * 
@@ -18,7 +22,7 @@ public class ExternalTrainingAction extends BaseAction{
 	private static final long serialVersionUID = 1L;
 	private ExternalTrainingService trainingService;
 	ExternalTraining training;
-	
+	List<ExternalTraining> externalTrainings;
 	
 	@Override
 	public String execute() {
@@ -32,7 +36,7 @@ public class ExternalTrainingAction extends BaseAction{
 	
 	@Override
 	public void prepare() {
-		 		
+		 this.trainingService.loadAll();
 	}
 	
 	public String apply(){
@@ -63,8 +67,12 @@ public class ExternalTrainingAction extends BaseAction{
 	public void setTrainingService(ExternalTrainingService trainingService) {
 		this.trainingService = trainingService;
 	}
+	
+	public String list(){
+	
+		return Action.SUCCESS;
+	}
 
 	 
-
 
 }

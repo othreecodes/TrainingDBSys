@@ -125,6 +125,8 @@
 						</security:authorize>
 						<li><a style="margin-right: 10px;"
 							href="<s:url namespace='/announcement' action='cdoindex' />"><span>Announcements</span></a></li>
+							<li><a style="margin-right: 10px;"
+							href="<s:url namespace='/' action='external-training-list' />"><span>External Trainings</span></a></li>
 					</security:authorize>
 				</ul></li>
 
