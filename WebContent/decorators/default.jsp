@@ -100,6 +100,6 @@
 	<script  type="text/javascript" src="<s:url value="/script/scriptaculous.js" />"></script>
 	<script type="text/javascript" src="<s:url value="/script/gears/gears_init.js" />"></script>
 	<s:action name="google/analytics" namespace="/" executeResult="true" ignoreContextParams="true" />
-
+	
   </body>
 </html>

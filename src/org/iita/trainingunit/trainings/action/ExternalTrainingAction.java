@@ -7,7 +7,7 @@ import org.iita.crm.action.BaseAction;
 import org.iita.trainingunit.announcements.service.AnnouncementService;
 import org.iita.trainingunit.trainings.model.ExternalTraining;
 import org.iita.trainingunit.trainings.service.ExternalTrainingService;
-
+import org.iita.util.PagedResult;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.Preparable;
@@ -19,10 +19,11 @@ public class ExternalTrainingAction extends BaseAction{
 	/**
 	 * 
 	 */
+	protected int startAt = 0, maxResults = 50;
 	private static final long serialVersionUID = 1L;
 	private ExternalTrainingService trainingService;
 	ExternalTraining training;
-	List<ExternalTraining> externalTrainings;
+	PagedResult<ExternalTraining> paged;
 	
 	@Override
 	public String execute() {
@@ -36,7 +37,8 @@ public class ExternalTrainingAction extends BaseAction{
 	
 	@Override
 	public void prepare() {
-		 this.trainingService.loadAll();
+		super.prepare();
+		paged = this.trainingService.loadAll(startAt,maxResults);
 	}
 	
 	public String apply(){
@@ -73,6 +75,35 @@ public class ExternalTrainingAction extends BaseAction{
 		return Action.SUCCESS;
 	}
 
+	/**
+	 * @return the startAt
+	 */
+	public int getStartAt() {
+		return startAt;
+	}
+
+	/**
+	 * @param startAt the startAt to set
+	 */
+	public void setStartAt(int startAt) {
+		this.startAt = startAt;
+	}
+
+	/**
+	 * @return the paged
+	 */
+	public PagedResult<ExternalTraining> getPaged() {
+		return paged;
+	}
+
+	/**
+	 * @param paged the paged to set
+	 */
+	public void setPaged(PagedResult<ExternalTraining> paged) {
+		this.paged = paged;
+	}
+
+	 
 	 
 
 }

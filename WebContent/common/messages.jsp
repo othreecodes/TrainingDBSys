@@ -23,7 +23,7 @@
 
 <%-- Action Messages - usually set in Actions --%>
 <s:if test="hasActionMessages()">
-	<div class="error alert alert-danger" id="actionMessages"><s:iterator value="actionMessages">
+	<div class="error alert alert-info" id="actionMessages"><s:iterator value="actionMessages">
 		<s:property />
 		<br />
 	</s:iterator></div>
