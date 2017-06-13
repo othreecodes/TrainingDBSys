@@ -4,7 +4,7 @@
 <%@ include file="/common/taglibs.jsp"%>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title><decorator:title default="Untitled page" /> | <fmt:message key="webapp.name" /></title>
+<title>IITA Training System</title>
 <%@ include file="/common/meta.jsp"%>
 <!-- This section is imported for materializecss -->
 	<!--Import Google Icon Font-->
