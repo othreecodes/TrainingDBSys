@@ -4,44 +4,65 @@
 <%@ include file="/common/taglibs.jsp"%>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<title><decorator:title default="Untitled page" /> | <fmt:message key="webapp.name" /> Administration</title>
+<title>
+<decorator:title default="Untitled page" /> | <fmt:message key="webapp.name" /> Administration
+</title>
 <%@ include file="/common/meta.jsp"%>
+
+
 <decorator:head />
+
+ <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <script type="text/javascript" src="<c:url value="/help/script/help.js" />"></script>
 </head>
-<body <decorator:getProperty property="body.id" writeEntireProperty="true"/> <decorator:getProperty property="body.class" writeEntireProperty="true"/>>
+<body
+ <decorator:getProperty property="body.id" writeEntireProperty="true"/> 
+ <decorator:getProperty property="body.class" writeEntireProperty="true"/>
+ >
 
-<div style="" class="noprint">
-<table style="width: 100%">
-	<col width="150px" />
-	<col />
-	<tr>
-		<td rowspan="2" style="vertical-align: top; padding-right: 10px;"><a href="<s:url action="index" namespace="/admin" />" title="Go to dashboard of <fmt:message key="webapp.name" />"><img src="<c:url value='/img/logo.gif'/>" alt="IITA"
-			style="float: left;" /></a></td>
-		<td style="vertical-align: top; padding: 0;">
-			<s:action name="applock-status" namespace="/" executeResult="true" ignoreContextParams="true" />
-			<div style="padding: 3px 6px; background-color: rgb(240, 240, 240);">
-				<div style="float: right;"><s:include value="/WEB-INF/jsp/admin/fast-switch.jsp" /> <%-- Search: <form method="get" action="<s:url action='search' />"><input name="q" style="width: 200px;" value="" /> <input type="submit" value="Search" /></form> --%></div>
-				<h1 style="margin: 0px 0px 3px 0px; padding: 0px; font-size: 1.5em;">Administration: <fmt:message key="webapp.name" /></h1>
-			</div>			
-		</td>
-	</tr>
-	<tr>
-		<td style="vertical-align: bottom; padding: 5px 0 0 0;">
-			<div style="margin: 1pt 0px 6px 0px;"><jsp:include page="/common/adminmenu.jsp" /></div>
-		</td>
-	</tr>
-</table>
-</div>
 
-<div class="noprint" style="margin-top: 3px; border-top: solid 1px black; background-color: #EACE7C; min-height: 16px; padding: 3px 10px 2px 10px; font-weight: bold;"><div style="float: right"><s:action name="user-info" namespace="/" executeResult="true" ignoreContextParams="true" /></div><decorator:title
-	default="Untitled page" /></div>
 
-<div style="margin: 10px 10px 0px 10px;">
+<s:action name="applock-status" namespace="/" executeResult="true" ignoreContextParams="true" />
+			
+			
+			<div class="well rmmgb" style="text-transform: uppercase;">
+					<form method="get" class="form-inline" >
+					<div style="float: right;"><s:include value="/WEB-INF/jsp/admin/fast-switch.jsp" /> </div>
 
-<div id="main"><%@ include file="/common/messages.jsp"%> <decorator:body /></div>
-</div>
+					</form>
+					</div>
+				<h6 class="centered"><strong>Administration: <fmt:message key="webapp.name" /></strong></h6>
+			</div>
+			
+			
+			
+    <!-- Fixed navbar -->
+   		<jsp:include page="/common/adminmenu.jsp" />
+   		
+<!-- ----- WELCOME USER ROW----- -->
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h4><s:action name="user-info" namespace="/" executeResult="true" ignoreContextParams="true" /></h4>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
+	
 
+		<div class="container mtb">
+	 	<div class="row">
+		 	<div id="main">
+	<%@ include file="/common/messages.jsp"%>
+	<decorator:body />
+	</div>
+	 	</div><!-- --/row ---->
+	 </div>
+	
+	
 <jsp:include page="/common/footer.jsp" />
 <jsp:include page="/common/sessionkeeper.jsp" />
 <script type="text/javascript">
@@ -50,5 +71,16 @@ Event.observe(window, "load", function() {
 	IITAHELP = new IITA.Help("<c:url value="/" />help/admin/");
 });
 </script>
+
+    <script  type="text/javascript" src="<s:url value="/script/assets/js/bootstrap.min.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/retina-1.1.0.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.hoverdir.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.hoverex.min.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.prettyPhoto.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/jquery.isotope.min.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/assets/js/custom.js" />"></script>
+ 	<script  type="text/javascript" src="<s:url value="/script/prototype.js" />"></script>
+	<script  type="text/javascript" src="<s:url value="/script/scriptaculous.js" />"></script>
+	<script type="text/javascript" src="<s:url value="/script/gears/gears_init.js" />"></script>
 </body>
 </html>
