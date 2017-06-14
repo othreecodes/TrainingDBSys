@@ -45,7 +45,7 @@ public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 	@Override
 	@Transactional(readOnly=true)
 	public ExternalTraining load(Long id) {
-		 
+		 System.out.println("got the id "+id);
 		return this.entityManager.find(ExternalTraining.class, id);
 	}
 
