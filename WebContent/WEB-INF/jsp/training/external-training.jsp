@@ -35,10 +35,11 @@
 								<div class="row">
 									<div class="form-group">
 										<div class="col-xs-12 col-md-3">
-											<label for="lastname" class="col-xs-6"><strong>Title
+											<label for="lastname" class="col-xs-12 col-lg-12"><strong>Title
 													(Dr., Mr., Mrs., etc.):<font style="color: #ff0000">*</font>
 											</strong></label>
-											<s:textfield cssClass="form-control" id="title" name="training.title"
+												  <s:select cssClass="form-control" id="title" name="training.title"
+											list="#{'Ms.':'Ms.','Mrs.':'Mrs.','Mr.':'Mr','Dr.':'Dr.','Chief':'Chief.','Prof':'Prof','Engr':'Engr','Rev':'Rev'}"
 												value="%{training.title}" />
 										</div>
 									</div>

@@ -132,7 +132,7 @@
 
             
 			<li class="dropdown">
-			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search <b class="caret"></b></a>
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Report <b class="caret"></b></a>
 				<ul class="dropdown-menu">
 					<security:authorize ifAnyGranted="ROLE_STAFF">
 						<security:authorize
