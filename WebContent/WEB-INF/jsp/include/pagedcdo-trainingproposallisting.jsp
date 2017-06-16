@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 <s:if test="paged.totalHits > 0">
-	<table class="data-listing">
+	<table class="table table-responsive table-bordered table-striped">
 		<colgroup>
 			<col width="2%" />
 			<col width="15%" />

@@ -3,7 +3,7 @@
 <s:form method="get" action="programs/export" namespace="/"><s:submit value="Export to Excel" /></s:form>
 </div>
 <s:if test="paged.pageSize > 0">
-		<table class="data-listing">
+		<table class="table table-responsive table-striped table-bordered">
 				<colgroup>
 					<col width="2%" />
 					<col />
