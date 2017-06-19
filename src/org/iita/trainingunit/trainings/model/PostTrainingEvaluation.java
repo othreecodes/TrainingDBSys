@@ -53,11 +53,12 @@ public class PostTrainingEvaluation extends VersionedEntity {
 	private STATUS lenghtSufficient;
 	private STATUS facilitiesComfortable;
 	private RATE rateTraining;
-
+	
 	private Application application;
 
 	private String canbeImproved;
 	private String otherComments;
+	
 
 	@Enumerated(EnumType.STRING)
 	public STATUS getMetExpectations() {
@@ -230,4 +231,8 @@ public class PostTrainingEvaluation extends VersionedEntity {
 		return application;
 	}
 
+ 
+
+	
+	
 }

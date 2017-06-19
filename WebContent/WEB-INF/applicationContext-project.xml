@@ -508,6 +508,7 @@
 	
 	<bean id="postTrainingEvaluationAction" class="org.iita.trainingunit.trainings.action.PostTrainingEvaluationAction" scope="request">
 			<constructor-arg ref="postTrainingEvaluationsService" />
+			<constructor-arg ref="cdoApplicationService" />
 	</bean>
 		<bean id="useOfFacilitiesAction" scope="request" class="org.iita.trainingunit.facilities.action.UseOfFacilitiesAction">
 	</bean>

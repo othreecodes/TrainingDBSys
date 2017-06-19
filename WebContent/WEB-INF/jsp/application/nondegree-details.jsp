@@ -7,6 +7,14 @@
     <title>Non Degree Training Application</title>
 </head>
 <body>
+<s:if test="application.ptEvaluation==null">
+			<div class="pull-right">
+				<s:form id="" namespace="/" action="post-training" method="get">
+				<s:hidden name="applicationId" value="%{application.id}" />
+				<s:submit cssClass="btn btn-success" value="Submit Evaluation"/>
+				</s:form>
+			</div>
+		</s:if>
 <s:if test="application!=null">
 <s:push value="application">
 <table style="width: 100%">
