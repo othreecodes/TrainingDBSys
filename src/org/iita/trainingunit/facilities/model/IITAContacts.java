@@ -8,6 +8,10 @@ import org.iita.trainingunit.applications.model.BaseEntity;
 @Entity
 public class IITAContacts extends VersionedEntity {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private String email;
 	public String getName() {

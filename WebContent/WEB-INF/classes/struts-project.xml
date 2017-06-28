@@ -542,6 +542,21 @@
             <result name="error">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="input">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
         </action>
+		<!-- EXTERNAL TRAINING APPLICATION -->
+        <action name="external-training" class="externalTrainingAction">
+            <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+        </action>
+
+        <action name="apply" class="externalTrainingAction" method="apply">
+            <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
+            <result name="applied" type="redirect-action">external-training</result>
+            <result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
+        </action>
+        
+        <action name="external-training-new" class="externalTrainingAction" method="createNew">
+            <result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
+        </action>
+        <!-- EXTERNAL TRAINING APPLICATION ENDS HERE-->
     </package>
 
     <package namespace="/announcement" name="restricted-browsing" extends="default">
@@ -799,10 +814,6 @@
         <action name="upload-report">
             <result>/WEB-INF/jsp/upload-report.jsp</result>
         </action>
-
-        <action name="external-training" class="externalTrainingAction">
-            <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
-        </action>
         
         <action name="external-training/view" class="externalTrainingAction" method="view" >
             <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
@@ -811,10 +822,6 @@
          <action name="external-training-list" class="externalTrainingAction" method="list">
             <result name="success">/WEB-INF/jsp/training/list.jsp</result>
         </action>
-        
-        <action name="external-training-new" class="externalTrainingAction" method="createNew">
-            <result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
-        </action>
 
         <action name="post-training" class="postTrainingEvaluationAction" method="execute">
             <result name="input">/WEB-INF/jsp/training/post-training.jsp</result>
@@ -822,12 +829,6 @@
 
         <action name="save-evaluation" class="postTrainingEvaluationAction" method="save">
             <result name="success">/WEB-INF/jsp/training/post-training.jsp</result>
-        </action>
-
-        <action name="apply" class="externalTrainingAction" method="apply">
-            <result name="success">/WEB-INF/jsp/training/external-training.jsp</result>
-            <result name="applied" type="redirect-action">external-training</result>
-            <result name="input">/WEB-INF/jsp/training/external-training.jsp</result>
         </action>
 
         <action name="readonly" class="viewApplicationAction">

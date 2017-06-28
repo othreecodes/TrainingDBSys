@@ -14,24 +14,24 @@
 		</colgroup>
 		<tr>
 			<td>Sponsor/Project:</td>
-			<td><s:url namespace="/ajax" action="public-ajax" id="xx" /> <iita:autocompleter cssClass="organization" name="organizationId" id="tra.organizationId" listKey="id"
+			<td><s:url namespace="/ajax" action="public-ajax" id="xx" /> <iita:autocompleter cssClass="organization form-control" name="organizationId" id="tra.organizationId" listKey="id"
 				listValue="title" url="%{xx}" method="autocompleteOrganization" submitTextTo="organizationName" /></td>
 		</tr>
 		<tr>
 			<td>Sponsor type:</td>
-			<td><s:select name="sponsorType" list="@org.iita.trainingunit.model.Funding$SponsorType@values()" /></td>
+			<td><s:select name="sponsorType" cssClass="form-control" list="@org.iita.trainingunit.model.Funding$SponsorType@values()" /></td>
 		</tr>
 		<tr>
 			<td>Cost Center:</td>
-			<td><s:textfield name="costCenter" /></td>
+			<td><s:textfield name="costCenter" cssClass="form-control" /></td>
 		</tr>
 		<tr>
 			<td>Estimated Cost (USD):</td>
-			<td><s:textfield name="estimatedCost" /></td>
+			<td><s:textfield name="estimatedCost" cssClass="form-control" /></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><s:submit value="Register funding" /></td>
+			<td><s:submit value="Register funding" cssClass="btn btn-success btn-block" /></td>
 		</tr>
 	</table>
 </s:form>

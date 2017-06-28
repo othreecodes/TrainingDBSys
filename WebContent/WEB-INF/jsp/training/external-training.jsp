@@ -8,7 +8,7 @@
 
 
 	<div class="container-fluid">
-		<s:form id="" namespace="/" action="apply" method="post">
+		<s:form id="" namespace="/application" action="apply" method="post">
 			<s:if test="training.id!=null">
 				<s:hidden name="training.id" value="%{training.id}" />
 				<s:if test="">
@@ -239,7 +239,7 @@
 					<tr>
 						<td></td>
 						<td> 
-								<s:submit cssClass="btn btn-primary pull-right" action="apply"
+								<s:submit cssClass="btn btn-primary pull-right"
 									value="Submit Form"
 									onclick="if(confirm('Submit your Registeration form ?')){return true;}else{return false;}" />
 									

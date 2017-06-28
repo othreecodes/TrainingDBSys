@@ -1,6 +1,7 @@
 package org.iita.trainingunit.trainings.action;
 
 import org.iita.crm.action.BaseAction;
+import org.iita.trainingunit.applications.service.CDOApplicationService;
 import org.iita.trainingunit.trainings.model.PostTrainingEvaluation;
 import org.iita.trainingunit.trainings.model.PostTrainingEvaluation.RATE;
 import org.iita.trainingunit.trainings.model.PostTrainingEvaluation.STATUS;
@@ -16,7 +17,7 @@ public class PostTrainingEvaluationAction extends BaseAction {
 	private static final long serialVersionUID = 1L;
 	private PostTrainingEvaluationsService postTrainingEvaluationService;
 	private PostTrainingEvaluation postTraining;
-
+	private CDOApplicationService cdoApplicationService;
 	private String metExpectations;
 	private String applyKnowledge;
 	private String trainingObjectives;
@@ -31,9 +32,14 @@ public class PostTrainingEvaluationAction extends BaseAction {
 	private String facilitiesComfortable;
 	private String rateTraining;
 
+	private long applicationId;
 	@Override
 	public String execute() {
-
+		if(applicationId == 0){
+			return Action.ERROR;
+		}
+	
+		System.out.println(applicationId);
 		return Action.INPUT;
 	}
 
@@ -57,8 +63,9 @@ public class PostTrainingEvaluationAction extends BaseAction {
 		return Action.SUCCESS;
 	}
 
-	public PostTrainingEvaluationAction(PostTrainingEvaluationsService postTrainingEvaluationService) {
+	public PostTrainingEvaluationAction(PostTrainingEvaluationsService postTrainingEvaluationService,CDOApplicationService cdoApplicationService ) {
 		this.postTrainingEvaluationService = postTrainingEvaluationService;
+		this.setCdoApplicationService(cdoApplicationService);
 	}
 
 	public PostTrainingEvaluationsService getPostTrainingEvaluationService() {
@@ -259,6 +266,30 @@ public class PostTrainingEvaluationAction extends BaseAction {
 		this.rateTraining = rateTraining;
 	}
 
+	/**
+	 * @return the applicationId
+	 */
+	public long getApplicationId() {
+		return applicationId;
+	}
+
+	/**
+	 * @param applicationId the applicationId to set
+	 */
+	public void setApplicationId(long applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public CDOApplicationService getCdoApplicationService() {
+		return cdoApplicationService;
+	}
+
+	public void setCdoApplicationService(CDOApplicationService cdoApplicationService) {
+		this.cdoApplicationService = cdoApplicationService;
+	}
+
+	
+	
 	
 	
 }

@@ -3,10 +3,14 @@ package org.iita.trainingunit.facilities.model;
 import javax.persistence.Entity;
 
 import org.iita.trainingunit.applications.model.BaseEntity;
-
+import org.iita.entity.VersionedEntity;
 @Entity
-public class Collaboration extends BaseEntity {
+public class Collaboration extends VersionedEntity {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String collaboration;
 	private String location;
 	public String getCollaboration() {
