@@ -242,14 +242,11 @@
 								<s:submit cssClass="btn btn-primary pull-right" action="apply"
 									value="Submit Form"
 									onclick="if(confirm('Submit your Registeration form ?')){return true;}else{return false;}" />
-									
-					
 					</tr>
 				</table>
 			</div>
 		</s:form>
 		<div class="clearfix">&nbsp;</div>
 	</div>
-
 </body>
 </html>
