@@ -5,13 +5,21 @@
 <title>Administrator Dashboard</title>
 </head>
 <body>
-<h2>Tools</h2>
-<p><a href="<s:url action="schedule/index" />">Scheduled jobs</a></p>
-<p><a href="<s:url action="lucene/reindex" />">Lucene reindex</a></p>
-<p><a href="<s:url action="applock" />">Block access to application</a></p>
-<p><a href="<s:url action="java-status" />">JRE status</a></p>
+	<h2>Tools</h2>
 
-<%--
+
+	<div class="panel-body">
+		<div class="list-group">
+				<a class="list-group-item"  href="<s:url action="schedule/index" />">Scheduled jobs</a>
+				<a class="list-group-item"  href="<s:url action="lucene/reindex" />">Lucene reindex</a>		
+				<a class="list-group-item"  href="<s:url action="applock" />">Block access to application</a>		
+				<a class="list-group-item"  href="<s:url action="java-status" />">JRE status</a>		
+			</div ><! --list group -->
+						<div class="hline"></div>
+	</div><! --close panel body -->
+	<div class="spacing"></div>
+
+	<%--
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
         codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"
         width="760" height="300" id="graph-2">
@@ -72,13 +80,31 @@ function tester(a, b) {
 }
 </script>
 --%>
-<h2>Session</h2>
-<p>Session timeout: <b>${pageContext.session.maxInactiveInterval} seconds</b></p>
-<h2>Server locale and time zone settings</h2>
-<p>Locale: <b><s:property value="@java.util.Locale@getDefault()" /></b></p>
-<p>Timezone: <b><s:property value="@java.util.TimeZone@getDefault()" /></b></p>
-<h2>User locale and time zone</h2>
-<p>Locale: <b><s:property value="getLocale()" /></b></p>
+	<h2>Session</h2>
+	<div class="alert alert-info">
+	<p>
+		Session timeout: <b>${pageContext.session.maxInactiveInterval}
+			seconds</b>
+	</p>
+</div>
+<div class="spacing"></div>
+	<h2>Server locale and time zone settings</h2>
+	
+	<div class="alert alert-info">
+	<p>
+		Timezone: <b><s:property value="@java.util.TimeZone@getDefault()" /></b>
+	</p>
+	</div>
+	
+	<div class="spacing"></div>
+	
+	<h2>User locale and time zone</h2>	<div class="alert alert-info">
+	<p>
+		Locale: <b><s:property value="getLocale()" /></b>
+	</p>
+</div>
+	
+
 
 </body>
 </html>

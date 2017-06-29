@@ -7,7 +7,7 @@
 		<s:param name="href" value="%{''}" />
 	</s:include>
 
-	<table class="data-listing">
+	<table class="data-listing table-striped" >
 		<colgroup>
 			<col width="20%" />
 			<col width="20%" />
