@@ -20,7 +20,16 @@
     </style>
 </head>
 <body>
-
+		
+		<s:if test="application.ptEvaluation==null">
+			<div class="pull-right">
+				<s:form id="" namespace="/" action="post-training" method="get">
+				<s:hidden name="applicationId" value="%{application.id}" />
+				<s:submit cssClass="btn btn-success" value="Submit Evaluation"/>
+				</s:form>
+			</div>
+		</s:if>
+		
 <s:if test="application!=null">
 <s:push value="application">
 <table style="width: 100%">
@@ -30,7 +39,7 @@
 			<col width="350" />
 		</s:if>
 	</colgroup>
-	<tbody>
+	<tbody>  
 	<tr>
 	<td>
 <%--  <h2>Application for: <a href="<s:url namespace="/announcement" action="profile" />?id=<s:property value="announcement.id" />"><s:property value="announcement.title" /></a></h2>

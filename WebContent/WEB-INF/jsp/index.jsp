@@ -77,8 +77,7 @@
 									<a class="list-group-item" href="<s:url namespace="/" action="trainingprogram-register" />">Organize a training</a>
 									<a class="list-group-item" href="<s:url namespace="/" action="advanced/search" />">Search database</a>
 									<a class="list-group-item" href="<s:url namespace="/" action="upload-report" />">Upload Report</a>
-									<a class="list-group-item" href="<s:url namespace="/" action="external-training-new" />">External Training Application</a>
-									<a class="list-group-item" href="<s:url namespace="/application" action="register?trainingOption=Use of Facilities For" />">Use of Facilities</a>
+									<a class="list-group-item" href="<s:url namespace="/application" action="use-of-facilities" />">Use of Facilities</a>
 								</div>
 							</div><div class="spacing"></div>
 		 	
