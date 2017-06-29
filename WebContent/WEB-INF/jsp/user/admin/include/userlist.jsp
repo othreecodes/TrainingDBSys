@@ -7,19 +7,19 @@
 		<s:param name="href" value="%{''}" />
 	</s:include>
 
-	<table class="data-listing table-striped" >
+	<table class="table table-responsive table-striped" >
 		<colgroup>
 			<col width="20%" />
 			<col width="20%" />
 			<col />
 			<col width="20%" />
 		</colgroup>
-		<thead>
-			<tr>
-				<td>Name</td>
-				<td>Mail</td>
-				<td>Login</td>
-				<td>Failed</td>
+		<thead class="info">
+			<tr class="info">
+				<td><h4>Name</h4></td>
+				<td><h4>Mail</h4></td>
+				<td><h4>Login</h4></td>
+				<td><h4>Failed</h4></td>
 				<td class="ar">Tools</td>
 			</tr>
 		</thead>

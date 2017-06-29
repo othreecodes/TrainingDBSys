@@ -6,7 +6,7 @@
 </head>
 <body>
 <s:include value="include/search.jsp" />
-
+<div class="space"></div>
 <a href="<s:url action="user/user!input" namespace="/admin" />">Add New User</a>
 <a href="<s:url action="users" namespace="/admin" />">List all users</a>
 <a href="<s:url action="user/roles" namespace="/admin" />">Roles</a>
