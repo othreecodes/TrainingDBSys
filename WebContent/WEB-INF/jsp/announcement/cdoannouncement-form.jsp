@@ -14,7 +14,7 @@
 	<a href="<s:url action="cdoindex" />">CDO Announcements</a>
 </div>
 
-<table style="width: 100%">
+<table class="table table-responsive" >
 		<colgroup>
 			<col />
 			<s:if test="announcement.id!=null">

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<table class="data-listing">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col width="200px" />
 			<col />

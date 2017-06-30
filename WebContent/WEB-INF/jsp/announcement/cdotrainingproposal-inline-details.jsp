@@ -1,6 +1,6 @@
 <%@ include file="/common/taglibs.jsp"%>
 
-<table class="data-listing">
+<table class="table table-responsive" >
 					<colgroup>
 						<col width="20%" />
 						<col />

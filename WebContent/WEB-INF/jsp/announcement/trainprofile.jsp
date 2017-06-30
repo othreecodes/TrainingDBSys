@@ -5,7 +5,7 @@
 </title>
 </head>
 <body>
-<table style="width: 100%">
+<table class="table table-responsive" >
 	<colgroup>
 		<col width="200px" />
 		<col />

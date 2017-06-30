@@ -7,7 +7,7 @@
 </head>
 <body>
 <s:form method="post" action="search-announcements!query">
-	<table class="inputform">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col width="200px" />
 			<col />

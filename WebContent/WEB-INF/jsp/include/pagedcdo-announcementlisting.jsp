@@ -1,21 +1,9 @@
 <%@ include file="/common/taglibs.jsp"%>
 <s:if test="paged.totalHits > 0">
-	<table class="data-listing">
-		<colgroup>
-			<col width="2%" />
-			<col width="5%" />
-			<col width="5%" />
-			<col width="13%" />
-			<col />
-			<col width="12%" />
-			<col width="12%" />
-			<col width="15%" />
-			<col width="7%" />
-			<col width="12%" />
-			<col width="7%" />
-		</colgroup>
+	<table class="table table-responsive table-striped" >
+		
 		<thead>
-			<tr>
+			<tr class="warning">
 				<td>#</td>
 				<td>Status</td>
 				<td>Type</td>

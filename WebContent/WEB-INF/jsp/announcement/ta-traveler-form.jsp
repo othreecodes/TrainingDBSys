@@ -18,7 +18,7 @@
 <tr>
 	<td />
 	<td>
-	<table class="data-listing">
+	<table class="table table-responsive" >
 		<thead>
 			<tr>
 				<td>Traveling From</td>
