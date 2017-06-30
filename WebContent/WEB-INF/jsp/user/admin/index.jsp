@@ -11,6 +11,8 @@
 <div class="col-md-6">
 <s:include value="include/search.jsp" />
 </div>
+
+
 <div  class="col-md-6">
 <div class="panel-body">
 		<div class="list-group">
@@ -20,12 +22,8 @@
 			</div ><! --list group -->		
 	</div><! --close panel body -->
 </div>
-
-
 </div>	
-
 	<div class="hline"></div>
-	
 		<s:include value="include/userlist.jsp" />
 	
 	</body>

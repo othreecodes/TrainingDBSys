@@ -5,8 +5,8 @@
 <title>Templates</title>
 </head>
 <body>
-<div class="button-bar"><a href="<s:url action="template/profile" />">Add template</a></div>
-<table class="data-listing">
+<div class="button-bar"><h2><a href="<s:url action="template/profile" />">Add template</a></h2></div>
+<table class="table table-responsive">
 	<colgroup>
 		<col width="100px" />
 		<col width="200px" />
