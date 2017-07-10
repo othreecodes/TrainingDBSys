@@ -35,7 +35,9 @@
 </table>
 </div>
 
-<div class="noprint" style="margin-top: 3px; border-top: solid 1px black; background-color: #DD7025; min-height: 16px; padding: 3px 10px 2px 10px; font-weight: bold;"><div style="float: right"><s:action name="user-info" namespace="/" executeResult="true" ignoreContextParams="true" /></div><decorator:title
+<div class="noprint" style="margin-top: 3px; border-top: solid 1px black; background-color: #DD7025; min-height: 16px; padding: 3px 10px 2px 10px; font-weight: bold;"><div style="float: right">
+<s:action name="user-info" namespace="/" executeResult="true" ignoreContextParams="true" />
+</div><decorator:title
 	default="Untitled page" /></div>
 
 <div style="margin: 10px 10px 0px 10px;">
