@@ -2,21 +2,23 @@
 
 <div class="row">
 	<h3>Next of Kin</h3>
-	<div class="form-group">
-		<div class="col-xs-6 col-md-6">
+
+		<div class="col-xs-12 ">
 			<label for="nextOfKinName" class="col-xs-12">Name: *</label>
 			<s:textfield id="nextOfKinName" cssClass="form-control" name="cdoBioData.nextOfKinName" value="%{cdoBioData.nextOfKinName}" />
 		</div>
-		<div class="col-xs-6 col-md-6">
+		
+		<div class="col-xs-12">
 			<label for="nextOfKinAddrs" class="col-xs-12">Address: *</label>
 			<s:textarea id="nextOfKinAddrs" cssClass="form-control" name="cdoBioData.nextOfKinAddrs" value="%{cdoBioData.nextOfKinAddrs}" />
 		</div>
-	</div>
+
 
 	<div class="col-xs-6 col-md-6">
 		<label for="nextOfKinTelNo" class="col-md-4">Telephone: *</label>
 		<s:textfield id="nextOfKinTelNo" cssClass="form-control" name="cdoBioData.nextOfKinTelNo" value="%{cdoBioData.nextOfKinTelNo}" />
 	</div>
+	
 	<div class="col-xs-6 col-md-6">
 		<label for="nextOfKinRelationship" class="col-md-4">Relationship: *</label>
 		<s:select id="nextOfKinRelationship" cssClass="form-control" name="cdoBioData.nextOfKinRelationship" 

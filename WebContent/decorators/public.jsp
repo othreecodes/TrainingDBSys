@@ -77,11 +77,11 @@
 			</h1>
 			<div style="padding-top: 20px;">
 				<a class="waves-effect waves-purple btn-large grey lighten-4"href="<s:url namespace="/" action="login" />">
-				<span class="hero-button  brown-text darken-1">IITA Staff</span></a>
+				<span class="hero-button  brown-text darken-1">Login</span></a>
 				 
 				 <a class="waves-effect waves-purple btn-large grey lighten-4"
 					href="<s:url namespace="/" action="application/index" />">
-					<span class="hero-button bold indigo-text darken-3">Non-IITA Staff</span></a>
+					<span class="hero-button bold indigo-text darken-3">Sign Up</span></a>
 			</div>
 		</div>
 	</div>
