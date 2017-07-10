@@ -869,6 +869,7 @@ public class CDOBiodataProcessAction extends BaseBIOAction implements Preparable
 						appStarter.setBiodata(this.cdoBioData);
 						appStarter.setAnnouncement(this.announcement);
 						appStarter.setAppKey(StringUtil.getRandomAlphaNumericString(10).toUpperCase());
+						appStarter.setStatus(STATUS.COMPLETED);
 						appStarter.setEmail(this.cdoBioData.getCorrespondenceEmailAddress());
 						this.appStarter = this.cdoApplicationService.save(appStarter);
 					}
