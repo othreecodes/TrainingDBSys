@@ -525,6 +525,10 @@
             <result name="input">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="errorGoBack" type="redirect-action">index</result>
         </action>
+        
+        <action name="user-registered" class="cdoBiodataProcessAction" method="regUser" >
+        <result name="success">/WEB-INF/jsp/public/application/cdobiodata-confirm.jsp</result>
+        </action>
 
         <action name="process-register" class="cdoBiodataProcessAction" method="doRegister">
             <result name="success">/WEB-INF/jsp/public/application/cdobiodata-confirm.jsp</result>
