@@ -14,7 +14,7 @@
 <s:form action="save" method="post">
 <div style="font-style: italic;"><strong>*</strong> means mandatory fields</div>
 	<s:hidden name="id" value="%{announcement.id}" />
-	<table class="chooseit">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col width="20%" />
 			<col />

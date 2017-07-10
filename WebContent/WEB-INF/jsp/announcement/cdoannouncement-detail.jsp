@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<table>
+<table class="table table-responsive" >
 	<colgroup>
 		<col width="70%" />
 		<col width="30%" />

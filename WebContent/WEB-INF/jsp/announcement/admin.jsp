@@ -8,7 +8,7 @@
 
 <iita:authorize ifAnyGranted="ROLE_ADMIN, ROLE_DDGR">
 <s:form method="post" action="appraisal/admin/update">
-	<table class="inputform">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col width="200px" />
 			<col />

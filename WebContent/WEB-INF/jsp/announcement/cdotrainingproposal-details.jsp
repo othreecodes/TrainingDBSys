@@ -11,7 +11,7 @@
 		<a href="<s:url action="trainingproposal" />">Training Proposal</a> 
 		<s:if test="trainingProposal.status==@org.iita.trainingunit.announcements.model.TrainingProposal$STATUS@SUBMITTED"><a href="<s:url action="trainingproposal-copy!copy" />?id=<s:property value="trainingProposal.id" />" onclick="javascript: return confirm('Make a copy of this proposal?');">MAKE A COPY OF THIS PROPOSAL?</a></s:if>
 	</div>
-	<table style="width: 100%">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col />
 			<s:if test="trainingProposal.id!=null">

@@ -1,8 +1,11 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 
-<table class="data-listing">
-	<colgroup><col width="25%" /><col /></colgroup>
+<div class="row">
+	
+	<div class="col-xs-12">
+<table class="tabel table-reponsive table-striped">
+	<colgroup><col width="45%"/><col /></colgroup>
 	<thead>
 		<tr>
 			<td><label>Role</label></td>
@@ -16,3 +19,5 @@
 		</tr>
 	</s:iterator>
 </table>
+</div>
+</div>

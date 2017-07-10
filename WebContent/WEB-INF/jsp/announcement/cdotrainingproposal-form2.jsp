@@ -10,7 +10,7 @@
 	<div class="button-bar">
 		<a href="<s:url action="trainingproposal" />">Training Proposal</a>
 	</div>
-	<table style="width: 100%">
+	<table class="table table-responsive" >
 		<colgroup>
 			<col />
 			<s:if test="trainingProposal.id!=null">

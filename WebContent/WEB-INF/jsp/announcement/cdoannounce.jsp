@@ -14,8 +14,11 @@
 </s:include>
 <div class="btn-group" role="group">
 	<security:authorize ifAnyGranted="ROLE_CRM">
+
+    
 		<a href="<s:url action="new-announcement" />" class="btn btn-default">Add Announcement</a> &nbsp;</security:authorize><a class="btn btn-default" href="<s:url action="search-announcements" />">Search Announcements</a>
 </div>
+
 <s:include value="/WEB-INF/jsp/include/pagedcdo-announcementlisting.jsp" />
 
 </body>

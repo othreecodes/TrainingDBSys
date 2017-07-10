@@ -8,10 +8,10 @@
 	</thead>
 	<s:iterator value="user.accessTags" status="status">
 		<tr>
-			<td><s:textfield name="user.accessTags" value="%{top}" cssStyle="width: 100%" /></td>
+			<td><s:textfield name="user.accessTags" value="%{top}" cssStyle="width: 100%" cssClass="form-control"/></td>
 		</tr>
 	</s:iterator>
 	<tr>
-		<td><s:textfield name="user.accessTags" value="" label="Identifier" cssStyle="width: 100%" /></td>
+		<td><s:textfield name="user.accessTags" value="" label="Identifier" cssStyle="width: 100%" cssClass="form-control" /></td>
 	</tr>
 </table>
