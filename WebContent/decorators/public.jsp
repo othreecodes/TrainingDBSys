@@ -80,7 +80,7 @@
 				<span class="hero-button  brown-text darken-1">Login</span></a>
 				 
 				 <a class="waves-effect waves-purple btn-large grey lighten-4"
-					href="<s:url namespace="/" action="application/index" />">
+					href="<s:url namespace="/" action="application/register" />">
 					<span class="hero-button bold indigo-text darken-3">Sign Up</span></a>
 			</div>
 		</div>

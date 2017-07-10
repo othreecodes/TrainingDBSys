@@ -14,10 +14,12 @@
 			<td align="right">Applicant:</td>
 			<td><s:property value="cdoBioData.title" /> <s:property value="cdoBioData.firstName" /> <s:property value="cdoBioData.lastName" /></td>
 		</tr>
+		<s:if test="announcement!=null">
 		<tr>
 			<td align="right">Application for:</td>
 			<td><s:property value="announcement.title" /> - <s:property value="announcement.type" /></td>
 		</tr>
+		</s:if>
 
 		<tr><td></td><td colspan="2"><div class="button-bar">Dear <s:property value="cdoBioData.title" /> <s:property value="cdoBioData.lastName" />, <s:property value="cdoBioData.firstName" />, <br/><br/>
 		
