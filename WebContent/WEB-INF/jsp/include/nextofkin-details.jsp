@@ -3,6 +3,9 @@
 <h3>NEXT OF KIN</h3>
 <div>
 	<div>
+	
+
+	
 	    <table class="table" id="nextofkinTable">
 	    <colgroup>
 			<col width="200px" />
