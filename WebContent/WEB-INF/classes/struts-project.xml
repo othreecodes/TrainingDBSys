@@ -520,6 +520,7 @@
 
         <action name="register" class="cdoBiodataProcessAction" method="proceedRegister">
             <result name="success">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
+            <result name="new">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="error">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="input">/WEB-INF/jsp/public/application/cdobiodata-form.jsp</result>
             <result name="errorGoBack" type="redirect-action">index</result>

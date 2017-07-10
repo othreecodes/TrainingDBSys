@@ -407,6 +407,9 @@ public class CDOBiodataProcessAction extends BaseBIOAction implements Preparable
 	}
 
 	public String proceedRegister(){
+		if(this.trainingOption==null){
+			return "new";
+		}
 		if(this.announcementId!=null){
 			this.announcement =this.announcementService.find(this.announcementId);
 
@@ -795,6 +798,101 @@ public class CDOBiodataProcessAction extends BaseBIOAction implements Preparable
 			//}
 	//	}
 	//}
+	
+	
+	
+	@Validations(requiredStrings = { 
+			@RequiredStringValidator(fieldName = "cdoBioData.firstName", trim=true, message = "Enter your first name"),
+			@RequiredStringValidator(fieldName = "cdoBioData.lastName", trim=true, message = "Enter your last name"),
+			//@RequiredStringValidator(fieldName = "cdoBioData.dateOfBirth", trim=true, message = "Enter your date of birth"),
+			@RequiredStringValidator(fieldName = "cdoBioData.nationality", trim=true, message = "Select your nationality"),
+			@RequiredStringValidator(fieldName = "cdoBioData.permanentAddress", trim=true, message = "Enter your permanent address"),
+			@RequiredStringValidator(fieldName = "cdoBioData.correspondenceEmailAddress", trim=true, message = "Enter your email address")},
+			requiredFields = { @RequiredFieldValidator(fieldName = "cdoBioData.title", message = "Select your title"), 
+			@RequiredFieldValidator(fieldName = "cdoBioData.gender", message = "Select your gender")//, 
+			//@RequiredFieldValidator(fieldName = "cdoBioData.english", message = "Select your understanding level of english") 
+			})
+	public String regUser(){
+		try {
+			 
+			if(this.cdoBioData!=null && this.cdoBioData.getId()==null){
+				this.user  = this.cdoApplicationService.findUserByEmail(this.cdoBioData.getCorrespondenceEmailAddress());
+				
+				if(this.user!=null && this.user.getId()!=null){
+					addActionError("Error occurred! Email address already exists.");
+					return Action.ERROR;
+				}
+			}
+			 
+				if (this.cdoBioData!=null){
+					if (this.cdoBioData.getDateOfBirth()==null){
+						addActionError("Error occurred! Enter your valid date of birth.");
+						return Action.ERROR;
+					}
+					
+					if(!isValidEmailAddress(this.cdoBioData.getCorrespondenceEmailAddress())){
+						addActionError("Error occurred! Enter a valid email address.");
+						return Action.ERROR;
+					}
+				}
+				
+				if(this.cdoBioData.getStatus().equals(org.iita.trainingunit.applications.model.ApplicantsBioData.STATUS.REGISTERED)){
+					addActionError("Error occurred! Your personal information entry has been completed");
+					addActionError("Please login to proceed with your training registration.");
+					return Action.ERROR;
+				}
+				
+				//Check if user exists and Save User
+				ApplicantsBioData bio = null;
+				if(this.cdoBioData!=null)
+					if(this.cdoBioData.getId()==null)
+						bio = this.cdoApplicationService.getBioDataByRefNumber(this.cdoBioData.getCorrespondenceEmailAddress());
+				
+				if(bio==null){
+					userProperties();
+				}else{
+					addActionError("Error saving CDO personal information! Biodata with supplied email already exists.");
+					return Action.ERROR;
+				}
+				//Checking if biodata exists and Saving BioData
+				//if(this.userExists==false)
+					this.cdoApplicationService.save(this.cdoBioData, null);
+				//else{
+				//	addActionError("Error saving CDO personal information! User account already exists in the system.");
+				//	return Action.ERROR;
+				//}
+					
+					
+				if(this.appStarterId==null){
+					if(this.cdoBioData!=null && this.announcement!=null){
+						ApplicationStarter appStarter = new ApplicationStarter();
+						appStarter.setBiodata(this.cdoBioData);
+						appStarter.setAnnouncement(this.announcement);
+						appStarter.setAppKey(StringUtil.getRandomAlphaNumericString(10).toUpperCase());
+						appStarter.setEmail(this.cdoBioData.getCorrespondenceEmailAddress());
+						this.appStarter = this.cdoApplicationService.save(appStarter);
+					}
+				}
+				
+				if(this.cdoBioData!=null && this.user!=null){
+					addActionMessage("Personal information successfully saved! Proceed to registration if you are done with your editing.");
+					addActionMessage("Your Application Key is: " + this.appStarter.getAppKey() + ".");
+					addActionMessage("This key in combination with your email will enable you continue with editing of your bio-data until you complete your registration. Please keep it safe if you would need it.");
+					return Action.SUCCESS;
+				}else if(this.cdoBioData==null && this.user!=null){
+					addActionError("Error saving CDO personal information! Biodata was not submitted.");
+					return Action.ERROR;
+				}else if(this.cdoBioData!=null && this.user==null){
+					addActionError("Error saving CDO personal information! User account was not created.");
+					return Action.ERROR;
+				}else
+					return Action.INPUT;
+			 
+		}catch(Exception e){
+			addActionError("Error saving CDO application! " + e.getMessage());
+			return Action.ERROR;
+		}
+	}
 	
 	private void userProperties(){
 		

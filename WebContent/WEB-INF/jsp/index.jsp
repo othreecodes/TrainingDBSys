@@ -64,7 +64,7 @@
 
 
 <div class="col-lg-8">
-	 			<! -- Blog Post 1 -->
+	 			<!-- Blog Post 1 -->
 		 		<a href="single-post.html"><h2 class="ctitle panel-heading">What do you want to do?</h2></a>
 		 		<div class="hline"></div>
 		 		 <div class="panel-body">
@@ -81,10 +81,10 @@
 								</div>
 							</div><div class="spacing"></div>
 		 	
-			</div><! --/col-lg-8 -->
+			</div><!-- /col-lg-8 -->
 	 		
 	 		
-	 		<! -- SIDEBAR -->
+	 		<!-- SIDEBAR -->
 	 		<div class="col-lg-4 padding">
 	 		
 		 		<div class="hline"></div>
