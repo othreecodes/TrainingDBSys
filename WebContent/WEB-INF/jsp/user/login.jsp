@@ -27,11 +27,7 @@
 		</p>
 
 
-		<c:if test="${not empty param.login_error}">
-			<div id="errorMessages">
-				<span class="errorMessage">Invalid user name or password!</span>
-			</div>
-		</c:if>
+		
 
 	</div>
 	
