@@ -1,16 +1,19 @@
 <%@ include file="/common/taglibs.jsp"%>
 <hr>
-<div class="alert alert-warning">
-	<h3>My uncompleted training applications</h3>
+<div class="alert alert-danger ">
+	<h3 class="text-center">My uncompleted training applications</h3>
 </div>
 
 <s:if test="groupUncompleted.size() > 0">
-	<h3>Group Training</h3>
+	<h4>Group Training</h4>
 
-	<div class="panel-body">
-		<div class="list-group">
+	
+	<table class="table table-striped">
+		<tr>
+			<td>
+		<ol>
 			<s:iterator value="groupUncompleted">
-							<a
+							<li><a
 								href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
 									<s:if test="announcement.type!=null">
 										<s:property value="announcement.type" />: </s:if> <s:if
@@ -35,19 +38,22 @@
 							- Estimated Start date: <s:date
 										format="%{getText('date.format')}"
 										name="otherAppDetails.startDate" />
-								</s:if> - Submission Status: <s:property value="submissionStatus" />
+								</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 				</s:iterator>
-		</div>
-		</div>
-
+				</ol>
+						</ol>
+			</td>
+		</tr>
+	</table>
+		
 </s:if>
 
 <s:if test="graduateUncompleted.size() > 0">
-	<h3>Graduate Training</h3>
-	<table class="data-listing">
+	<h4>Graduate Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="graduateUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -59,7 +65,8 @@
 									(Deadline - <s:date format="%{getText('date.format')}"
 											name="announcement.deadline" />)
 								</s:if>
-								</s:if> <s:else>
+								</s:if> 
+								<s:else>
 								Unspecified title
 								<s:if test="announcement.deadline!=null">
 									(Deadline - <s:date format="%{getText('date.format')}"
@@ -76,18 +83,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="internshipUncompleted.size() > 0">
-	<h3>Internship Training</h3>
-	<table class="data-listing">
+	<h4>Internship Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="internshipUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -116,18 +123,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="nondegreeUncompleted.size() > 0">
-	<h3>Non Degree Training</h3>
-	<table class="data-listing">
+	<h4>Non Degree Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="nondegreeUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -156,18 +163,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="otherUncompleted.size() > 0">
-	<h3>Other Training</h3>
-	<table class="data-listing">
+	<h4>Other Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="otherUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -196,18 +203,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="individualUncompleted.size() > 0">
-	<h3>Individual Training</h3>
-	<table class="data-listing">
+	<h4>Individual Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="individualUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -236,18 +243,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="sabbaticalUncompleted.size() > 0">
-	<h3>Sabbatical Training</h3>
-	<table class="data-listing">
+	<h4>Sabbatical Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="sabbaticalUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -276,18 +283,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="staffDevUncompleted.size() > 0">
-	<h3>Staff Development Training</h3>
-	<table class="data-listing">
+	<h4>Staff Development Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="staffDevUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -316,18 +323,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="inHouseUncompleted.size() > 0">
-	<h3>In-house Group Training</h3>
-	<table class="data-listing">
+	<h4>In-house Group Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="inHouseUncompleted">
 						<li><a
 							href="<s:url action="draft" />?applicationId=<s:property value="id" />&announcementId=<s:property value="announcement.id" />">
@@ -356,7 +363,7 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Submission Status: <s:property value="submissionStatus" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
@@ -367,14 +374,20 @@
 	<p>No uncompleted training application found.</p>
 </s:if>
 
-<div class="myapp-bar">My submitted training applications</div>
+
+<hr>
+
+<div class="alert alert-success">
+	<h3  class="text-center">My submitted training applications</h3>
+</div>
+
 
 <s:if test="groupApplication.size() > 0">
-	<h3>Group Training</h3>
-	<table class="data-listing">
+	<h4>Group Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="groupApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -403,18 +416,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - Status: <s:property value="status" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="graduateApplication.size() > 0">
-	<h3>Graduate Training</h3>
-	<table class="data-listing">
+	<h4>Graduate Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="graduateApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -443,18 +456,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - <s:text name="application.status.%{status}" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="internshipApplication.size() > 0">
-	<h3>Internship Training</h3>
-	<table class="data-listing">
+	<h4>Internship Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="internshipApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -483,18 +496,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - <s:text name="application.status.%{status}" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="nondegreeApplication.size() > 0">
-	<h3>Non Degree Training</h3>
-	<table class="data-listing">
+	<h4>Non Degree Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="nondegreeApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -523,18 +536,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - <s:text name="application.status.%{status}" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="otherApplication.size() > 0">
-	<h3>Other Training</h3>
-	<table class="data-listing">
+	<h4>Other Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="otherApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -563,18 +576,18 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - <s:text name="application.status.%{status}" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="individualApplication.size() > 0">
-	<h3>Individual Training</h3>
-	<table class="data-listing">
+	<h4>Individual Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
-				<ul>
+				<ol>
 					<s:iterator value="individualApplication">
 						<li><a
 							href="<s:url action="appdetails" />?applicationId=<s:property value="id" />">
@@ -603,15 +616,15 @@
 									name="otherAppDetails.startDate" />
 							</s:if> - <s:text name="application.status.%{status}" /></li>
 					</s:iterator>
-				</ul>
+				</ol>
 			</td>
 		</tr>
 	</table>
 </s:if>
 
 <s:if test="sabbaticalApplication.size() > 0">
-	<h3>Sabbatical Training</h3>
-	<table class="data-listing">
+	<h4>Sabbatical Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
 				<ul>
@@ -650,8 +663,8 @@
 </s:if>
 
 <s:if test="inHouseApplication.size() > 0">
-	<h3>In-house Group Training</h3>
-	<table class="data-listing">
+	<h4>In-house Group Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
 				<ul>
@@ -690,8 +703,8 @@
 </s:if>
 
 <s:if test="staffDevApplication.size() > 0">
-	<h3>Staff Development Training</h3>
-	<table class="data-listing">
+	<h4>Staff Development Training</h4>
+	<table class="table table-striped">
 		<tr>
 			<td>
 				<ul>

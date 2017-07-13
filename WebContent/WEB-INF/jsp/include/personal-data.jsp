@@ -1,7 +1,7 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 <div class="myapp-bar">
-	<h3 class="alert alert-warning"> My Personal Info </h3>
+	<h3 class="alert alert-info"> My Personal Info </h3>
 	[<a href="<s:url namespace="/applicant" action="biodata-update"/>" title="Edit profile" title="Edit Biodata">
 	Edit Biodata</a> 
 	| <a href="<s:url namespace="/applicant" action="password-update"/>" alt="Change password" title="Change password">
@@ -62,7 +62,7 @@
 					<td><fmt:formatDate value="${cdoBioData.createdDate}" type="both" pattern="dd/MM/yyyy" timeZone="${timeZone}" />, <s:date name="cdoBioData.createdDate"
 						nice="true" /></td>
 				</tr>
-				<tr>
+				<tr align="right">
 					<td colspan="2">
 						<s:if test="cdoBioData.fileName==null || cdoBioData.fileName.length()==0">
 							<s:if test="cdoBioData.gender==@org.iita.trainingunit.applications.model.ApplicantsBioData$GENDER@Male">

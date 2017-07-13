@@ -4,16 +4,12 @@
 <title>Applicant Dashboard: <s:property value="user.fullName" /></title>
 </head>
 <body>
-				<div class="row">
+		<div class="row">
 					<div class="col-xs-12 col-md-12 alert alert-info">
 								<h2 class="text-center">Kickstart New Application</h2>	
 					</div>
-				</div>
+		</div>
 		
-		
-		<section class="container section">
-			
-		</section>
 		
 		
 <div class="row">
@@ -69,16 +65,23 @@
 			    </div>
 			</div>
 			
-			</div>
+</div>
 
+
+
+
+
+
+
+<!-- ends row of panels -->
+
+
+<div class="row">
 	<div class="col-lg-8">
-		
-		<!-- ends row of kickstart in lg 8 -->
-		
 		<div class="row">
 		<s:include value="/WEB-INF/jsp/include/public-announcementlisting.jsp" />
 		</div>
-		
+		<hr>
 		<div class="row">
 		<s:include value="/WEB-INF/jsp/include/mytraining-list.jsp" />
 		</div>
@@ -88,8 +91,9 @@
 <!-- right personal details -->
 	<div class="col-lg-4">
 		<s:include value="/WEB-INF/jsp/include/personal-data.jsp" />
-
 	</div>
 
+</div>
+<!-- ends row of panels -->
 </body>
 </html>
