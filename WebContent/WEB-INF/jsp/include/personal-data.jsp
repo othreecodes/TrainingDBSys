@@ -1,7 +1,12 @@
 <%@ include file="/common/taglibs.jsp"%>
 
 <div class="myapp-bar">
-	My Personal Info [<a href="<s:url namespace="/applicant" action="biodata-update"/>" title="Edit profile" title="Edit Biodata">Edit Biodata</a> | <a href="<s:url namespace="/applicant" action="password-update"/>" alt="Change password" title="Change password">Change Password</a>]
+	<h3 class="alert alert-warning"> My Personal Info </h3>
+	[<a href="<s:url namespace="/applicant" action="biodata-update"/>" title="Edit profile" title="Edit Biodata">
+	Edit Biodata</a> 
+	| <a href="<s:url namespace="/applicant" action="password-update"/>" alt="Change password" title="Change password">
+	Change Password</a>]
+
 </div>
 <table class="table">
 				<colgroup>
