@@ -3,35 +3,7 @@
 <html>
 <head>
 <title>Training DB Application</title>
-<!--  <style type="text/css">
-	.home-title {
-		text-align: left;
-  		font-size: 35px;
-  		font-family: sans-serif;
-  		color: olive;
-  		padding-bottom: 20px;
-	}
-	.ticker-link {
-		font-size: x-large;
-  		color: #999999;
-  		font-family: monospace;
-  		text-decoration: underline;
-  		font-weight: bold;
-  		!important;
-	}
-	
-	.col-sm-6 { float: left; text-align:left; padding-left:75px; !important;}
-	
-	.col-sm-6 img {padding-left: 10px;}
-	
-	.search-box { margin-left:75px; !important;}
-	
-	.yearselect { text-align:left; !important;}
-	
-	.top-buffer { margin-top:20px; }
-	
-	.hideDiv {display: none;}
-</style>-->
+
 </head>
 <body>
 <div class="alert alert-warning">
