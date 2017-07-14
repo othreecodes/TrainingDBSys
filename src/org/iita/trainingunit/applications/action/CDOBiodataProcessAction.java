@@ -666,7 +666,8 @@ public class CDOBiodataProcessAction extends BaseBIOAction implements Preparable
 		}
 	}
 	
-	@Validations(requiredStrings = { 
+	@Validations(
+			requiredStrings = { 
 			@RequiredStringValidator(fieldName = "cdoBioData.firstName", trim=true, message = "Enter your first name"),
 			@RequiredStringValidator(fieldName = "cdoBioData.lastName", trim=true, message = "Enter your last name"),
 			//@RequiredStringValidator(fieldName = "cdoBioData.dateOfBirth", trim=true, message = "Enter your date of birth"),

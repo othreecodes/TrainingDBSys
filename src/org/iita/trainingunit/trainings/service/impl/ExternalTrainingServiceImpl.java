@@ -10,7 +10,10 @@ import org.iita.trainingunit.trainings.model.ExternalTraining;
 import org.iita.trainingunit.trainings.service.ExternalTrainingService;
 import org.iita.util.PagedResult;
 import org.springframework.transaction.annotation.Transactional;
-
+/**
+ * @author othreecodes
+ *
+ */
 public class ExternalTrainingServiceImpl  implements ExternalTrainingService{
 
 	protected EntityManager entityManager;

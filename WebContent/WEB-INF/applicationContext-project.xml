@@ -11,6 +11,7 @@
 	<bean id="searchService" class="org.iita.service.impl.SearchServiceImpl" />
 	<bean id="externalTrainingService" class="org.iita.trainingunit.trainings.service.impl.ExternalTrainingServiceImpl"></bean>
 	<bean id="postTrainingEvaluationsService" class="org.iita.trainingunit.trainings.service.impl.PostTrainingEvaluationsServiceImpl"></bean>
+	<bean id="useOfFacilitiesService" class="org.iita.trainingunit.facilities.action.UseOfFacilitiesServiceImpl"></bean>
 	
 	<bean id="advancedTrainingSearchService" class="org.iita.trainingunit.service.impl.AdvancedTrainingSearchServiceImpl" scope="prototype" />
 	<bean id="iframeSearchService" class="org.iita.trainingunit.announcements.service.impl.IframeSearchServiceImpl" scope="prototype" />
@@ -511,6 +512,8 @@
 			<constructor-arg ref="cdoApplicationService" />
 	</bean>
 		<bean id="useOfFacilitiesAction" scope="request" class="org.iita.trainingunit.facilities.action.UseOfFacilitiesAction">
+		<constructor-arg ref="cdoApplicationService" />
+		<constructor-arg ref="useOfFacilitiesService" />
 	</bean>
 
 
