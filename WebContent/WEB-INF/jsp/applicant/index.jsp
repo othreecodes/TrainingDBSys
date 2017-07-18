@@ -6,7 +6,7 @@
 <body>
 		<div class="row">
 					<div class="col-xs-12 col-md-12 alert alert-info">
-								<h2 class="text-center">Kickstart New Application</h2>	
+								<h3 class="text-center">Kickstart New Application</h3>	
 					</div>
 		</div>
 		

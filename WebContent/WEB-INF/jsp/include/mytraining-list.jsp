@@ -1,11 +1,11 @@
 <%@ include file="/common/taglibs.jsp"%>
-<hr>
+
 <div class="alert alert-danger ">
-	<h3 class="text-center">My uncompleted training applications</h3>
+	<h4 class="text-center">My uncompleted training applications</h4>
 </div>
 
 <s:if test="groupUncompleted.size() > 0">
-	<h4>Group Training</h4>
+	<h5>Group Training</h5>
 
 	
 	<table class="table table-striped">
@@ -378,7 +378,7 @@
 <hr>
 
 <div class="alert alert-success">
-	<h3  class="text-center">My submitted training applications</h3>
+	<h4  class="text-center">My submitted training applications</h4>
 </div>
 
 

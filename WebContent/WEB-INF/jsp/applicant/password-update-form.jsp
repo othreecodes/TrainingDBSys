@@ -4,28 +4,26 @@
     <title>Training Registration</title>
 </head>
 <body>
-<p>Choose new password to use a custom password to login to this application.</p>
+<p class="alert alert-warning text-center">Choose new password to use a custom password to login to this application.</p>
 	<s:form action="password-update!updatePassword" method="post">
-		<table class="inputform">
-			<colgroup>
-				<col width="200" />
-				<col />
-			</colgroup>
+		<table class="table table-responsive">
+		
 			<tr>
 				<td>Current Password:</td>
-				<td><s:password name="oldPassword" value="%{oldPassword}" /></td>
+				<td><s:password name="oldPassword" cssClass="form-control" value="%{oldPassword}" /></td>
 			</tr>
+			
 			<tr>
 				<td>Password:</td>
-				<td><s:password name="newPassword" value="%{newPassword}" /></td>
+				<td><s:password name="newPassword" cssClass="form-control" value="%{newPassword}" /></td>
 			</tr>
 			<tr>
 				<td>Retype Password:</td>
-				<td><s:password name="confirmPassword" value="%{confirmPassword}" /></td>
+				<td><s:password name="confirmPassword" cssClass="form-control" value="%{confirmPassword}" /></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td><s:submit value="Update Password" onclick="javascript: return confirm('Update password anyway?');" /></td>
+				<td><s:submit value="Update Password" cssClass="btn btn-primary btn-block" onclick="javascript: return confirm('Update password anyway?');" /></td>
 			</tr>
 		</table>
 	</s:form>
