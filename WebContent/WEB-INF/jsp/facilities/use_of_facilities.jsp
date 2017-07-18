@@ -66,13 +66,15 @@
 							<font style="color: #d3d3d3">PART II. FACILITIES TO BE
 								USED : </font>
 						</legend>
+
+						
 						<div class="row">
 							<div class="col-md-12">
 								<label for="Synopsis" class=""><strong> Provide
 										Synopsis of Research Work: <font style="color: #ff0000">*</font>
 								</strong></label>
 								<s:textfield cssClass="form-control" id="Synopsis"
-									name="Synopsis" value="%{.}" />
+									name="useOfFacilities.synopsis" value="%{useOfFacilities.synopsis}" />
 							</div>
 						</div>
 
@@ -84,8 +86,8 @@
 								<label for="summary" class=""><strong> Short
 										summary of research objective: <font style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="summary" name="summary"
-									value="%{.}" />
+								<s:textfield cssClass="form-control" id="objective" name="useOfFacilities.objective"
+									value="%{useOfFacilities.objective}" />
 							</div>
 						</div>
 
@@ -97,8 +99,8 @@
 										Facilities Required: (e.g. Bioscience Laboratory) : <font
 										style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="Required"
-									name="Required" value="%{.}" />
+								<s:textfield cssClass="form-control" id="facilitesRequired"
+									name="useOfFacilities.facilitesRequired" value="%{useOfFacilities.facilitesRequired}" />
 							</div>
 						</div>
 
@@ -110,8 +112,8 @@
 										will your research work last?: (months) <font
 										style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="last" name="last"
-									value="%{.}" />
+								<s:textfield cssClass="form-control" id="months" name="useOfFacilities.months"
+									value="%{useOfFacilities.months}" />
 							</div>
 
 							<div class="col-md-6">
@@ -119,8 +121,9 @@
 										wish to start your research work?: (MM/YYYY) <font
 										style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="start" name="start"
-									value="%{.}" />
+								
+							<s:textfield cssClass="form-control" id="start"
+									name="useOfFacilities.start" value="%{useOfFacilities.start}" />
 							</div>
 						</div>
 
@@ -132,8 +135,8 @@
 								<label for="Previous" class=""><strong>
 										Previous Collaboration with IITA: <font style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="Previous"
-									name="Previous" value="%{.}" />
+								<s:textfield cssClass="form-control" id="previousCollaborations"
+									name="useOfFacilities.previousCollaborations" value="%{useOfFacilities.previousCollaborations}" />
 							</div>
 						</div>
 
@@ -143,8 +146,9 @@
 								<label for="Location" class=""><strong>
 										Location: <font style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="Location"
-									name="Location" value="%{.}" />
+								
+								<s:textfield cssClass="form-control" id="location"
+									name="useOfFacilities.location" value="%{useOfFacilities.location}" />
 							</div>
 						</div>
 
@@ -156,16 +160,16 @@
 								<label for="Contacts" class=""><strong> IITA
 										Contacts: <font style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="Contacts"
-									name="Contacts" value="%{.}" />
+								<s:textfield cssClass="form-control" id="iitaContacts"
+									name="useOfFacilities.iitaContacts" value="%{useOfFacilities.iitaContacts}" />
 							</div>
 
 							<div class="col-md-6">
 								<label for="email" class=""><strong>IITA
 										Contact email(s):<font style="color: #ff0000">*</font>
 								</strong></label>
-								<s:textfield cssClass="form-control" id="email" name="email"
-									value="%{.}" />
+								<s:textfield cssClass="form-control" id="contactEmails" name="useOfFacilities.contactEmails"
+									value="%{useOfFacilities.contactEmails}" />
 							</div>
 						</div>
 				</tr>

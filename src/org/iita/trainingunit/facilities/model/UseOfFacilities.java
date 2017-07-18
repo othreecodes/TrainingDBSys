@@ -1,3 +1,4 @@
+
 package org.iita.trainingunit.facilities.model;
 
 import java.util.Date;
@@ -41,12 +42,13 @@ public class UseOfFacilities extends VersionedEntity  {
 	private String objective;
 	private String facilitesRequired;
 	private int months;
-	private Date start;
+	private String start;
 	
 	private String previousCollaborations;
 	private String iitaContacts;
+	private String location;
 	private Funding sourceOfFunding;
-	
+	private String contactEmails;
 	private Approval approval;
 
 	/**
@@ -122,14 +124,14 @@ public class UseOfFacilities extends VersionedEntity  {
 	/**
 	 * @return the start
 	 */
-	public Date getStart() {
+	public String getStart() {
 		return start;
 	}
 
 	/**
 	 * @param start the start to set
 	 */
-	public void setStart(Date start) {
+	public void setStart(String start) {
 		this.start = start;
 	}
 
@@ -198,7 +200,36 @@ public class UseOfFacilities extends VersionedEntity  {
 		return serialVersionUID;
 	}
 
+	/**
+	 * @return the location
+	 */
+	public String getLocation() {
+		return location;
+	}
+
+	/**
+	 * @param location the location to set
+	 */
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	/**
+	 * @return the contactEmails
+	 */
+	public String getContactEmails() {
+		return contactEmails;
+	}
+
+	/**
+	 * @param contactEmails the contactEmails to set
+	 */
+	public void setContactEmails(String contactEmails) {
+		this.contactEmails = contactEmails;
+	}
+
 	
 	
+
 	
 }
