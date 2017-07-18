@@ -263,7 +263,11 @@
             <result name="input" type="redirect-action">index</result>
             <result name="error" type="redirect-action">index</result>
         </action>
-
+		
+		 <action name="use-of-facilities" class="useOfFacilitiesAction">
+            <result  name="success">/WEB-INF/jsp/facilities/use_of_facilities.jsp</result>
+        </action>
+		
         <action name="pending" class="cdoBiodataProcessAction" method="continueRegistration">
             <result name="group">/WEB-INF/jsp/applicant/cdoreg-form.jsp</result>
             <result name="graduate">/WEB-INF/jsp/applicant/cdograduatereg-form.jsp</result>

@@ -7,6 +7,8 @@ import org.iita.trainingunit.facilities.model.UseOfFacilities;
 import org.iita.trainingunit.facilities.service.UseOfFacilitiesService;
 import org.iita.trainingunit.applications.service.CDOApplicationService;
 import com.opensymphony.xwork2.Action;
+
+import bsh.This;
 /**
  * @author othreecodes
  *
@@ -20,6 +22,8 @@ public class UseOfFacilitiesAction extends BioDataAction {
 	public UseOfFacilitiesAction(CDOApplicationService cdoApplicationService,UseOfFacilitiesService useOfFacilitiesService) {
 		super(cdoApplicationService);
 		// TODO Auto-generated constructor stub
+		
+		
 	}
 
 	/**
@@ -33,6 +37,13 @@ public class UseOfFacilitiesAction extends BioDataAction {
 		return Action.SUCCESS;
 	}
 
+	@Override
+	public void prepare() {
+		// TODO Auto-generated method stub
+		super.prepare();
+		System.out.print(this.getCdoBioData().getFullName());
+	}
+	
 	/**
 	 * @return the useOfFacilities
 	 */
