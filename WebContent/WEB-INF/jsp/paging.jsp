@@ -4,10 +4,10 @@
 <s:if test="%{top instanceof org.iita.util.PagedResult}">
 
 
-	<div class="page-header">
-		<h1>
+	<div class="page-header" style="margin:  -5px;">
+		<h3>
 			<s:text name="search.paging.title" />
-		</h1>
+		</h3>
 	</div>
 
 	<nav aria-label="Search results page" class="text-center">
@@ -53,10 +53,10 @@
 <s:else>
 	<c:if test="${0+param.page <= 0+param.pages}">
 
-		<div class="page-header">
-			<h1>
+		<div class="page-header" style="margin: -5px;">
+			<h3>
 				<s:text name="search.paging.title" />
-			</h1>
+			</h3>
 		</div>
 
 		<nav aria-label="Search results page" class="text-center">

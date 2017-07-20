@@ -1,12 +1,12 @@
 <%@ include file="/common/taglibs.jsp"%>
 <s:if test="paged.totalHits>0">
-	<!--<s:include value="/WEB-INF/jsp/paging.jsp">
+	<s:include value="/WEB-INF/jsp/paging.jsp">
 		<s:param name="page" value="paged.page" />
 		<s:param name="pages" value="paged.pages" />
 		<s:param name="pageSize" value="paged.pageSize" />
 		<s:param name="href" value="%{''}" />
 	</s:include>
--->
+
 	<table class="table table-responsive table-striped" >
 		<colgroup>
 			<col width="20%" />
