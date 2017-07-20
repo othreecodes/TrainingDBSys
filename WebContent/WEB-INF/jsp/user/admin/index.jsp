@@ -23,7 +23,6 @@
 	</div><! --close panel body -->
 </div>
 </div>	
-	<div class="hline"></div>
 		<s:include value="include/userlist.jsp" />
 	
 	</body>

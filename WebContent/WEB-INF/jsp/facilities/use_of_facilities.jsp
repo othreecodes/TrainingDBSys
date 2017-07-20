@@ -58,7 +58,7 @@
 
 			<!--------------------------------------- PART II. FACILITIES TO BE USED   .------------------------------>
 
-
+<div class="col-md-9">
 			<table id="" class="table table-stripped">
 				<tr>
 					<fieldset>
@@ -232,6 +232,39 @@
 				</tr>
 				</fieldset>
 			</table>
+
+</div>
+<!-- close use of facilities form on the left -->
+
+
+
+
+<!--open personal details on the right -->
+<div class="col-md-3 pull-right">
+		<s:include value="/WEB-INF/jsp/include/personal-data.jsp" />
+		<s:if test="cdoGraduateApplication.id!=null">
+			<table class="table">
+			    <colgroup>
+						<col />
+					</colgroup>
+				        <tr>
+				            <td>
+				            	<h2>Application documents</h2>
+								<s:if test="cdoGraduateApplication.documents!=null">
+									<ul class="file-list">
+										<s:iterator value="cdoGraduateApplication.documents">
+											<li class="file"><s:include value="/WEB-INF/jsp/document/entitydocument-applicant-quick.jsp" /></li>
+										</s:iterator>
+									</ul>
+								</s:if>
+								<p>Attach document to application:</p>
+								<iita:fileupload action="application-document!upload" value="Upload files" queryParams="entityId=${cdoGraduateApplication.id}" />
+				            </td>
+				        </tr>
+			</table>
+		</s:if>
+</div>
+
 
 <div class="row success pull-right">
 					<s:submit cssClass="btn btn-primary pull-right"
